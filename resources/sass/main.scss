@@ -1,0 +1,87 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+
+// -----------------------------------------------------------------------------
+// GRID
+// -----------------------------------------------------------------------------
+
+// Grid Container
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// loop over the breakpoints
+@each $key, $value in $breakpoints {
+    @for $i from 1 through $items {
+        .grid__item--#{$key}-span-#{$i} {
+            flex: 0 0 100%;
+            @include break($key) {
+              flex: 0 0 #{$i / $items * 100%};
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// IMG RESPONSIVE
+// -----------------------------------------------------------------------------
+
+.img_responsive {
+    width: 100%;
+    height: auto;
+}
+
+// -----------------------------------------------------------------------------
+// SIDE NAV MASK
+// -----------------------------------------------------------------------------
+
+#side-nav-mask {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    left: 0;
+    top: 0;
+    opacity: .1;
+    visibility: hidden;
+    z-index: 1000;
+    transition: all 300ms cubic-bezier(.4,0,.2,1);
+    transform: translateZ(0);
+
+    &.visible {
+        transition-delay: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+}
