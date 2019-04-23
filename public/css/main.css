@@ -527,13 +527,10 @@ html {
 a {
   color: #e50050;
   text-decoration: none;
-}
-
-a:hover,
-a:active,
-a:focus {
-  color: #222222;
-  text-decoration: underline;
+  /*@include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }*/
 }
 
 /**
@@ -606,6 +603,345 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+#header .title {
+  color: white;
+}
+
+#header #nav {
+  padding: 0 4em;
+  font-weight: 500;
+  font-size: 13pt;
+  text-transform: uppercase;
+  z-index: 10000;
+  /*#nav-toggler {
+      display: none;
+  }*/
+}
+
+#header #nav h1,
+#header #nav nav,
+#header #nav li {
+  display: inline-block;
+}
+
+#header #nav h1 {
+  margin: 0;
+  font-size: 18pt;
+  font-weight: bold;
+  padding: 0;
+}
+
+#header #nav h1 a {
+  border-bottom: 0;
+}
+
+#header #nav h1:after {
+  display: none;
+}
+
+#header #nav nav {
+  float: right;
+}
+
+#header #nav nav .nav-links {
+  margin: 0;
+}
+
+#header #nav nav .nav-links li {
+  margin-left: 15px;
+}
+
+#header #nav nav .nav-links li a {
+  text-decoration: none;
+}
+
+#header #nav #nav-toggler {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#header .navbar {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  line-height: 5.5em;
+}
+
+#header .navbar h1 {
+  color: #FFF;
+}
+
+#header .navbar nav a {
+  color: #FFF;
+}
+
+#header .sticky {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  line-height: 3.5em;
+  background-color: #FFF;
+  color: #444;
+  box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, 0.35);
+  -webkit-animation: sticky 500ms;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: normal;
+  /* Safari 4.0 - 8.0 */
+  animation: sticky 500ms;
+  animation-direction: normal;
+}
+
+#header .sticky h1 {
+  color: #444;
+}
+
+#header .sticky nav a {
+  color: #444;
+}
+
+#header #nav-responsive {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 20em;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateX(20em);
+  transform: translateX(20em);
+  z-index: 10001;
+}
+
+#header #nav-responsive.visible {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+#header #nav-responsive nav {
+  padding: 3em 2em;
+}
+
+#header #nav-responsive nav .link {
+  color: #444;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: solid 1px #e6e6e6;
+  display: block;
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 0.75em 0;
+}
+
+#header #nav-responsive nav .link:first-child {
+  border: 0;
+}
+
+#header #nav-responsive .close {
+  transition: color 200ms ease-in-out;
+  -webkit-transition: color 200ms ease-in-out;
+  -moz-transition: color 200ms ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #444;
+  cursor: pointer;
+  display: block;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+#header #carousel {
+  position: relative;
+}
+
+#header #carousel .carousel-list {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#header #carousel .carousel-list li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  min-height: 40em;
+  height: 75vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 500ms ease-in;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+}
+
+#header #carousel .carousel-list li.active {
+  display: block;
+  position: relative;
+  top: unset;
+  left: unset;
+  right: unset;
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+#header #carousel .carousel-list li:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#header #carousel .carousel-list li:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.35;
+}
+
+#header #carousel .carousel-dots {
+  bottom: 1.5em;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  line-height: 0;
+  z-index: 2;
+}
+
+#header #carousel .carousel-dots li {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  border-radius: 75px;
+  cursor: pointer;
+}
+
+#header #carousel .carousel-dots li.active {
+  background-color: white;
+}
+
+#header #carousel .carousel-title {
+  color: white;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 2;
+}
+
+#header #carousel .carousel-title h2 {
+  font-weight: 800;
+  font-size: 2.75em;
+  padding-bottom: 0;
+  margin: 0 0 0.5em 0;
+}
+
+#header #carousel .carousel-title h2:after {
+  display: none;
+}
+
+#header #carousel a {
+  color: #fff;
+}
+
+@-webkit-keyframes sticky {
+  from {
+    left: 0px;
+    top: -62px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes sticky {
+  from {
+    left: 0px;
+    top: -62px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #header #carousel .carousel-list li {
+    min-height: 35em;
+    height: 60vh;
+  }
+
+  #header #carousel .carousel-title h2 {
+    font-size: 2.25em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header #nav {
+    /*nav .nav-links li:not(:last-of-type) {
+        display: none;
+    }
+    #nav-toggler {
+        cursor: pointer;
+        display: inline-block;
+    }*/
+  }
+
+  #header #carousel .carousel-list li {
+    min-height: 50em;
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #header #nav {
+    padding: 0 1em;
+  }
+
+  #header #carousel .carousel-list li {
+    min-height: 25em;
+  }
+
+  #header #carousel .carousel-title h2 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
 }
 
 .grid {

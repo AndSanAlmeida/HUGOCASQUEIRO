@@ -4,6 +4,6 @@
     @yield('content')
     @include('layouts.public.includes.footer')
     <!-- MASK -->
-    <!--<div id="side-nav-mask"></div>-->
+    <div id="side-nav-mask"></div>
 </body>
 @include('layouts.public.partials._footer')

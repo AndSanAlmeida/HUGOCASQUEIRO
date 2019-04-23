@@ -1,3 +1,306 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+#header {
+	.title {
+		color: white;
+	}
+    #nav {
+        padding: 0 4em;
+        font-weight: 500;
+        font-size: 13pt;
+        text-transform: uppercase;
+        z-index: 10000;
+         h1, nav, li {
+            display: inline-block;
+        }
+        h1 {
+            margin: 0;
+            font-size: 18pt;
+            font-weight: bold;            
+            padding: 0;
+            a {
+                border-bottom: 0;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        nav {
+            float: right;
+            .nav-links {
+                margin: 0;
+                li {
+                    margin-left: 15px;
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        /*#nav-toggler {
+            display: none;
+        }*/
+        #nav-toggler {
+            cursor: pointer;
+            display: inline-block;
+        }
+    }
+    .navbar {
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+        line-height: 5.5em;
+        h1 {
+            color: #FFF;
+        }
+        nav {
+            a {
+                color: #FFF;
+            }
+        }
+    }
+    .sticky {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        line-height: 3.5em;
+        background-color: #FFF;
+        color: #444;
+        box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, 0.35);
+        -webkit-animation: sticky 500ms; /* Safari 4.0 - 8.0 */
+        -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+        animation: sticky 500ms;
+        animation-direction: normal;
+        h1 {
+            color: #444;
+        }
+        nav {
+            a {
+                color: #444;                
+            }            
+        }
+    }
+    #nav-responsive {
+        position: fixed;
+        height: 100%;
+        top: 0;
+        right: 0;
+        width: 20em;
+        background: white;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        @include transition(all, 300ms, cubic-bezier(.4,0,.2,1));
+        @include transform(translateX(20em));
+        z-index: 10001;
+        &.visible {
+            @include transform(translateX(0px));
+        }
+        nav {
+            padding: 3em 2em;
+            .link {
+                color: #444;
+                text-transform: uppercase;
+                text-decoration: none;            
+                border-top: solid 1px #e6e6e6;
+                display: block;
+                font-size: 0.9em;
+                font-weight: 700;
+                padding: 0.75em 0;
+                &:first-child {
+                    border: 0;
+                }
+            }                      
+        }
+        .close {
+            @include transition(color, 200ms, ease-in-out);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            color: #444;
+            cursor: pointer;
+            display: block;
+            padding: 1em;
+            position: absolute;
+            right: 0;            
+            top: 0;
+            text-align: center;
+        }
+    }  
+    #carousel {
+        position: relative;
+        .carousel-list {
+            position:relative;
+            list-style:none;
+            width:100%;
+            text-align:center;
+            margin: 0;
+            padding:0;
+            li {
+                position:absolute;
+                top: 0;
+                left:0;
+                right:0;                
+                padding:0;
+                text-align:center;                
+                opacity:0;
+                visibility:hidden;
+                z-index:0;
+
+                // NEEDED FOR PARALLAX and BG IMAGE => Frontend
+                min-height: 40em; 
+                height: 75vh;
+
+                // PARALLAX SCROLLING EFFECT
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                @include transition(all, 500ms, ease-in);
+                &.active {
+                    display:block;
+                    position:relative;
+                    top:unset;
+                    left:unset;
+                    right:unset;
+                    z-index:1;
+                    opacity:1;
+                    visibility:visible;               
+                }
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    height: 100%;
+                    vertical-align: middle;
+                }   
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #000;
+                    opacity: 0.35;
+                }     
+            }
+        }
+        .carousel-dots {
+            bottom: 1.5em;
+            left: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            line-height: 0;
+            z-index: 2;
+            li {
+                width: 15px;
+                height: 15px;
+                margin: 10px;
+                background-color: rgba(255, 255, 255, 0.6);
+                display: inline-block;
+                border-radius: 75px;
+                cursor: pointer;
+                &.active {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            } 
+        }
+        .carousel-title {
+        	color: white;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 2;
+            h2 {
+                font-weight: 800;
+                font-size: 2.75em;
+                padding-bottom: 0;
+                margin: 0 0 0.5em 0;
+                &:after {
+                    display: none;                    
+                }
+            }
+        }
+        a {
+            color: #fff;
+        }
+    }
+}
+
+@-webkit-keyframes sticky {
+    from    {left: 0px; top: -62px; opacity: 0;}
+    to      {left: 0px; top: 0px; opacity: 1;}
+}
+
+@keyframes sticky {
+    from    {left: 0px; top: -62px; opacity: 0;}
+    to      {left: 0px; top: 0px; opacity: 1;}
+}
+
+@include large {
+    #header {
+        #carousel {
+            .carousel-list {
+                li {
+                    min-height: 35em;
+                    height: 60vh;
+                }
+            }
+            .carousel-title {
+                h2 {
+                    font-size: 2.25em;
+                }
+            }
+        }
+    }
+}
+
+@include medium {
+    #header {
+        #nav {
+            /*nav .nav-links li:not(:last-of-type) {
+                display: none;
+            }
+            #nav-toggler {
+                cursor: pointer;
+                display: inline-block;
+            }*/
+        }
+        #carousel {
+            .carousel-list {
+                li {
+                    min-height: 50em;
+                    height: 75vh;
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    #header {
+        #nav {
+            padding: 0 1em;
+        }
+        #carousel {
+            .carousel-list {
+                li {
+                    min-height: 25em;
+                }
+            }
+            .carousel-title {
+                h2 {
+                    font-size: 1.75em;
+                    line-height: 1.25em;
+                }
+            }
+        }
+    }
+}
+
