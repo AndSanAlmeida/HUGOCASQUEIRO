@@ -12,31 +12,31 @@
 	        </ul>
 	    </nav>
 	</div>
-	<div id="nav-responsive">
+	<div id="sidenav">
 		<nav>
-			<a href="#" class="link" title="">Sobre Nós</a>
+			<a href="#" class="link" title="">Início</a>
 	        <a href="#" class="link" title="">Lenha</a>
 	        <a href="#" class="link" title="">Brita</a>
 			<a href="#" class="link" title="">Limpeza de Terrenos</a>
 			<a href="#" class="link" title="">Contactos</a>
 		</nav>
-		<a id="close-responsive-nav" class="close"><i class="fas fa-times"></i></a>
+		<a id="close-sidenav" class="close"><i class="fas fa-times"></i></a>
 	</div>
 	<div id="carousel">
 		<ul class="carousel-list">
 			<li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
                 <div class="carousel-title">
-                    <h2>Lorem ipsum.</h2>
+                    <h2>Firewood.</h2>
                 </div>
             </li>
 			<li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');">
                 <div class="carousel-title">
-                    <h2>Lorem ipsum dolor.</h2>
+                    <h2>Gravel.</h2>
                 </div>
             </li>
 			<li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');">
                 <div class="carousel-title">
-                    <h2>Lorem ipsum dolor sitamet.</h2>
+                    <h2>Florest cleaning.</h2>
                 </div>
             </li>
 		</ul>

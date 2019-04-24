@@ -5,3 +5,17 @@ body {
   color: $text-color;
   font: normal 125% / 1.4 $roboto;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: #444;
+    text-transform: uppercase;
+}
+
+p {
+    color: $dark-grey;
+    margin: 0 0 2em 0;
+    font-weight: 300;
+    font-size: 13pt;
+    line-height: 1.75em;
+}

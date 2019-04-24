@@ -9,9 +9,9 @@
     #nav {
         padding: 0 4em;
         font-weight: 500;
-        font-size: 13pt;
+        font-size: 18pt;
         text-transform: uppercase;
-        z-index: 10000;
+        z-index: 100;
          h1, nav, li {
             display: inline-block;
         }
@@ -43,6 +43,7 @@
             display: none;
         }*/
         #nav-toggler {
+            font-weight: 300;
             cursor: pointer;
             display: inline-block;
         }
@@ -66,7 +67,7 @@
         left: 0;
         position: fixed;
         width: 100%;
-        line-height: 3.5em;
+        line-height: 2.5em;
         background-color: #FFF;
         color: #444;
         box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, 0.35);
@@ -74,16 +75,11 @@
         -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
         animation: sticky 500ms;
         animation-direction: normal;
-        h1 {
+        .title, nav a {
             color: #444;
         }
-        nav {
-            a {
-                color: #444;                
-            }            
-        }
     }
-    #nav-responsive {
+    #sidenav {
         position: fixed;
         height: 100%;
         top: 0;
@@ -212,12 +208,12 @@
             } 
         }
         .carousel-title {
-        	color: white;
             position: relative;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: middle;            
             z-index: 2;
-            h2 {
+            h2 {                
+                color: white;
                 font-weight: 800;
                 font-size: 2.75em;
                 padding-bottom: 0;
@@ -275,7 +271,7 @@
         #carousel {
             .carousel-list {
                 li {
-                    min-height: 50em;
+                    min-height: 40em;
                     height: 75vh;
                 }
             }

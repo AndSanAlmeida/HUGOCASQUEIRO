@@ -16,8 +16,8 @@ function sticky() {
 //Responsive Navbar
 function navResponsive() {
   var $menuRevealBtn = $('#nav-toggler');
-  var $menuHideNavBtn = $('#close-responsive-nav');
-  var $sideNav = $('#nav-responsive');
+  var $menuHideNavBtn = $('#close-sidenav');
+  var $sideNav = $('#sidenav');
   var $sideNavMask = $('#side-nav-mask');
   
   $menuRevealBtn.on('click', function() {

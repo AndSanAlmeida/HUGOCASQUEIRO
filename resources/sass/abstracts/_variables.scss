@@ -44,7 +44,7 @@ $dark-grey: rgb(68, 68, 68) !default;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
+$max-width: 1250px !default;
 
 
 
@@ -52,7 +52,7 @@ $max-width: 1180px !default;
 // Breakpoints
 // ====================================================================
 $breakpoints: (
-  sm: 320px,
+  sm: 576px,
   md: 768px,
   lg: 1024px,
 ) !default;
@@ -63,7 +63,7 @@ $items: 12;
 
 // Media Queries
 // ====================================================================
-$small: 320px;
+$small: 576px;
 $medium: 768px;
 $large: 1024px;
 
