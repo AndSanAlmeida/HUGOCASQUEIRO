@@ -76,7 +76,7 @@
         animation: sticky 500ms;
         animation-direction: normal;
         .title, nav a {
-            color: #444;
+            color: #1E2832;
         }
     }
     #sidenav {
@@ -212,12 +212,11 @@
             display: inline-block;
             vertical-align: middle;            
             z-index: 2;
-            h2 {                
+            h1 {                
                 color: white;
                 font-weight: 800;
                 font-size: 2.75em;
                 padding-bottom: 0;
-                margin: 0 0 0.5em 0;
                 &:after {
                     display: none;                    
                 }
@@ -249,7 +248,7 @@
                 }
             }
             .carousel-title {
-                h2 {
+                h1 {
                     font-size: 2.25em;
                 }
             }
@@ -291,7 +290,7 @@
                 }
             }
             .carousel-title {
-                h2 {
+                h1 {
                     font-size: 1.75em;
                     line-height: 1.25em;
                 }

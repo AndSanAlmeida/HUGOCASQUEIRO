@@ -26,17 +26,17 @@
 		<ul class="carousel-list">
 			<li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
                 <div class="carousel-title">
-                    <h2>Firewood.</h2>
+                    <h1>Firewood.</h1>
                 </div>
             </li>
 			<li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');">
                 <div class="carousel-title">
-                    <h2>Gravel.</h2>
+                    <h1>Gravel.</h1>
                 </div>
             </li>
 			<li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');">
                 <div class="carousel-title">
-                    <h2>Florest cleaning.</h2>
+                    <h1>Florest cleaning.</h1>
                 </div>
             </li>
 		</ul>

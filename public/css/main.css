@@ -549,16 +549,31 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  color: #444;
+  color: #1E2832;
   text-transform: uppercase;
 }
 
 p {
   color: #444444;
-  margin: 0 0 2em 0;
   font-weight: 300;
   font-size: 13pt;
   line-height: 1.75em;
+}
+
+.header_underline {
+  position: relative;
+  padding-bottom: 0.75em;
+  margin: 0 0 0.7em 0;
+}
+
+.header_underline:after {
+  border-bottom: solid 2px;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  width: 3rem;
 }
 
 /**
@@ -716,7 +731,7 @@ p {
 
 #header .sticky .title,
 #header .sticky nav a {
-  color: #444;
+  color: #1E2832;
 }
 
 #header #sidenav {
@@ -874,15 +889,14 @@ p {
   z-index: 2;
 }
 
-#header #carousel .carousel-title h2 {
+#header #carousel .carousel-title h1 {
   color: white;
   font-weight: 800;
   font-size: 2.75em;
   padding-bottom: 0;
-  margin: 0 0 0.5em 0;
 }
 
-#header #carousel .carousel-title h2:after {
+#header #carousel .carousel-title h1:after {
   display: none;
 }
 
@@ -924,7 +938,7 @@ p {
     height: 60vh;
   }
 
-  #header #carousel .carousel-title h2 {
+  #header #carousel .carousel-title h1 {
     font-size: 2.25em;
   }
 }
@@ -955,30 +969,64 @@ p {
     min-height: 25em;
   }
 
-  #header #carousel .carousel-title h2 {
+  #header #carousel .carousel-title h1 {
     font-size: 1.75em;
     line-height: 1.25em;
   }
 }
 
-#about-us {
-  margin: 5rem 0;
-}
-
-#about-us h2 {
-  position: relative;
-  padding-bottom: 0.75em;
-  margin: 0 0 0.7em 0;
-}
-
-#about-us h2:after {
-  border-bottom: solid 2px;
-  bottom: 0;
-  content: "";
+.btn {
   display: inline-block;
-  left: 0;
+  padding: 1em 2.1em;
+  border-radius: 0;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  transition: all 250ms ease;
+}
+
+.btn:before,
+.btn:after {
+  content: "";
   position: absolute;
-  width: 3rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  transition: 0.25s;
+}
+
+.btn:before {
+  -webkit-transform: translateX(-0.25em) translateY(0.25em);
+          transform: translateX(-0.25em) translateY(0.25em);
+}
+
+.btn:after {
+  -webkit-transform: translateX(0.25em) translateY(-0.25em);
+          transform: translateX(0.25em) translateY(-0.25em);
+}
+
+.btn:hover:before,
+.btn:hover:after {
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+}
+
+.btn-primary {
+  color: #1E2832;
+}
+
+.btn-secundary {
+  color: #FFF;
+}
+
+#about-us {
+  margin: 5rem 0 3rem;
 }
 
 #about-us img {
@@ -989,13 +1037,96 @@ p {
 
 #services {
   background-color: #f2f2f2;
-  height: 1000px;
+}
+
+#services .services_header {
+  text-align: center;
+  margin: 3em 0;
+  padding: 0 6em;
+}
+
+#services .services_header p {
+  font-weight: 400;
+}
+
+#services .services_item {
+  background-color: #FFF;
+  margin: 0 0 2em 0;
+}
+
+#services .services_item img {
+  height: 100%;
+}
+
+#services .services_item .services_item_info {
+  padding: 2em 4em;
+}
+
+#services .services_item .services_item_info .btn {
+  margin-right: 2em;
+}
+
+#services .services_item:last-child {
+  margin-bottom: 4em;
+}
+
+#budget {
+  padding: 5em 0;
+  text-align: center;
+}
+
+#budget h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 2.75em;
+  padding-bottom: 0;
+}
+
+#budget hr {
+  margin-bottom: 2em;
+  border-top: 2px solid white;
+  width: 10%;
+}
+
+#budget p {
+  color: white;
+  margin-bottom: 3em;
+  padding: 0 8em;
+  font-size: 15pt;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1024px) {
   #about-us img {
     padding-left: 0;
     max-height: 400px;
+  }
+
+  #services .services_header {
+    padding: 0 5em;
+  }
+
+  #services .services_item {
+    margin: 0 0 2em;
+  }
+
+  #services .services_item .services_item_info {
+    padding: 2em 2em;
+  }
+
+  #budget p {
+    padding: 0 4em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #services .services_header {
+    margin: 3em 0;
+    padding: 0;
+  }
+
+  #budget p {
+    padding: 0;
   }
 }
 
@@ -1390,11 +1521,23 @@ p {
   opacity: 1;
 }
 
+.align-right {
+  float: right;
+}
+
+.align-left {
+  float: left;
+}
+
 .style-1 {
   background-color: #FFFFFF;
 }
 
 .style-2 {
   background-color: #F2F2F2;
+}
+
+.style-3 {
+  background-color: #1E2832;
 }
 

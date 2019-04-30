@@ -3,21 +3,7 @@
 // -----------------------------------------------------------------------------
 
 #about-us {
-    margin: 5rem 0;
-    h2 {
-        position: relative;
-        padding-bottom: 0.75em;
-        margin: 0 0 0.7em 0;
-        &:after {
-            border-bottom: solid 2px;
-            bottom: 0;
-            content: '';
-            display: inline-block;
-            left: 0;
-            position: absolute;
-            width: 3rem;
-        }
-    }
+        margin: 5rem 0 3rem;
     img {
         padding-left: 100px;
         padding-bottom: 30px;
@@ -27,7 +13,53 @@
 
 #services {
     background-color: #f2f2f2;
-    height: 1000px;
+    .services_header {
+        text-align: center;
+        margin: 3em 0;
+        padding: 0 6em;
+        p {
+            font-weight: 400;
+        }
+    }
+    .services_item {
+        background-color: #FFF;
+        margin: 0 0 2em 0;
+        img {
+            height: 100%;
+        }
+        .services_item_info {
+            padding: 2em 4em;
+            .btn {
+                margin-right: 2em;
+            }
+        }
+        &:last-child {
+            margin-bottom: 4em;
+        }
+    }
+}
+
+#budget {
+    padding: 5em 0;
+    text-align: center;
+    h1 {                
+        color: white;
+        font-weight: 800;
+        font-size: 2.75em;
+        padding-bottom: 0;
+    }
+    hr {
+        margin-bottom: 2em;
+        border-top: 2px solid white;
+        width: 10%;
+    }
+    p {
+        color: white;
+        margin-bottom: 3em;
+        padding: 0 8em;
+        font-size: 15pt;
+        font-weight: 500;
+    }
 }
 
 @include large {
@@ -35,6 +67,36 @@
         img {
             padding-left: 0;
             max-height: 400px;
+        }
+    }
+    #services {
+        .services_header {
+            padding: 0 5em;
+        }
+        .services_item {
+            margin: 0 0 2em;
+            .services_item_info {
+                padding: 2em 2em;
+            }
+        }
+    }
+    #budget {
+        p {
+            padding: 0 4em;
+        }
+    }
+}
+
+@include medium {
+    #services {
+        .services_header {
+            margin: 3em 0;
+            padding: 0;
+        }
+    }
+    #budget {
+        p {
+            padding: 0;
         }
     }
 }

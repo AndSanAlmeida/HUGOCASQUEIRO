@@ -8,14 +8,28 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    color: #444;
+    color: #1E2832;
     text-transform: uppercase;
 }
 
 p {
     color: $dark-grey;
-    margin: 0 0 2em 0;
     font-weight: 300;
     font-size: 13pt;
     line-height: 1.75em;
+}
+
+.header_underline {
+    position: relative;
+    padding-bottom: 0.75em;
+    margin: 0 0 0.7em 0;
+    &:after {
+        border-bottom: solid 2px;
+        bottom: 0;
+        content: '';
+        display: inline-block;
+        left: 0;
+        position: absolute;
+        width: 3rem;
+    }
 }
