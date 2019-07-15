@@ -1,6 +1,6 @@
 <header id="header">
 	<div id="nav" class="navbar">
-		<h1><a class="title" href="#">RUSFATIMA</a></h1>
+		<h1><a class="title" href="#">HUGO CASQUEIRO</a></h1>
 	    <nav>
 	        <ul class="nav-links">
 	            <!--<li><a href="#" title="">Sobre Nós</a></li>	            
