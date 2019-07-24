@@ -1,3 +1,39 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+
+#footer {
+    h5 {
+        color: $text-color;
+    }
+    .footer_header {
+        margin: 5em 0 3em;
+        .footer_header_item{
+            padding-left:3em;
+            a {
+                font-size: 11pt;
+                letter-spacing: 1px;
+                line-height: 2em;
+            }
+        }
+    }
+    .footer_footer {
+        margin: 2em 0 3em;
+        text-align: center;   
+        span {
+            padding: 0 3em;
+            font-size: 11pt;
+        }     
+    }
+    
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            font-size: 11pt;
+            letter-spacing: 1px;
+            line-height: 2em;
+        }
+    } 
+}

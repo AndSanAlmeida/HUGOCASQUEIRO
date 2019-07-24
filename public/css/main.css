@@ -525,7 +525,7 @@ html {
  */
 
 a {
-  color: #e50050;
+  color: #222222;
   text-decoration: none;
   /*@include on-event {
     color: $text-color;
@@ -975,6 +975,45 @@ p {
   }
 }
 
+#footer h5 {
+  color: #222222;
+}
+
+#footer .footer_header {
+  margin: 5em 0 3em;
+}
+
+#footer .footer_header .footer_header_item {
+  padding-left: 3em;
+}
+
+#footer .footer_header .footer_header_item a {
+  font-size: 11pt;
+  letter-spacing: 1px;
+  line-height: 2em;
+}
+
+#footer .footer_footer {
+  margin: 2em 0 3em;
+  text-align: center;
+}
+
+#footer .footer_footer span {
+  padding: 0 3em;
+  font-size: 11pt;
+}
+
+#footer ul {
+  padding: 0;
+}
+
+#footer ul li {
+  list-style-type: none;
+  font-size: 11pt;
+  letter-spacing: 1px;
+  line-height: 2em;
+}
+
 .btn {
   display: inline-block;
   padding: 1em 2.1em;
@@ -1031,7 +1070,6 @@ p {
 
 #about-us img {
   padding-left: 100px;
-  padding-bottom: 30px;
   max-height: 300px;
 }
 
@@ -1064,6 +1102,10 @@ p {
 
 #services .services_item .services_item_info .btn {
   margin-right: 2em;
+}
+
+#services .services_item:first-child {
+  margin-top: 4em;
 }
 
 #services .services_item:last-child {
