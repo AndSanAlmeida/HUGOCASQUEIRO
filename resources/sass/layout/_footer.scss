@@ -15,6 +15,13 @@
                 font-size: 11pt;
                 letter-spacing: 1px;
                 line-height: 2em;
+                border-bottom: 2px solid #fff;
+                padding-bottom: 2px;
+                @include transition(all, 100ms, ease-in-out);
+                &:hover {
+                    border-color: #000;
+                    padding-bottom: 0px;
+                }
             }
         }
     }

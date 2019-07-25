@@ -14,7 +14,7 @@
                     <a class="btn btn-primary align-right" href="#">See more</a>
                 </div>
                 <div class="grid__item grid__item--lg-span-8 grid__item--md-span-12">
-                    <img class="img_responsive" src="{!! asset('img/about_us.jpg') !!}" alt="about_us">
+                    <img class="img_responsive" src="{!! asset('img/about.jpg') !!}" alt="about_us">
                 </div>
             </div>
         </section>
