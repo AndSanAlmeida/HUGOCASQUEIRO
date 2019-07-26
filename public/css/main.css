@@ -691,6 +691,10 @@ p {
   text-decoration: none;
 }
 
+#header #nav nav .nav-links li a img {
+  vertical-align: middle;
+}
+
 #header #nav #nav-toggler {
   font-weight: 300;
   cursor: pointer;
@@ -882,26 +886,27 @@ p {
   background-color: white;
 }
 
-#header #carousel .carousel-title {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
+#header #carousel a {
+  color: #fff;
+}
+
+.flexbox {
+  position: absolute;
+  display: table;
+  width: 100%;
+  height: 40vw;
   z-index: 2;
 }
 
-#header #carousel .carousel-title h1 {
-  color: white;
-  font-weight: 800;
-  font-size: 2.75em;
-  padding-bottom: 0;
+.flexbox .flexbox_item {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-#header #carousel .carousel-title h1:after {
-  display: none;
-}
-
-#header #carousel a {
-  color: #fff;
+.flexbox .flexbox_item .logo_home_image {
+  margin: 0 auto;
+  max-width: 400px;
+  min-width: 150px;
 }
 
 @-webkit-keyframes sticky {
@@ -980,7 +985,7 @@ p {
 }
 
 #footer .footer_header {
-  margin: 5em 0 3em;
+  padding: 5em 0 3em;
 }
 
 #footer .footer_header .footer_header_item {
@@ -1004,7 +1009,7 @@ p {
 }
 
 #footer .footer_footer {
-  margin: 2em 0 3em;
+  padding: 2em 0 3em;
   text-align: center;
 }
 

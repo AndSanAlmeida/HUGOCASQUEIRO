@@ -3,39 +3,34 @@
 		<h1><a class="title" href="#">HUGO CASQUEIRO</a></h1>
 	    <nav>
 	        <ul class="nav-links">
-	            <!--<li><a href="#" title="">Sobre</a></li>	            
-	            <li><a href="#" title="">Portfólio</a></li>
-	            <li><a href="#" title="">Contactos</a></li>-->
+	            <li><a href="#" title="Português"><img src="{!! asset('img/flags/portugal.svg') !!}" alt="Portugal" width="40" height="40"></a></li>	            
+	            <li><a href="#" title="Inglês"><img src="{!! asset('img/flags/united-kingdom.svg') !!}" alt="Inglaterra" width="40" height="40"></a></li>
+	            <li><a href="#" title="Francês"><img src="{!! asset('img/flags/france.svg') !!}" alt="França" width="40" height="40"></a></li>
 	            <li><a id="nav-toggler"><i class="fas fa-bars"></i> Menu</a></li>
 	        </ul>
 	    </nav>
 	</div>
 	<div id="sidenav">
 		<nav>
-			<a href="#" class="link" title="">Início</a>
-            <a href="#" class="link" title="">Sobre</a>
-	        <a href="#" class="link" title="">Portfólio</a>
-			<a href="#" class="link" title="">Contactos</a>
+			<a href="#" class="link" title="Início">Início</a>
+            <a href="#" class="link" title="Sobre">Sobre</a>
+	        <a href="#" class="link" title="Portfólio">Portfólio</a>
+			<a href="#" class="link" title="Contactos">Contactos</a>
 		</nav>
 		<a id="close-sidenav" class="close"><i class="fas fa-times"></i></a>
 	</div>
 	<div id="carousel">
+        <div class="flexbox">
+            <div class="flexbox_item">
+                <div class="logo_home_image">
+                    <img class="img_responsive" src="{!! asset('img/logo.svg') !!}" alt="Logo">
+                </div>
+            </div>
+        </div>
 		<ul class="carousel-list">
-			<li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
-                <!--<div class="carousel-title">
-                    <h1>Firewood.</h1>
-                </div>-->
-            </li>
-			<li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');">
-                <!--<div class="carousel-title">
-                    <h1>Gravel.</h1>
-                </div>-->
-            </li>
-			<li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');">
-                <!--<div class="carousel-title">
-                    <h1>Florest cleaning.</h1>
-                </div>-->
-            </li>
+			<li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');"></li>
+			<li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');"></li>
+			<li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');"></li>
 		</ul>
 		<div class="carousel-dots"></div>
 	</div>

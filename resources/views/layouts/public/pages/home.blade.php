@@ -35,7 +35,7 @@
                     <div class="services_item">
                         <div class="grid">
                             <div class="grid__item grid__item--md-span-5">
-                                <img class="img_responsive" src="{!! asset('img/firewood.jpg') !!}" alt="Firewood"></img>
+                                <img class="img_responsive" src="{!! asset('img/services.jpg') !!}" alt="Firewood"></img>
                             </div>
                             <div class="grid__item grid__item--md-span-7">
                                 <div class="services_item_info">
@@ -56,14 +56,14 @@
                                 </div>                                
                             </div>
                             <div class="grid__item grid__item--md-span-5">
-                                <img class="img_responsive" src="{!! asset('img/firewood.jpg') !!}" alt="Firewood"></img>
+                                <img class="img_responsive" src="{!! asset('img/services.jpg') !!}" alt="Firewood"></img>
                             </div>
                         </div>
                     </div> 
                     <div class="services_item">
                         <div class="grid">
                             <div class="grid__item grid__item--md-span-5">
-                                <img class="img_responsive" src="{!! asset('img/firewood.jpg') !!}" alt="Firewood"></img>
+                                <img class="img_responsive" src="{!! asset('img/services.jpg') !!}" alt="Firewood"></img>
                             </div>
                             <div class="grid__item grid__item--md-span-7">
                                 <div class="services_item_info">
