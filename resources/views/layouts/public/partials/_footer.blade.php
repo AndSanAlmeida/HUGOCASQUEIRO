@@ -13,7 +13,11 @@
                     </div>
                     <div class="grid__item grid__item--md-span-4 footer_header_item">
                         <h5 class="header_underline">Redes Sociais</h5>
-                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i>acebook</a>
+                        <ul>
+                            <li><a href="#" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#" title="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                        </ul>
                     </div>
                     <div class="grid__item grid__item--md-span-4 footer_header_item">
                         <h5 class="header_underline">Hugo Casqueiro</h5>
