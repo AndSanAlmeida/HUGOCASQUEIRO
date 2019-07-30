@@ -1,6 +1,6 @@
 <header id="header">
 	<div id="nav" class="navbar">
-		<h1><a class="title" href="#">HUGO CASQUEIRO</a></h1>
+		<h1><a class="title" href="{{ url('/')}}">HUGO CASQUEIRO</a></h1>
 	    <nav>
 	        <ul class="nav-links">
 	            <li><a href="#" title="Português"><img src="{!! asset('img/flags/portugal.svg') !!}" alt="Portugal" width="40" height="40"></a></li>	            
@@ -12,26 +12,11 @@
 	</div>
 	<div id="sidenav">
 		<nav>
-			<a href="#" class="link" title="Início">Início</a>
-            <a href="#" class="link" title="Sobre">Sobre</a>
-	        <a href="#" class="link" title="Portfólio">Portfólio</a>
-			<a href="#" class="link" title="Contactos">Contactos</a>
+			<a href="{{ url('/') }}" class="link" title="Início">Início</a>
+            <a href="{{ url('/about') }}" class="link" title="Sobre">Sobre</a>
+	        <a href="{{ url('/portfolio') }}" class="link" title="Portfólio">Portfólio</a>
+			<a href="{{ url('/contacts') }}" class="link" title="Contactos">Contactos</a>
 		</nav>
 		<a id="close-sidenav" class="close"><i class="fas fa-times"></i></a>
-	</div>
-	<div id="carousel">
-        <div class="flexbox">
-            <div class="flexbox_item">
-                <div class="logo_home_image">
-                    <img class="img_responsive" src="{!! asset('img/logo.svg') !!}" alt="Logo">
-                </div>
-            </div>
-        </div>
-		<ul class="carousel-list">
-			<li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');"></li>
-			<li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');"></li>
-			<li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');"></li>
-		</ul>
-		<div class="carousel-dots"></div>
 	</div>
 </header>

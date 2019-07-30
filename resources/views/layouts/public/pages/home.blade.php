@@ -4,6 +4,22 @@
 
 @section('content')
 
+<div id="carousel">
+    <div class="flexbox">
+        <div class="flexbox_item">
+            <div class="logo_home_image">
+                <img class="img_responsive" src="{!! asset('img/logo.svg') !!}" alt="Logo">
+            </div>
+        </div>
+    </div>
+    <ul class="carousel-list">
+        <li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');"></li>
+        <li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');"></li>
+        <li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');"></li>
+    </ul>
+    <div class="carousel-dots"></div>
+</div>
+
 <div class="style-1">
     <div class="container">
         <section id="about-us">
@@ -25,12 +41,6 @@
     <div class="container">
         <section id="services">
             <div class="grid">
-                <!--<div class="grid__item grid__item--sm-span-12">
-                    <div class="services_header">
-                        <h2>Os Nossos Serviços</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>                    
-                </div>-->
                 <div class="grid__item grid__item--sm-span-12">
                     <div class="services_item">
                         <div class="grid">
