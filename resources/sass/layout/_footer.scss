@@ -4,25 +4,15 @@
 
 
 #footer {
+    color: white;
     h5 {
-        color: $text-color;
+        color: #b6b6b6;
+        letter-spacing: 1px;
     }
     .footer_header {
         padding: 5em 0 3em;
         .footer_header_item{
             padding-left:3em;
-            a {
-                font-size: 11pt;
-                letter-spacing: 1px;
-                line-height: 2em;
-                border-bottom: 2px solid #fff;
-                padding-bottom: 2px;
-                @include transition(all, 100ms, ease-in-out);
-                &:hover {
-                    border-color: #000;
-                    padding-bottom: 0px;
-                }
-            }
         }
     }
     .footer_footer {
@@ -31,16 +21,29 @@
         span {
             padding: 0 3em;
             font-size: 11pt;
+            letter-spacing: 1px;            
         }     
     }
-    
     ul {
         padding: 0;
         li {
             list-style-type: none;
-            font-size: 11pt;
+            font-size: 10pt;
             letter-spacing: 1px;
-            line-height: 2em;
+            line-height: 2.5em;
         }
     } 
+    a {
+        color: white;
+        font-size: 10pt;
+        letter-spacing: 1px;
+        line-height: 2em;
+        border-bottom: 2px solid #212121;
+        padding-bottom: 2px;
+        @include transition(all, 100ms, ease-in-out);
+        &:hover {
+            border-color: #fff;
+            padding-bottom: 0px;
+        }
+    }
 }

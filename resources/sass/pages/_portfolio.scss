@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the portfolio page.
+// -----------------------------------------------------------------------------
+
+#portfolio {
+    .parallax-portfolio { 
+        position: relative;
+
+        height: 550px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: initial;
+    }
+}

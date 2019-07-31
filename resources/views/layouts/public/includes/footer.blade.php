@@ -1,4 +1,4 @@
-<div class="style-1">
+<div class="style-4">
     <div class="container">
         <footer id="footer">
             <div class="grid footer_header">
@@ -30,7 +30,7 @@
             </div>
             <div class="grid footer_footer">
                 <div class="grid__item grid__item--md-span-12">
-                    <span>Copyright © <?php echo date("Y"); ?> Hugo Casqueiro by <a href="https://www.linkedin.com/in/andsanalmeida/"target="_blank" title="André Almeida - LinkedIn"><b><u>André Almeida</u></b></a></span>
+                    <span>Copyright © <?php echo date("Y"); ?> Hugo Casqueiro by <a href="https://www.linkedin.com/in/andsanalmeida/"target="_blank" title="André Almeida - LinkedIn"><b>André Almeida</b></a></span>
                 </div>
             </div>
         </footer>
