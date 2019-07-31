@@ -29,7 +29,7 @@
 // 6. Page-specific styles
 @import
   'pages/home',
-  'pages/about',
+  'pages/aboutUs',
   'pages/portfolio',
   'pages/contacts';
 
@@ -88,6 +88,10 @@
     }
 }
 
+// -----------------------------------------------------------------------------
+//FLEXBOX
+// -----------------------------------------------------------------------------
+
 .flexbox {
     position: absolute;
     display: table;
@@ -99,6 +103,10 @@
         vertical-align: middle;
     }
 }
+
+// -----------------------------------------------------------------------------
+// FADE HOVER
+// -----------------------------------------------------------------------------
 
 .grey-fade-over {
     position: absolute;
@@ -122,6 +130,30 @@
     z-index: -1;
 }
 
+// -----------------------------------------------------------------------------
+// TITLE
+// -----------------------------------------------------------------------------
+
+.main-title, .main-subtitle {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.main-title {
+    text-transform: capitalize;
+    font-weight: initial;
+}
+.main-subtitle {
+    width: 70%;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGNS
+// -----------------------------------------------------------------------------
+
 .align-right {
     float: right;
 }
@@ -129,6 +161,11 @@
 .align-left {
     float: left;
 }
+
+
+// -----------------------------------------------------------------------------
+// STYLES
+// -----------------------------------------------------------------------------
 
 .style-1 {
     background-color: #FFFFFF; // Branco
@@ -139,9 +176,24 @@
 }
 
 .style-3 {
-    background-color: #1E2832; // Verde     
+    background-color: #212121; // Cinza Escuro     
 }
 
-.style-4 {
-    background-color: #212121; // Cinza Escuro     
+
+// -----------------------------------------------------------------------------
+// MEDIA QUERIES
+// -----------------------------------------------------------------------------
+
+@include large {
+    
+}
+
+@include medium {
+    .main-subtitle {
+        width: 100%;
+    }
+}
+
+@include small {
+
 }

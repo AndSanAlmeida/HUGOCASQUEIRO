@@ -98,9 +98,32 @@ function slider() {
   );  
 }
 
+//Isotope
+// ISOTOPE
+function isotope() {
+  $('.isotope-list').isotope({
+    itemSelector: '.isotope-item',
+    filter: "*"
+  });
+
+  $('.isotope-sorters li').click(function(){
+    var selector = $(this).attr('data-filter');
+    
+    $('.isotope-list').isotope({
+      filter: selector,
+    })
+    
+    //changing active class with click event
+    $(this).removeClass('active');
+    $(this).addClass('active');
+  });
+} 
+
+
 // Inicializa funções ONLOAD
 $(document).ready(function(){
     sticky();
     navResponsive();
     slider();
+    isotope();
 }); 

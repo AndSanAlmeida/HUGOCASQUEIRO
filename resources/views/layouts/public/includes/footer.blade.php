@@ -1,4 +1,4 @@
-<div class="style-4">
+<div class="style-3">
     <div class="container">
         <footer id="footer">
             <div class="grid footer_header">
@@ -6,8 +6,9 @@
                     <h5 class="header_underline">Páginas</h5>
                     <ul>
                         <li><a href="#" title="Início">Início</a></li>
-                        <li><a href="#" title="Sobre">Sobre</a></li>
+                        <li><a href="#" title="Sobre Nós">Sobre Nós</a></li>
                         <li><a href="#" title="Portfólio">Portfólio</a></li>
+                        <li><a href="#" title="Catálogo">Catálogo</a></li>
                         <li><a href="#" title="Contactos">Contactos</a></li>
                     </ul>
                 </div>
@@ -16,7 +17,6 @@
                     <ul>
                         <li><a href="#" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
                         <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#" title="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a></li>
                     </ul>
                 </div>
                 <div class="grid__item grid__item--md-span-4 footer_header_item">

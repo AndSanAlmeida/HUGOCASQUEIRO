@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);@import url(https://fonts.googleapis.com/css?family=Poppins&display=swap);/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1177,11 +1177,99 @@ p {
   background-size: cover;
 }
 
-#portfolio h1 {
-  color: white;
-  text-transform: capitalize;
+#portfolio #isotope .isotope-sorters ul {
+  margin: 4em 0 2em;
+  padding: 0;
+  text-align: center;
+}
+
+#portfolio #isotope .isotope-sorters ul li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 15px;
+  margin-left: 5px;
+  font-size: 15pt;
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+#portfolio #isotope .isotope-sorters .active {
+  border-bottom: 2px black;
+}
+
+#portfolio #isotope .isotope-list {
+  overflow: hidden;
+}
+
+#portfolio #isotope .isotope-item {
+  margin: 15px;
+  width: calc(50% - 30px);
+  display: inline-block;
+}
+
+#portfolio #isotope .isotope-item img {
+  border-radius: 0.25rem;
+}
+
+#portfolio #isotope .isotope-item h5.on-center,
+#portfolio #isotope .isotope-item p.on-center {
+  bottom: auto;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+#portfolio #isotope .isotope-item h5.on-center {
+  bottom: auto;
   letter-spacing: 1px;
-  font-weight: initial;
+  font-size: 23px;
+  line-height: 23px;
+  font-weight: 600;
+  margin-top: 3px;
+  color: #212121;
+  text-transform: lowercase;
+}
+
+#portfolio #isotope .isotope-item p.on-center {
+  bottom: auto;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 20px;
+  font-style: normal;
+  margin-top: -25px;
+  color: #afafaf;
+}
+
+#portfolio #isotope .isotope-item .item-mask {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  left: 20px;
+  top: 17px;
+  z-index: 1;
+  display: block;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 0.25rem;
+  transition: all 250ms linear;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+}
+
+#portfolio #isotope .isotope-item .item-mask:hover {
+  opacity: 1;
+}
+
+#portfolio #isotope .isotope-item h5.on-center,
+#portfolio #isotope .isotope-item p.on-center {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+  top: 50%;
 }
 
 .grid {
@@ -1610,6 +1698,24 @@ p {
   z-index: -1;
 }
 
+.main-title,
+.main-subtitle {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.main-title {
+  text-transform: capitalize;
+  font-weight: initial;
+}
+
+.main-subtitle {
+  width: 70%;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
 .align-right {
   float: right;
 }
@@ -1627,10 +1733,12 @@ p {
 }
 
 .style-3 {
-  background-color: #1E2832;
+  background-color: #212121;
 }
 
-.style-4 {
-  background-color: #212121;
+@media screen and (max-width: 768px) {
+  .main-subtitle {
+    width: 100%;
+  }
 }
 

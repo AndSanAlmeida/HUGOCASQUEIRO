@@ -12,6 +12,6 @@
 */
 
 Route::get('/', 'PublicPagesController@home');
-Route::get('/about', 'PublicPagesController@about');
+Route::get('/aboutUs', 'PublicPagesController@aboutUs');
 Route::get('/portfolio', 'PublicPagesController@portfolio');
 Route::get('/contacts', 'PublicPagesController@contacts');

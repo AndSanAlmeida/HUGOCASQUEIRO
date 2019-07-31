@@ -1,6 +1,6 @@
 <header id="header">
 	<div id="nav" class="navbar">
-		<h1><a class="title" href="{{ url('/')}}">HUGO CASQUEIRO</a></h1>
+		<h1><a class="title" href="{{ url('/')}}">HC | Marcenaria - Carpintaria</a></h1>
 	    <nav>
 	        <ul class="nav-links">
 	            <li><a href="#" title="Português"><img src="{!! asset('img/flags/portugal.svg') !!}" alt="Portugal" width="40" height="40"></a></li>	            
@@ -13,8 +13,9 @@
 	<div id="sidenav">
 		<nav>
 			<a href="{{ url('/') }}" class="link" title="Início">Início</a>
-            <a href="{{ url('/about') }}" class="link" title="Sobre">Sobre</a>
+            <a href="{{ url('/aboutUs') }}" class="link" title="Sobre Nós">Sobre</a>
 	        <a href="{{ url('/portfolio') }}" class="link" title="Portfólio">Portfólio</a>
+            <a href="#" class="link" title="Catálogo">Catálogo</a>
 			<a href="{{ url('/contacts') }}" class="link" title="Contactos">Contactos</a>
 		</nav>
 		<a id="close-sidenav" class="close"><i class="fas fa-times"></i></a>

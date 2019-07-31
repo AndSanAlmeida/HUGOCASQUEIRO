@@ -9,8 +9,8 @@ class PublicPagesController extends Controller
     public function home () {
         return view('layouts.public.pages.home');
     }
-    public function about () {
-        return view('layouts.public.pages.about');
+    public function aboutUs () {
+        return view('layouts.public.pages.aboutUs');
     }
     public function portfolio () {
         return view('layouts.public.pages.portfolio');
