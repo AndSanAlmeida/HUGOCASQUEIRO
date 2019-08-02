@@ -649,9 +649,6 @@ p {
   font-size: 18pt;
   text-transform: uppercase;
   z-index: 100;
-  /*#nav-toggler {
-      display: none;
-  }*/
 }
 
 #header #nav h1,
@@ -795,6 +792,18 @@ p {
   text-align: center;
 }
 
+#header #sidenav .sidenav-languages {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+#header #sidenav .sidenav-languages li {
+  display: inline;
+  margin: 0 5px;
+}
+
 @-webkit-keyframes sticky {
   from {
     left: 0px;
@@ -824,6 +833,23 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+  #header #nav span {
+    display: none;
+  }
+
+  #header #nav nav .nav-links li:not(:last-of-type) {
+    display: none;
+  }
+
+  #header #sidenav .sidenav-languages {
+    display: block;
+  }
+
+  #carousel .carousel-list li {
+    min-height: 40em;
+    height: 75vh;
+  }
+
   #carousel .carousel-list li {
     min-height: 35em;
     height: 60vh;
@@ -835,16 +861,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  #header #nav {
-    /*nav .nav-links li:not(:last-of-type) {
-        display: none;
-    }
-    #nav-toggler {
-        cursor: pointer;
-        display: inline-block;
-    }*/
-  }
-
   #carousel .carousel-list li {
     min-height: 40em;
     height: 75vh;
@@ -864,6 +880,27 @@ p {
     font-size: 1.75em;
     line-height: 1.25em;
   }
+}
+
+#goToTop {
+  position: fixed;
+  color: #444444;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#goToTop:hover i {
+  color: #999999;
+  top: 0;
+  opacity: 1;
+}
+
+#goToTop i {
+  position: relative;
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
 }
 
 #footer {
@@ -1184,17 +1221,28 @@ p {
 }
 
 #portfolio #isotope .isotope-sorters ul li {
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   display: inline-block;
-  padding: 5px 15px;
-  margin-left: 5px;
+  margin: 5px 15px;
   font-size: 15pt;
   text-transform: lowercase;
   font-style: italic;
+  color: #444444;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+}
+
+#portfolio #isotope .isotope-sorters ul li:hover {
+  border-color: #444444;
+  padding-bottom: 0px;
 }
 
 #portfolio #isotope .isotope-sorters .active {
-  border-bottom: 2px black;
+  border-bottom: 2px solid #444444;
 }
 
 #portfolio #isotope .isotope-list {
@@ -1270,6 +1318,12 @@ p {
   width: 100%;
   text-align: center;
   top: 50%;
+}
+
+@media screen and (max-width: 576px) {
+  #portfolio #isotope .isotope-item {
+    width: calc(100% - 30px);
+  }
 }
 
 .grid {

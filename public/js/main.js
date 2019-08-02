@@ -99,7 +99,6 @@ function slider() {
 }
 
 //Isotope
-// ISOTOPE
 function isotope() {
   $('.isotope-list').isotope({
     itemSelector: '.isotope-item',
@@ -114,10 +113,29 @@ function isotope() {
     })
     
     //changing active class with click event
-    $(this).removeClass('active');
+    $('.isotope-sorters li.active').removeClass('active');
     $(this).addClass('active');
   });
 } 
+
+// Back to Top
+function goToTop() {
+
+    var goToTop = $("#goToTop");
+    var body = $('html , body');
+    
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > 200 ){
+             goToTop.fadeIn()
+        }else{
+             goToTop.fadeOut()  
+        };
+    });
+    
+    goToTop.click(function(){
+        body.animate({scrollTop:0},800)
+    });
+}
 
 
 // Inicializa funções ONLOAD
@@ -126,4 +144,5 @@ $(document).ready(function(){
     navResponsive();
     slider();
     isotope();
+    goToTop();
 }); 

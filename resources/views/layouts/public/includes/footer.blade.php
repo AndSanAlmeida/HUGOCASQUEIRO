@@ -1,4 +1,8 @@
 <div class="style-3">
+
+    <div id="goToTop">
+        <i class="fas fa-chevron-circle-up fa-2x"></i></i>
+    </div>
     <div class="container">
         <footer id="footer">
             <div class="grid footer_header">

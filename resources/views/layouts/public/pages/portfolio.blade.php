@@ -22,7 +22,7 @@
             <div id="isotope">
                 <div class="isotope-sorters">
                     <ul>
-                        <li data-filter="*">All</li>
+                        <li data-filter="*" class="active">All</li>
                         <li data-filter=".running">Running</li>
                         <li data-filter=".gym">Gym</li>
                         <li data-filter=".swimming">Swimming</li>

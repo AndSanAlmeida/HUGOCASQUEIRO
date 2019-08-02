@@ -19,19 +19,27 @@
                 margin: 4em 0 2em;
                 padding: 0;
                 text-align: center;
-                li {            
+                li {  
+                    font-family: $poppins;          
                     cursor: pointer;
                     display: inline-block;
-                    padding: 5px 15px;
-                    margin-left: 5px;
+                    margin: 5px 15px;
                     font-size: 15pt;
                     text-transform: lowercase;
-                    font-style: italic;                
+                    font-style: italic; 
+                    color: $dark-grey;
+                    border-bottom: 2px solid white;
+                    padding-bottom: 2px;
+                    @include transition(all, 100ms, ease-in-out);
+                    &:hover {
+                        border-color: $dark-grey;
+                        padding-bottom: 0px;
+                    }               
                 }
-            }
+            } 
             .active {
-                border-bottom: 2px black;       
-            }    
+                border-bottom: 2px solid $dark-grey;      
+            }  
         }
         .isotope-list {
             overflow:hidden;
@@ -93,6 +101,24 @@
                 width: 100%;
                 text-align: center;
                 top: 50%;
+            }
+        }
+    }
+}
+
+@include large {
+    
+}
+
+@include medium {
+
+}
+
+@include small {
+    #portfolio {
+        #isotope {
+            .isotope-item {
+                width: calc(100% - 30px);
             }
         }
     }

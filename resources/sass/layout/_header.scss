@@ -42,9 +42,6 @@
                 }
             }
         }
-        /*#nav-toggler {
-            display: none;
-        }*/
         #nav-toggler {
             font-weight: 300;
             cursor: pointer;
@@ -126,6 +123,16 @@
             top: 0;
             text-align: center;
         }
+        .sidenav-languages {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            li {
+                display: inline;
+                margin: 0 5px;
+            }
+        }
     }  
 }
 
@@ -140,6 +147,29 @@
 }
 
 @include large {
+    #header {
+        #nav {
+            span {
+                display: none;
+            }
+            nav .nav-links li:not(:last-of-type) {
+                display: none;
+            }            
+        }
+        #sidenav {
+            .sidenav-languages {
+                display: block;
+            }
+        }
+    }
+    #carousel {
+        .carousel-list {
+            li {
+                min-height: 40em;
+                height: 75vh;
+            }
+        }
+    }
     #carousel {
         .carousel-list {
             li {
@@ -156,17 +186,6 @@
 }
 
 @include medium {
-    #header {
-        #nav {
-            /*nav .nav-links li:not(:last-of-type) {
-                display: none;
-            }
-            #nav-toggler {
-                cursor: pointer;
-                display: inline-block;
-            }*/
-        }
-    }
     #carousel {
         .carousel-list {
             li {
