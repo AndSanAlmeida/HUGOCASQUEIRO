@@ -15,7 +15,7 @@
 			<a href="{{ url('/') }}" class="link" title="Início">Início</a>
             <a href="{{ url('/aboutUs') }}" class="link" title="Sobre Nós">Sobre</a>
 	        <a href="{{ url('/portfolio') }}" class="link" title="Portfólio">Portfólio</a>
-            <a href="#" class="link" title="Catálogo">Catálogo</a>
+            <a href="#" class="link" title="Catálogo" target="_blank">Catálogo</a>
 			<a href="{{ url('/contacts') }}" class="link" title="Contactos">Contactos</a>
             <ul class="sidenav-languages">
                 <li><a href="#" title="Português"><img src="{!! asset('img/flags/portugal.svg') !!}" alt="Portugal" width="40" height="40"></a></li>       

@@ -11,8 +11,8 @@
                     <ul>
                         <li><a href="#" title="Início">Início</a></li>
                         <li><a href="#" title="Sobre Nós">Sobre Nós</a></li>
-                        <li><a href="#" title="Portfólio">Portfólio</a></li>
-                        <li><a href="#" title="Catálogo">Catálogo</a></li>
+                        <li><a href="#" title="Portfólio">Portfólio</a></li>  
+                        <li><a href="#" title="Catálogo" target="_blank">Catálogo</a></li>                      
                         <li><a href="#" title="Contactos">Contactos</a></li>
                     </ul>
                 </div>
