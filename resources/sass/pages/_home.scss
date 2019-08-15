@@ -129,29 +129,6 @@
     }
 }
 
-#budget {
-    padding: 5em 0;
-    text-align: center;
-    h1 {                
-        color: $text-color;
-        font-weight: 800;
-        font-size: 2.75em;
-        padding-bottom: 0;
-    }
-    hr {
-        margin-bottom: 2em;
-        border-top: 2px solid $text-color;
-        width: 10%;
-    }
-    p {
-        color: $text-color;
-        margin-bottom: 3em;
-        padding: 0 8em;
-        font-size: 15pt;
-        font-weight: 500;
-    }
-}
-
 @include large {
     #about-us {
         img {
@@ -167,22 +144,12 @@
             }
         }
     }
-    #budget {
-        p {
-            padding: 0 4em;
-        }
-    }
 }
 
 @include medium {
     #services {
         .services_header {
             margin: 3em 0;
-            padding: 0;
-        }
-    }
-    #budget {
-        p {
             padding: 0;
         }
     }

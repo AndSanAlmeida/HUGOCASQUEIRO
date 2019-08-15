@@ -903,6 +903,23 @@ p {
   -moz-transition: all 100ms ease-in-out;
 }
 
+#budget .parallax-budget {
+  position: relative;
+  height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#budget h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 2.75em;
+  padding-bottom: 0;
+  margin: 0;
+}
+
 #footer {
   color: white;
 }
@@ -959,6 +976,17 @@ p {
   padding-bottom: 0px;
 }
 
+@media screen and (max-width: 1024px) {
+  #budget h1,
+  #budget .grid__item:last-child {
+    text-align: center;
+  }
+
+  #footer .footer_header .footer_header_item {
+    padding-left: 2em;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 1em 2.1em;
@@ -971,6 +999,8 @@ p {
   text-decoration: none;
   position: relative;
   transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
 }
 
 .btn:before,
@@ -1007,6 +1037,36 @@ p {
 
 .btn-secundary {
   color: #FFF;
+}
+
+.btn-budget {
+  display: inline-block;
+  background-color: white;
+  padding: 0 40px;
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-weight: 700;
+  line-height: 4em;
+  float: right;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+
+.btn-budget:hover {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .btn-budget {
+    margin-top: 1em;
+    float: none;
+  }
 }
 
 #carousel {
@@ -1149,32 +1209,6 @@ p {
   margin-bottom: 4em;
 }
 
-#budget {
-  padding: 5em 0;
-  text-align: center;
-}
-
-#budget h1 {
-  color: #222222;
-  font-weight: 800;
-  font-size: 2.75em;
-  padding-bottom: 0;
-}
-
-#budget hr {
-  margin-bottom: 2em;
-  border-top: 2px solid #222222;
-  width: 10%;
-}
-
-#budget p {
-  color: #222222;
-  margin-bottom: 3em;
-  padding: 0 8em;
-  font-size: 15pt;
-  font-weight: 500;
-}
-
 @media screen and (max-width: 1024px) {
   #about-us img {
     padding-left: 0;
@@ -1188,19 +1222,11 @@ p {
   #services .services_item .services_item_info {
     padding: 2em 2em;
   }
-
-  #budget p {
-    padding: 0 4em;
-  }
 }
 
 @media screen and (max-width: 768px) {
   #services .services_header {
     margin: 3em 0;
-    padding: 0;
-  }
-
-  #budget p {
     padding: 0;
   }
 }

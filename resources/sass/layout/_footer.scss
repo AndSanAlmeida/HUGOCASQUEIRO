@@ -21,6 +21,25 @@
     }
 }
 
+#budget {
+    .parallax-budget { 
+        position: relative;
+
+        height: 350px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {                
+        color: white;
+        font-weight: 800;
+        font-size: 2.75em;
+        padding-bottom: 0;
+        margin: 0;
+    }
+} 
+
 #footer {
     color: white;
     h5 {
@@ -64,4 +83,23 @@
             padding-bottom: 0px;
         }
     }
+}
+
+@include large {
+    #budget {
+        h1, .grid__item:last-child {                
+            text-align: center;
+        }
+    } 
+    #footer {
+        .footer_header {
+            .footer_header_item{
+                padding-left:2em;
+            }
+        }
+    }
+}
+
+@include medium {
+
 }
