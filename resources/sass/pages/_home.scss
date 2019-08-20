@@ -129,6 +129,169 @@
     }
 }
 
+.reviews {
+    width: 100%;
+    margin: 60px auto;
+    box-sizing: border-box;
+
+    * {
+        box-sizing: inherit;
+    }
+
+    &-container {
+        max-width: 1140px;
+
+        margin: 0 auto;
+        padding: 0 10px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+    }
+
+    &-list {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+
+        transition: 0.3s ease-in-out;
+
+        position: relative;
+    }
+
+    &-item {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-figure {
+            display: inline-block;
+
+            background-color: #fff;
+        }
+
+        &-image {
+            max-width: 250px;
+            height: 200px;
+
+            margin-right: 40px;
+
+            object-fit: cover;
+
+            opacity: .8;
+        }
+
+        &-info {
+            margin-top: 10px;
+        }
+
+        &-name {
+            font-size: 16px;
+            color: #262e34;
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+            &:before {
+                content: '';
+                width: 20%;
+                height: 2px;
+
+                background-color: #262e34;
+
+                position: absolute;
+                bottom: -4px;
+                left: 0
+            }
+        }
+
+        &-message {
+            font-size: 18px;
+            line-height: 1.3;
+            color: #4e4e4e;
+        }
+    }
+
+    &-controllers {
+        text-align: right;
+
+        &-button {
+            padding: 10px;
+            border: 1px solid #adadad;
+            background-color: transparent;
+
+            cursor: pointer;
+
+            outline: 0;
+
+            opacity: .8;
+            
+            
+            transition: 0.2s ease-in-out;
+
+            &:first-child {
+                .reviews-controllers-icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+
+            &:active {
+                opacity: 0.6;
+            }
+        }
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+
+            fill: #262e34;
+        }
+    }
+}
+
+@media screen and(max-width: 1060px) {
+    .reviews {
+        &-item {
+            &-image {
+                margin-right: 10px; 
+            }
+            
+            &-info {
+                margin-top: 0;
+            }
+            &-message {
+                  font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 480px) { 
+    .reviews {
+        &-container {
+            padding: 0;
+            margin: 0 10px;
+        }
+        &-item {
+            flex: 0 0 100%;
+            margin: 0;
+
+            &-image {
+                height: 165px;
+            }
+        }
+    }
+}
+
 @include large {
     #about-us {
         img {

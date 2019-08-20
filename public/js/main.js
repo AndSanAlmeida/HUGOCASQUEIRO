@@ -1,4 +1,7 @@
-//Sticky Navbar
+// ====================================================
+// Sticky Navbar
+// ====================================================
+
 function sticky() {
     $(window).scroll(function() {
         var $nav = $('#nav');
@@ -13,7 +16,10 @@ function sticky() {
     })
 }
 
-//Responsive Navbar
+// ====================================================
+// Responsive Navbar
+// ====================================================
+
 function navResponsive() {
   var $menuRevealBtn = $('#nav-toggler');
   var $menuHideNavBtn = $('#close-sidenav');
@@ -36,7 +42,10 @@ function navResponsive() {
   });
 }
 
+// ====================================================
 // Slider
+// ====================================================
+
 function slider() {
   var timer = setInterval(move_to_next, 5000),
       $slider = $('#carousel'),
@@ -98,7 +107,92 @@ function slider() {
   );  
 }
 
-//Isotope
+// ====================================================
+// Reviews
+// ====================================================
+
+function sliderReviews(options) {
+    let Privates = {};
+
+    this.slideNext = () => {
+        ++Privates.sel.position;
+
+        if (document.body.clientWidth) {
+            if (Privates.sel.position >= Privates.sel.slides.length) {
+                Privates.sel.position = 0;
+            }
+
+            let value = Privates.sel.position * 100;
+            Privates.sel.slider_wrap.style.transform = `translateX(-${value}%)`;
+        } else {
+            if (Privates.sel.position >= Privates.sel.slides.length - 1) {
+                Privates.sel.position = 0;
+            }
+
+            let value = Privates.sel.position * 50;
+            Privates.sel.slider_wrap.style.transform = `translateX(-${value}%)`;
+        }
+
+    }
+
+    this.slidePrev = () => {
+        --Privates.sel.position;
+
+        if (document.body.clientWidth) {
+            if (Privates.sel.position < 0) {
+                Privates.sel.position = Privates.sel.slides.length - 1;
+            }
+
+            let value = Privates.sel.position * 100;
+            Privates.sel.slider_wrap.style.transform = `translateX(-${value}%)`;
+        } else {
+            if (Privates.sel.position < 0) {
+                Privates.sel.position = Privates.sel.slides.length - 2;
+            }
+
+            let value = Privates.sel.position * 50;
+            Privates.sel.slider_wrap.style.transform = `translateX(-${value}%)`;
+        }
+    };
+
+    // this.test = () => {
+    //     console.log('test');
+    // }
+
+    Privates.options = options;
+    Privates.sel = {
+        slider_wrap: document.querySelector(Privates.options.slider_wrap),
+        slides: document.querySelectorAll(Privates.options.slides),
+        next_button: document.querySelector(Privates.options.next_button),
+        prev_button: document.querySelector(Privates.options.prev_button),
+        position: 0,
+    };
+
+    if (Privates.sel.next_button != undefined && Privates.sel.next_button != null) {
+        Privates.sel.next_button.addEventListener('click', () => {
+            this.slideNext();
+        });
+    }
+
+    if (Privates.sel.prev_button != undefined && Privates.sel.next_button != null) {
+        Privates.sel.prev_button.addEventListener('click', () => {
+            this.slidePrev();
+        });
+    }
+
+    // Privates.sel.slider_wrap.addEventListener('touchstart', this.test);
+};
+const Reviews = new sliderReviews({
+    slider_wrap: '.slider-wrap',
+    slides: '.reviews-slide',
+    next_button: '.slider-control-next',
+    prev_button: '.slider-control-prev',
+});
+
+// ====================================================
+// Isotope
+// ====================================================
+
 function isotope() {
   $('.isotope-list').isotope({
     itemSelector: '.isotope-item',
@@ -118,7 +212,10 @@ function isotope() {
   });
 } 
 
+// ====================================================
 // Back to Top
+// ====================================================
+
 function goToTop() {
 
     var goToTop = $("#goToTop");
@@ -137,8 +234,10 @@ function goToTop() {
     });
 }
 
-
+// ====================================================
 // Inicializa funções ONLOAD
+// ====================================================
+
 $(document).ready(function(){
     sticky();
     navResponsive();
