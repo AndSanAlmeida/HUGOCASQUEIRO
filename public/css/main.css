@@ -1171,55 +1171,97 @@ p {
   min-width: 150px;
 }
 
-#about-us {
+#mission {
   margin: 5rem 0 3rem;
 }
 
-#about-us img {
+#mission p {
+  font-size: 16pt;
+  font-style: italic;
+}
+
+#mission img {
   padding-left: 100px;
   max-height: 300px;
 }
 
+/*#services {
+    background-color: #f2f2f2;
+    .services_item {
+        background-color: #FFF;
+        margin: 0 0 2em 0;
+        img {
+            height: 100%;
+        }
+        .services_item_info {
+            padding: 2em 4em;
+            .btn {
+                margin-right: 2em;
+            }
+        }
+        &:first-child {
+            margin-top: 4em;
+        }
+        &:last-child {
+            margin-bottom: 4em;
+        }
+    }
+}*/
+
 #services {
-  background-color: #f2f2f2;
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#services .services_item {
-  background-color: #FFF;
-  margin: 0 0 2em 0;
+#services .services {
+  position: relative;
+  padding: 10em 0;
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
 }
 
-#services .services_item img {
-  height: 100%;
+#services .services h1,
+#services .services h2,
+#services .services li {
+  color: white !important;
 }
 
-#services .services_item .services_item_info {
-  padding: 2em 4em;
+#services .services li {
+  font-size: 13pt;
+  line-height: 1.8;
 }
 
-#services .services_item .services_item_info .btn {
-  margin-right: 2em;
+#services .services .grid__item:nth-child(2) {
+  border: 1px solid rgba(237, 237, 237, 0.5);
 }
 
-#services .services_item:first-child {
-  margin-top: 4em;
+#services .services-item {
+  padding: 0 1em;
 }
 
-#services .services_item:last-child {
-  margin-bottom: 4em;
-}
-
-.reviews {
+#reviews .reviews {
   width: 100%;
   margin: 60px auto;
   box-sizing: border-box;
 }
 
-.reviews * {
+#reviews .reviews * {
   box-sizing: inherit;
 }
 
-.reviews-container {
+#reviews .reviews-title {
+  margin: 1em 0 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14pt;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#reviews .reviews-container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 10px;
@@ -1227,146 +1269,109 @@ p {
   overflow: hidden;
 }
 
-.reviews-list {
+#reviews .reviews-list {
   max-width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   transition: 0.3s ease-in-out;
   position: relative;
 }
 
-.reviews-item {
+#reviews .reviews-item {
   flex: 0 0 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.reviews-item-figure {
-  display: inline-block;
-  background-color: #fff;
+#reviews .reviews-item-message {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 2;
+  color: #4e4e4e;
+  padding: 0 5em;
+  margin-bottom: 2em;
 }
 
-.reviews-item-image {
-  max-width: 250px;
-  height: 200px;
-  margin-right: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.8;
-}
-
-.reviews-item-info {
+#reviews .reviews-item-info {
   margin-top: 10px;
 }
 
-.reviews-item-name {
+#reviews .reviews-item-figure {
+  display: inline-block;
+}
+
+#reviews .reviews-item-image {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#reviews .reviews-item-name {
   font-size: 16px;
   color: #262e34;
   font-weight: 600;
-  margin-bottom: 20px;
+  text-transform: uppercase;
   position: relative;
 }
 
-.reviews-item-name:before {
-  content: "";
-  width: 20%;
-  height: 2px;
-  background-color: #262e34;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-}
-
-.reviews-item-message {
-  font-size: 18px;
-  line-height: 1.3;
-  color: #4e4e4e;
-}
-
-.reviews-controllers {
+#reviews .reviews-controllers {
   text-align: right;
 }
 
-.reviews-controllers-button {
-  padding: 10px;
-  border: 1px solid #adadad;
+#reviews .reviews-controllers-button {
+  padding: 15px;
+  border: 1px solid #fff;
   background-color: transparent;
   cursor: pointer;
   outline: 0;
   opacity: 0.8;
-  transition: 0.2s ease-in-out;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
 }
 
-.reviews-controllers-button:first-child .reviews-controllers-icon {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.reviews-controllers-button:hover,
-.reviews-controllers-button:focus {
+#reviews .reviews-controllers-button:hover {
+  border: 1px solid #adadad;
   opacity: 1;
 }
 
-.reviews-controllers-button:active {
-  opacity: 0.6;
-}
-
-.reviews-controllers-icon {
+#reviews .reviews-controllers-icon {
   width: 20px;
   height: 20px;
   fill: #262e34;
 }
 
-@media screen and (max-width: 1060px) {
-  .reviews-item-image {
-    margin-right: 10px;
+@media screen and (max-width: 1024px) {
+  #mission img {
+    padding-left: 40px;
+    max-height: 400px;
   }
 
-  .reviews-item-info {
-    margin-top: 0;
+  #services .grid__item {
+    padding-top: 15px;
   }
 
-  .reviews-item-message {
+  #reviews .reviews-item-message {
     font-size: 15px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .reviews-container {
+@media screen and (max-width: 768px) {
+  #mission img {
+    padding-left: 0;
+  }
+
+  #reviews .reviews-container {
     padding: 0;
     margin: 0 10px;
-  }
-
-  .reviews-item {
-    flex: 0 0 100%;
-    margin: 0;
-  }
-
-  .reviews-item-image {
-    height: 165px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #about-us img {
-    padding-left: 0;
-    max-height: 400px;
-  }
-
-  #services .services_item {
-    margin: 0 0 2em;
-  }
-
-  #services .services_item .services_item_info {
-    padding: 2em 2em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #services .services_header {
-    margin: 3em 0;
-    padding: 0;
   }
 }
 

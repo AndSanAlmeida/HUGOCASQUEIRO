@@ -6,7 +6,7 @@ function sticky() {
     $(window).scroll(function() {
         var $nav = $('#nav');
 
-        $(this).scrollTop() > 640 ? (
+        $(this).scrollTop() > 300 ? (
             $nav.addClass("sticky"), 
             $nav.removeClass("navbar")
         ) : (
