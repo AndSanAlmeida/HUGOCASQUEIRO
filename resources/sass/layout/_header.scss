@@ -4,7 +4,20 @@
 
 #header {
 	.title {
+        position: relative;
+        display: inline-block;
 		color: white;
+
+        .hcG {
+            display: none;            
+        }
+
+        img {
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 80px;
+            height: 75px;
+        }
 	}
     #nav {
         padding: 0 4em;
@@ -30,13 +43,22 @@
         nav {
             float: right;
             .nav-links {
-                margin: 0;
+                display: contents;
                 li {
                     margin-left: 15px;
                     a {
                         text-decoration: none;
                         img {
                             vertical-align: middle;
+                            margin-bottom: 5px;
+                            -webkit-filter: grayscale(30%);
+                            filter: grayscale(30%);
+                            -webkit-transition: .3s ease-in-out;
+                            transition: .3s ease-in-out;
+                            &:hover {
+                                -webkit-filter: grayscale(0);
+                                filter: grayscale(0);
+                            }
                         }
                     }
                 }
@@ -53,13 +75,8 @@
         width: 100%;
         background-color: transparent;
         line-height: 5.5em;
-        h1 {
+        h1, a{
             color: #FFF;
-        }
-        nav {
-            a {
-                color: #FFF;
-            }
         }
     }
     .sticky {
@@ -67,15 +84,15 @@
         left: 0;
         position: fixed;
         width: 100%;
-        line-height: 2.5em;
         background-color: #FFF;
+        line-height: 3.5;
         color: #444;
         box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, 0.35);
         -webkit-animation: sticky 500ms; /* Safari 4.0 - 8.0 */
         -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
         animation: sticky 500ms;
         animation-direction: normal;
-        .title, nav a {
+        .title, a {
             color: #1E2832;
         }
     }

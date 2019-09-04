@@ -640,7 +640,20 @@ p {
 }
 
 #header .title {
+  position: relative;
+  display: inline-block;
   color: white;
+}
+
+#header .title .hcG {
+  display: none;
+}
+
+#header .title img {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 80px;
+  height: 75px;
 }
 
 #header #nav {
@@ -677,7 +690,7 @@ p {
 }
 
 #header #nav nav .nav-links {
-  margin: 0;
+  display: contents;
 }
 
 #header #nav nav .nav-links li {
@@ -690,6 +703,15 @@ p {
 
 #header #nav nav .nav-links li a img {
   vertical-align: middle;
+  margin-bottom: 5px;
+  -webkit-filter: grayscale(30%);
+  filter: grayscale(30%);
+  transition: 0.3s ease-in-out;
+}
+
+#header #nav nav .nav-links li a img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 #header #nav #nav-toggler {
@@ -705,11 +727,8 @@ p {
   line-height: 5.5em;
 }
 
-#header .navbar h1 {
-  color: #FFF;
-}
-
-#header .navbar nav a {
+#header .navbar h1,
+#header .navbar a {
   color: #FFF;
 }
 
@@ -718,8 +737,8 @@ p {
   left: 0;
   position: fixed;
   width: 100%;
-  line-height: 2.5em;
   background-color: #FFF;
+  line-height: 3.5;
   color: #444;
   box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, 0.35);
   -webkit-animation: sticky 500ms;
@@ -731,7 +750,7 @@ p {
 }
 
 #header .sticky .title,
-#header .sticky nav a {
+#header .sticky a {
   color: #1E2832;
 }
 
@@ -1093,7 +1112,7 @@ p {
   opacity: 0;
   visibility: hidden;
   z-index: 0;
-  min-height: 40em;
+  min-height: 42em;
   height: 75vh;
   background-attachment: fixed;
   background-position: center;
@@ -1148,17 +1167,38 @@ p {
 }
 
 #carousel .carousel-dots li {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.3);
   display: inline-block;
-  border-radius: 75px;
   cursor: pointer;
+  border: 3px solid white;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
 }
 
 #carousel .carousel-dots li.active {
   background-color: white;
+}
+
+#carousel .carousel-title {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 2;
+}
+
+#carousel .carousel-title h2 {
+  font-weight: 800;
+  font-size: 2.75em;
+  padding-bottom: 0;
+  margin: 0 0 0.5em 0;
+}
+
+#carousel .carousel-title h2:after {
+  display: none;
 }
 
 #carousel a {
@@ -1172,41 +1212,24 @@ p {
 }
 
 #mission {
-  margin: 5rem 0 3rem;
+  margin: 8rem 0;
 }
 
-#mission p {
-  font-size: 16pt;
+#mission .mission-slogan {
+  padding: 40px;
+  margin: auto 0;
+}
+
+#mission .mission-slogan p {
+  font-size: 19pt;
   font-style: italic;
 }
 
-#mission img {
-  padding-left: 100px;
-  max-height: 300px;
+#mission .mission-photo img {
+  padding: 0 100px;
+  height: 600px;
+  max-height: 600px;
 }
-
-/*#services {
-    background-color: #f2f2f2;
-    .services_item {
-        background-color: #FFF;
-        margin: 0 0 2em 0;
-        img {
-            height: 100%;
-        }
-        .services_item_info {
-            padding: 2em 4em;
-            .btn {
-                margin-right: 2em;
-            }
-        }
-        &:first-child {
-            margin-top: 4em;
-        }
-        &:last-child {
-            margin-bottom: 4em;
-        }
-    }
-}*/
 
 #services {
   position: relative;
@@ -1238,7 +1261,7 @@ p {
 }
 
 #services .services-item {
-  padding: 0 1em;
+  padding: 1em;
 }
 
 #reviews .reviews {
@@ -1365,6 +1388,11 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  #carousel .carousel-title h2 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+
   #mission img {
     padding-left: 0;
   }

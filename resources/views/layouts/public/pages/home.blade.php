@@ -5,94 +5,39 @@
 @section('content')
 
 <div id="carousel">
-    <div class="flexbox">
-        <div class="flexbox_item">
-            <div class="logo_home_image">
-                <img class="img_responsive" src="{!! asset('img/logo.svg') !!}" alt="Logo">
-            </div>
-        </div>
-    </div>
     <ul class="carousel-list">
-        <li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');"></li>
-        <li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');"></li>
-        <li style="background-image: url('{!! asset('img/slide_03.jpg') !!}');"></li>
+        <li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
+            <div class="carousel-title">
+                <h2><a href="#">Lorem ipsum.</a></h2>
+            </div>
+        </li>
+        <li style="background-image: url('{!! asset('img/slide_02.jpg') !!}');">
+            <div class="carousel-title">
+                <h2><a href="#">Lorem ipsum dolor.</a></h2>
+            </div>
+        </li>
     </ul>
     <div class="carousel-dots"></div>
 </div>
 
 <div id="mission" class="style-1">
-    <div class="container">
-        <div class="grid">
-            <div class="grid__item grid__item--md-span-4 grid__item--sm-span-12">
-                <h2 class="header_underline">Our Mission</h2>
-                <p> Our mission is to produce the highest quality work for every client, on every project.</p>
-                <a class="btn btn-primary align-right" href="#">More about us</a>
-            </div>
-            <div class="grid__item grid__item--md-span-8 grid__item--sm-span-12">
-                <img class="img_responsive" src="{!! asset('img/our_mission.jpg') !!}" alt="Our Mission">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--<div class="style-2">
-    <div class="container">
-
-        <section id="services">
-
+    <div class="mission">
+        <div class="container">
             <div class="grid">
-                <div class="grid__item grid__item--sm-span-12">
-                    <div class="services_item">
-                        <div class="grid">
-                            <div class="grid__item grid__item--md-span-5">
-                                <img class="img_responsive" src="{!! asset('img/services.jpg') !!}" alt="Firewood"></img>
-                            </div>
-                            <div class="grid__item grid__item--md-span-7">
-                                <div class="services_item_info">
-                                    <h3 class="header_underline">Serviço</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <a class="btn btn-primary align-left" href="#">See more</a>
-                                </div>                                
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="services_item">
-                        <div class="grid">                            
-                            <div class="grid__item grid__item--md-span-7">
-                                <div class="services_item_info">
-                                    <h3 class="header_underline">Serviço</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <a class="btn btn-primary align-left" href="#">See more</a>
-                                </div>                                
-                            </div>
-                            <div class="grid__item grid__item--md-span-5">
-                                <img class="img_responsive" src="{!! asset('img/services.jpg') !!}" alt="Firewood"></img>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="services_item">
-                        <div class="grid">
-                            <div class="grid__item grid__item--md-span-5">
-                                <img class="img_responsive" src="{!! asset('img/services.jpg') !!}" alt="Firewood"></img>
-                            </div>
-                            <div class="grid__item grid__item--md-span-7">
-                                <div class="services_item_info">
-                                    <h3 class="header_underline">Serviço</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <a class="btn btn-primary align-left" href="#">See more</a>
-                                </div>                                
-                            </div>
-                        </div>
-                    </div>                   
+                <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-slogan">
+                    <h1 class="header_underline">Our Mission</h1>
+                    <p> Our mission is to produce the highest quality work for every client, on every project.</p>
+                    <a class="btn btn-primary align-right" href="#">More about us</a>
+                </div>
+                <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-photo">
+                    <img class="img_responsive" src="{!! asset('img/mission.jpg') !!}" alt="Our Mission">
                 </div>
             </div>
+        </div>
+    </div>    
+</div>
 
-        </section>
-
-    </div>
-</div>-->
-
-<div id="services" style="background-image: url('{!! asset('img/services2.jpg') !!}');">
+<div id="services" style="background-image: url('{!! asset('img/services.jpg') !!}');">
     <div class="grey-fade-over" style="opacity: 0.8; z-index: 1;"></div>
     <div class="services">
         <div class="container">

@@ -25,7 +25,7 @@
             z-index:0;
 
             // NEEDED FOR PARALLAX and BG IMAGE => Frontend
-            min-height: 40em; 
+            min-height: 42em; 
             height: 75vh;
 
             // PARALLAX SCROLLING EFFECT
@@ -75,17 +75,33 @@
         line-height: 0;
         z-index: 2;
         li {
-            width: 15px;
-            height: 15px;
+            width: 25px;
+            height: 25px;
             margin: 10px;
-            background-color: rgba(255, 255, 255, 0.6);
-            display: inline-block;
-            border-radius: 75px;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: inline-block;            
             cursor: pointer;
-            &.active {
+            border: 3px solid white;
+            @include border-radius(75px);
+            &.active {                
                 background-color: rgba(255, 255, 255, 1);
             }
         } 
+    }
+    .carousel-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 2;
+        h2 {
+            font-weight: 800;
+            font-size: 2.75em;
+            padding-bottom: 0;
+            margin: 0 0 0.5em 0;
+            &:after {
+                display: none;                    
+            }
+        }
     }
     a {
         color: #fff;
@@ -99,39 +115,27 @@
 }
 
 #mission {
-    margin: 5rem 0 3rem;
-    p {
-        font-size: 16pt;
-        font-style: italic;
-    }
-    img {
-        padding-left: 100px;
-        max-height: 300px;
-    }
-}
+    margin: 8rem 0;
 
-/*#services {
-    background-color: #f2f2f2;
-    .services_item {
-        background-color: #FFF;
-        margin: 0 0 2em 0;
-        img {
-            height: 100%;
-        }
-        .services_item_info {
-            padding: 2em 4em;
-            .btn {
-                margin-right: 2em;
+    .mission {
+        &-slogan {
+            padding: 40px;
+            margin: auto 0;
+            p {
+                font-size: 19pt;
+                font-style: italic;
             }
         }
-        &:first-child {
-            margin-top: 4em;
+
+        &-photo {
+            img {
+                padding: 0 100px;
+                height: 600px;
+                max-height: 600px;
+            }
         }
-        &:last-child {
-            margin-bottom: 4em;
-        }
-    }
-}*/
+    }    
+}
 
 #services {
     position: relative;
@@ -159,7 +163,7 @@
         }
         
         &-item {
-            padding: 0 1em;
+            padding: 1em;
         }
     }
 } 
@@ -307,6 +311,15 @@
 }
 
 @include medium {
+
+    #carousel {
+        .carousel-title {
+            h2 {
+                font-size: 1.75em;
+                line-height: 1.25em;
+            }
+        }
+    }
 
     #mission {
         img {

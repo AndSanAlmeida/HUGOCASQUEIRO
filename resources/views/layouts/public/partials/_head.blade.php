@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- FAVICON -->
-        <!--<link rel="shortcut icon" type="image/png" href="{!! asset('img/favicon.png') !!}"/>-->
+        <link rel="shortcut icon" type="image/png" href="{!! asset('img/hcG.png') !!}"/>
 
         <!-- STYLES LINKS -->        
         <link rel="stylesheet" type="text/css" href="{!! asset('css/main.css') !!}">

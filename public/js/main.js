@@ -5,11 +5,17 @@
 function sticky() {
     $(window).scroll(function() {
         var $nav = $('#nav');
+        var $hcW = $('.hcW');
+        var $hcG = $('.hcG');
 
         $(this).scrollTop() > 300 ? (
+            $hcW.hide(),
+            $hcG.show(),
             $nav.addClass("sticky"), 
             $nav.removeClass("navbar")
         ) : (
+            $hcW.show(),
+            $hcG.hide(),
             $nav.removeClass("sticky"), 
             $nav.addClass("navbar")
         )

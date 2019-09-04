@@ -1,6 +1,10 @@
 <header id="header">
 	<div id="nav" class="navbar">
-		<h1><a class="title" href="{{ url('/')}}">HC | Carpintaria<span> - Marcenaria</span></a></h1>
+		<a class="title" href="{{ url('/')}}">
+			<img class="hcW" src="{!! asset('img/hcW.png') !!}" alt="Hugo Casqueiro">
+			<img class="hcG" src="{!! asset('img/hcG.png') !!}" alt="Hugo Casqueiro">
+			<h1> | Carpintaria <span>- Marcenaria</span></h1>
+		</a>
 	    <nav>
 	        <ul class="nav-links">
 	            <li><a href="#" title="Português"><img src="{!! asset('img/flags/portugal.svg') !!}" alt="Portugal" width="40" height="40"></a></li>       
