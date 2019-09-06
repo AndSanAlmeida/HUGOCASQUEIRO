@@ -1,24 +1,3 @@
-<div id="budget">
-    <div class="parallax-budget" style="background-image: url('{!! asset('img/budget.jpg') !!}');">
-        <div class="flexbox">
-            <div class="flexbox_item">
-                <div class="grey-fade-over"></div>
-                    <div class="container">
-                        <div class="grid budget_info">
-                            <div class="grid__item grid__item--lg-span-8">
-                                <h1>Peça já o seu Orçamento.</h1>
-                            </div>
-                            <div class="grid__item grid__item--lg-span-4">
-                                <a class="btn-budget" href="#" title="Entrar em contacto">Entrar em contacto</a>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
-        </div>  
-    </div>  
-</div>
-
 <div class="style-3">
     <div id="goToTop">
         <i class="fas fa-chevron-circle-up fa-2x" title="Go To Top"></i>
@@ -47,17 +26,17 @@
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
                     <h3>Hugo Casqueiro</h3>
                     <ul>
-                        <hr class="dotted">
+                        <hr class="dotted"></hr>
                         <li><a href="mailto:hugocasqueiro@teste.com?Subject=hugocasquerio.pt%20|%20MAIL" target="_top" title="Enviar Email"><i class="fas fa-envelope contrast-color"></i>&nbsp;hugocasquerio@teste.com</a></li>
                         <li><i class="fas fa-phone contrast-color"></i>&nbsp;+351 919 123 654</li>
-                        <li><i class="fas fa-address-card contrast-color"></i>&nbsp;Mira D'Aire</li>
+                        <li><i class="fas fa-address-card contrast-color"></i>&nbsp;Mira De Aire</li>
                         <hr class="dotted">
                     </ul>
                 </div>
             </div>
-            <div class="grid footer_footer">
+            <div class="grid footer_footer align-center">
                 <div class="grid__item grid__item--md-span-12">
-                    <span>Copyright © <?php echo date("Y"); ?> Hugo Casqueiro by <a href="https://www.linkedin.com/in/andsanalmeida/" target="_blank" title="André Almeida - LinkedIn"><b class="contrast-color">André Almeida</b></a></span>
+                    <span>Copyright <i class="far fa-copyright contrast-color"></i> <?php echo date("Y"); ?> Hugo Casqueiro by <a href="https://www.linkedin.com/in/andsanalmeida/" target="_blank" title="André Almeida - LinkedIn"><b class="contrast-color">André Almeida</b></a></span>
                 </div>
             </div>
         </footer>

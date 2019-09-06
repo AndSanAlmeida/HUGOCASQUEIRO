@@ -70,7 +70,6 @@
         margin: 0;
         padding: 0;
         position: absolute;
-        text-align: center;
         width: 100%;
         line-height: 0;
         z-index: 2;
@@ -132,7 +131,7 @@
             img {                
                 height: 600px;
                 max-height: 600px;
-                @include box-shadow(0px, 0px, 50px, hsla(0, 0%, 0%, 0.8));
+                @include box-shadow(0px, 0px, 25px, hsla(0, 0%, 0%, 0.6));
             }
         }
     }    
@@ -186,7 +185,6 @@
             font-size: 14pt;
             letter-spacing: 4px;
             text-transform: uppercase;
-            text-align: center;
         }
 
         &-container {
@@ -203,7 +201,6 @@
 
         &-list {
             max-width: 100%;
-            text-align: center;
             display: flex;
             align-items: center;
 
@@ -246,13 +243,12 @@
                 color: #262e34;
                 font-weight: 600;
                 text-transform: uppercase;
-
+                letter-spacing: 1px;
                 position: relative;
             }
         }
 
         &-controllers {
-            text-align: right;
 
             &-button {
                 padding: 15px;
@@ -269,7 +265,7 @@
                 @include transition(all, 200ms, ease-in-out);
 
                 &:hover{
-                    border: 1px solid #adadad;
+                    border: 1px solid $green;
                     opacity: 1;
                 }
             }

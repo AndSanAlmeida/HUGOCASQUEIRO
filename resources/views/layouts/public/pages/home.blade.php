@@ -17,7 +17,7 @@
             </div>
         </li>
     </ul>
-    <div class="carousel-dots"></div>
+    <div class="carousel-dots align-center"></div>
 </div>
 
 <div id="mission" class="style-1">
@@ -79,7 +79,7 @@
 <div id="reviews" class="style-1">
     <div class="container">
 
-        <div class="reviews">
+        <div class="reviews align-center">
 
             <section class="reviews-container reviews-slider">
 
@@ -143,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="reviews-controllers">
+                <div class="reviews-controllers align-right">
                     <button tabindex="0" class="reviews-controllers-button slider-control-prev">
                         <i class="fas fa-long-arrow-alt-left fa-2x"></i>
                     </button>
@@ -156,6 +156,27 @@
         </div>
 
     </div>
+</div>
+
+<div id="budget">
+    <div class="parallax-budget" style="background-image: url('{!! asset('img/budget.jpg') !!}');">
+        <div class="flexbox">
+            <div class="flexbox_item">
+                <div class="grey-fade-over"></div>
+                    <div class="container">
+                        <div class="grid budget_info align-center">
+                            <div class="grid__item grid__item--lg-span-8">
+                                <h1>Peça já o seu Orçamento.</h1>
+                            </div>
+                            <div class="grid__item grid__item--lg-span-4">
+                                <a class="btn-budget" href="#" title="Entrar em contacto">Entrar em contacto</a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>  
+    </div>  
 </div>
 
 @stop

@@ -83,5 +83,187 @@
 
 #members {
     position: relative;
-    height: 500px;
+    
+    .members {   
+        padding: 150px 0; 
+
+        &-title, ,&-subtitle, &-text, &-profile, &-profile-socials {
+            font-family: $poppins;
+        }        
+
+        &-title {            
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: $green;
+        }
+
+        &-subtitle {
+            text-transform: capitalize;
+        }
+
+        &-text {
+            padding: 0 15%;
+            font-size: 16pt;
+            letter-spacing: 1px;  
+            color: $mid-grey;          
+        }
+
+        .grid {
+            margin-top: 80px;
+        }
+
+        .grid__item {
+            padding: 0 20px;
+        }
+
+        &-overlay {
+            position: absolute;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            left: 20px;
+            top: 20px;
+            z-index: 1;
+            display: block;
+            opacity: 0;
+            background-color: #fff;
+            @include border-radius(50%);
+            @include transform(scale(1.4));
+            @include transition(all, 250ms, linear);
+        }
+
+        &-profile {
+            position: relative;
+            width: 100%;
+            display: block;
+
+            &:hover .members-overlay {
+                opacity: 1; 
+                @include transform(scale(1)); 
+            }
+
+            img {
+                width: 100%;
+                display: block;
+                vertical-align: middle;
+                @include border-radius(50%);
+            }
+
+            h6 {
+                position: absolute;
+                top: 50%;
+                margin-top: -20px;
+                left: 0;
+                width: 100%;
+                font-size: 18px;
+                letter-spacing: 1px;
+                z-index: 2;
+                opacity: 0;
+                @include transition(all, 200ms, linear);
+            }
+
+            p {
+                position: absolute;
+                color: $green;
+                top: 50%;
+                margin-top: -48px;
+                left: 0;
+                width: 100%;
+                z-index: 2;
+                text-transform: lowercase;
+                font-family: "Times New Roman";
+                font-size: 16px;
+                line-height: 24px;
+                font-style: italic;
+                letter-spacing: 1px;
+                opacity: 0;
+                @include transition(all, 200ms, linear);
+            }
+
+            &:hover {
+                h6, p, .members-profile-socials {
+                    opacity: 1;
+                    -webkit-transition-delay: 0.2s;
+                    transition-delay: 0.2s;
+                }
+            }
+
+            &-socials {
+                position: absolute;
+                top: 50%;
+                margin: 20px auto 0;
+                left: 0;
+                width: 100%;
+                z-index: 2;
+                display: block;
+                padding-left: 0;
+                opacity: 0;
+                @include transition(all, 200ms, linear);
+
+                .fb {
+                    color: $facebook;
+                }
+
+                .in {
+                    color: $instagram;
+                }
+
+                .tw {
+                    color: $twitter;
+                }
+
+                li {
+                    margin-right: 5px;
+                    display: inline;
+
+                    i {
+                        font-size: 8px;
+                        vertical-align: middle;
+                        margin-right: 4px;
+                    }
+                    
+                    a {
+                        font-size: 12pt;
+                        @include transition(all, 200ms, ease-in-out);
+                    }
+
+                    .fbh:hover {
+                        color: $facebook;
+                    }  
+
+                    .inh:hover {
+                        color: $instagram;
+                    }  
+
+                    .twh:hover {
+                        color: $twitter;
+                    } 
+                }
+            }
+        }        
+    }
+}
+
+@include medium {
+
+    #aboutUs {
+        .aboutUs {
+            .container {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    #members {
+        .members {
+
+            &-text {
+                padding: 0;
+            }
+
+            .grid__item {
+                padding: 60px 20px;
+            }           
+        }
+    }
+
 }
