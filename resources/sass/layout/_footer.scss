@@ -2,25 +2,6 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-#goToTop {
-    position: fixed;
-    color: $dark-grey;
-    bottom: 15px;
-    right: 15px;
-    cursor: pointer;
-    &:hover {
-        i {
-            color: $mid-grey;
-            top: 0;
-            opacity: 1;
-        }
-    }
-    i {
-        position: relative;
-        @include transition(all, 100ms, ease-in-out);
-    }
-}
-
 #budget {
     .parallax-budget { 
         position: relative;
@@ -41,15 +22,25 @@
 } 
 
 #footer {
-    color: white;
+    
+    h3, li, a, span {
+        color: white;
+    }
+
     h5 {
         color: #b6b6b6;
         letter-spacing: 1px;
     }
+
+    hr.dotted {
+        border-top: 3px dashed white;
+        border-bottom: 0;
+    }
+
     .footer_header {
         padding: 5em 0 3em;
         .footer_header_item{
-            padding-left:3em;
+            padding: 0 3em;
         }
     }
     .footer_footer {
@@ -71,7 +62,6 @@
         }
     } 
     a {
-        color: white;
         font-size: 10pt;
         letter-spacing: 1px;
         line-height: 2em;
@@ -91,15 +81,22 @@
             text-align: center;
         }
     } 
+
     #footer {
         .footer_header {
             .footer_header_item{
-                padding-left:2em;
+                padding:0;
             }
         }
     }
 }
 
 @include medium {
-
+    #footer {
+        .footer_header {
+            .footer_header_item{
+                padding:0 2em;
+            }
+        }
+    }
 }

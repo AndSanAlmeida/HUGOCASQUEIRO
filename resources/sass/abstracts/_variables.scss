@@ -42,6 +42,9 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// @type Color
 $brown: rgb(177, 75, 0) !default;
 
+///Green
+$green: #6dc234;
+
 
 
 
@@ -79,3 +82,10 @@ $large: 1024px;
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+
+// Socials Colors
+// ====================================================================
+$facebook: #3b5999;
+$instagram: #e4405f;
+$twitter: #55acee;

@@ -8,7 +8,7 @@
 
         height: 550px; 
         background-attachment: fixed;
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -32,13 +32,13 @@
                     padding-bottom: 2px;
                     @include transition(all, 100ms, ease-in-out);
                     &:hover {
-                        border-color: $dark-grey;
+                        border-color: $green;
                         padding-bottom: 0px;
                     }               
                 }
             } 
             .active {
-                border-bottom: 2px solid $dark-grey;      
+                border-bottom: 2px solid $green;      
             }  
         }
         .isotope-list {
