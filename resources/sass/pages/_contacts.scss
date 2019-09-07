@@ -79,6 +79,10 @@
 	.contactDetails {
 		padding: 20px 0 50px;
 
+        .container {
+            padding: 0 105px;
+        }
+
 		hr.dotted {
 	        border-top: 1px dashed $light-grey;
 	        border-bottom: 0;

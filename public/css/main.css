@@ -1863,6 +1863,10 @@ p {
   padding: 20px 0 50px;
 }
 
+#contactDetails .contactDetails .container {
+  padding: 0 105px;
+}
+
 #contactDetails .contactDetails hr.dotted {
   border-top: 1px dashed #ededed;
   border-bottom: 0;
