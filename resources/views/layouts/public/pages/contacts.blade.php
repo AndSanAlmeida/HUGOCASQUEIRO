@@ -49,7 +49,7 @@
 
 			<hr class="dotted"></hr>
 
-			<div class="grid contactDetails-list align-center">
+			<div class="grid align-center">
 				<div class="grid__item grid__item--md-span-4 grid__item--sm-span-12">
 					<i class="fas fa-phone-alt fa-3x contrast-color"></i>
 					<h5 class="contactDetails-info">+351 249533780</h5>

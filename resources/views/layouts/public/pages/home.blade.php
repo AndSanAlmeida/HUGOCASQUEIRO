@@ -93,7 +93,7 @@
                                 nemo iusto quae nobis nam est fugit beatae."
                             </p>
                             <div class="reviews-item-figure">
-                                <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                <img src="{!! asset('img/profiles/p1.jpg') !!}"
                                     alt="John" class="reviews-item-image" width="70" height="70">
                                 <div class="reviews-item-name">John</div>
                             </div>
@@ -107,7 +107,7 @@
                                 nemo iusto quae nobis nam est fugit beatae."
                             </p>
                             <div class="reviews-item-figure">
-                                <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                <img src="{!! asset('img/profiles/p2.jpg') !!}"
                                     alt="John" class="reviews-item-image" width="70" height="70">
                                 <div class="reviews-item-name">John</div>
                             </div>
@@ -121,7 +121,7 @@
                                 nemo iusto quae nobis nam est fugit beatae."
                             </p>
                             <div class="reviews-item-figure">
-                                <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                <img src="{!! asset('img/profiles/p3.jpg') !!}"
                                     alt="John" class="reviews-item-image" width="70" height="70">
                                 <div class="reviews-item-name">John</div>
                             </div>
@@ -135,7 +135,7 @@
                                 nemo iusto quae nobis nam est fugit beatae."
                             </p>
                             <div class="reviews-item-figure">
-                                <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                <img src="{!! asset('img/profiles/p1.jpg') !!}"
                                     alt="John" class="reviews-item-image" width="70" height="70">
                                 <div class="reviews-item-name">John</div>
                             </div>

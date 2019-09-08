@@ -1677,8 +1677,11 @@ p {
   background-size: cover;
 }
 
+#portfolio #isotope {
+  margin: 7em 0;
+}
+
 #portfolio #isotope .isotope-sorters ul {
-  margin: 4em 0 2em;
   padding: 0;
 }
 
@@ -1863,17 +1866,13 @@ p {
   padding: 20px 0 50px;
 }
 
-#contactDetails .contactDetails .container {
-  padding: 0 105px;
-}
-
 #contactDetails .contactDetails hr.dotted {
   border-top: 1px dashed #ededed;
   border-bottom: 0;
-  margin: 15px 0;
+  margin: 15px 90px;
 }
 
-#contactDetails .contactDetails-list {
+#contactDetails .contactDetails .grid__item {
   padding: 40px 0;
 }
 
@@ -1888,6 +1887,16 @@ p {
   width: 100%;
   height: 100%;
   min-height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  #contactForm .contactForm .container {
+    padding: 0 20px;
+  }
+
+  #contactDetails .contactDetails hr.dotted {
+    margin: 15px;
+  }
 }
 
 .grid {

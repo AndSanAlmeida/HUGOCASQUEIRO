@@ -17,106 +17,104 @@
         </div>
     </div>
 
-    <div class="style-1">
+    <div id="isotope">
         <div class="container">
-            <div id="isotope">
-                <div class="isotope-sorters">
-                    <ul class="align-center">
-                        <li data-filter="*" class="active">All</li>
-                        <li data-filter=".running">Running</li>
-                        <li data-filter=".gym">Gym</li>
-                        <li data-filter=".swimming">Swimming</li>
-                    </ul>
-                </div>
-                <div class="isotope-list">
-                    <div class="isotope-item running">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">Design, Rústico</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item gym">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Porta Rustica</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>                                           
-                    </div> 
-                    <div class="isotope-item swimming">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item running">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Porta Rustica</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item gym">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Porta Rustica</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item swimming">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div>  
-                    <div class="isotope-item running">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item gym">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Porta Rustica</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item swimming">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item running">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Porta Rustica</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item gym">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Porta Rustica</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div> 
-                    <div class="isotope-item swimming">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">31/07/2019</p>     
-                        </div>
-                    </div>                        
-                </div>
+            <div class="isotope-sorters">
+                <ul class="align-center">
+                    <li data-filter="*" class="active">Todos</li>
+                    <li data-filter=".interior">Interior</li>
+                    <li data-filter=".exterior">Exterior</li>
+                    <li data-filter=".cozinha">Cozinha</li>
+                </ul>
             </div>
-        </div>      
-    </div>
+            <div class="isotope-list">
+                <div class="isotope-item interior">
+                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Caixa de Joias</h5>
+                        <p class="on-center align-center">Design, Rústico</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item exterior">
+                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Porta Rustica</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>                                           
+                </div> 
+                <div class="isotope-item cozinha">
+                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Caixa de Joias</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item interior">
+                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Porta Rustica</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item exterior">
+                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Porta Rustica</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item cozinha">
+                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Caixa de Joias</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div>  
+                <div class="isotope-item interior">
+                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Caixa de Joias</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item exterior">
+                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Porta Rustica</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item cozinha">
+                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Caixa de Joias</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item interior">
+                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Porta Rustica</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item exterior">
+                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Porta Rustica</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div> 
+                <div class="isotope-item cozinha">
+                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    <div class="item-mask">
+                        <h5 class="on-center align-center">Caixa de Joias</h5>
+                        <p class="on-center align-center">31/07/2019</p>     
+                    </div>
+                </div>                        
+            </div>
+        </div>  
+    </div> 
 </div>
 
 <div id="budget">
