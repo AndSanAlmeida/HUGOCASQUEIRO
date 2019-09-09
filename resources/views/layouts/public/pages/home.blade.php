@@ -27,7 +27,7 @@
                 <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-slogan">
                     <h1 class="header_underline">Our Mission</h1>
                     <p> Our mission is to produce the highest quality work for every client, on every project.</p>
-                    <a class="btn-static align-right" href="#" title="More about us">More about us</a>
+                    <a class="btn-static align-right" href="{{ url('/aboutUs') }}" title="More about us">More about us</a>
                 </div>
                 <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-photo">
                     <img class="img_responsive" src="{!! asset('img/mission.jpg') !!}" alt="Our Mission">
@@ -169,7 +169,7 @@
                                 <h1>Peça já o seu Orçamento.</h1>
                             </div>
                             <div class="grid__item grid__item--lg-span-4">
-                                <a class="btn-budget" href="#" title="Entrar em contacto">Entrar em contacto</a>
+                                <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
                             </div>
                         </div>
                     </div>                    

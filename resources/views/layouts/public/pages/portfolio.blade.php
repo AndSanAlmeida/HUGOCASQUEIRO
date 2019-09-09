@@ -128,7 +128,7 @@
                                 <h1>Peça já o seu Orçamento.</h1>
                             </div>
                             <div class="grid__item grid__item--lg-span-4">
-                                <a class="btn-budget" href="#" title="Entrar em contacto">Entrar em contacto</a>
+                                <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
                             </div>
                         </div>
                     </div>                    

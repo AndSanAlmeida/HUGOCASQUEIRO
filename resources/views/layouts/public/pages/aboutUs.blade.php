@@ -17,7 +17,7 @@
                         <li><i class="fas fa-circle in"></i><a href="#" class="inh" title="Instagram">In</a></li>
                         <li><i class="fas fa-circle tw"></i><a href="#" class="twh" title="Twitter">Tw</a></li>
                     </ul>
-                    <a class="btn" href="#" title="Ver Portfólio">Ver Portfólio</a>
+                    <a class="btn" href="{{ url('/portfolio') }}" title="Ver Portfólio">Ver Portfólio</a>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                                 <h1>Peça já o seu Orçamento.</h1>
                             </div>
                             <div class="grid__item grid__item--lg-span-4">
-                                <a class="btn-budget" href="#" title="Entrar em contacto">Entrar em contacto</a>
+                                <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
                             </div>
                         </div>
                     </div>                    

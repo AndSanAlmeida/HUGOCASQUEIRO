@@ -8,11 +8,11 @@
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
                     <h5 class="header_underline">Páginas</h5>
                     <ul>
-                        <li><a href="#" title="Início">Início</a></li>
-                        <li><a href="#" title="Sobre Nós">Sobre Nós</a></li>
-                        <li><a href="#" title="Portfólio">Portfólio</a></li>  
+                        <li><a href="{{ url('/home') }}" title="Início">Início</a></li>
+                        <li><a href="{{ url('/aboutUs') }}" title="Sobre Nós">Sobre Nós</a></li>
+                        <li><a href="{{ url('/portfolio') }}" title="Portfólio">Portfólio</a></li>  
                         <li><a href="#" title="Catálogo" target="_blank">Catálogo</a></li>                      
-                        <li><a href="#" title="Contactos">Contactos</a></li>
+                        <li><a href="{{ url('/contacts') }}" title="Contactos">Contactos</a></li>
                     </ul>
                 </div>
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
