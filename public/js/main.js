@@ -200,15 +200,26 @@ const Reviews = new sliderReviews({
 // ====================================================
 
 function isotope() {
-  $('.isotope-list').isotope({
-    itemSelector: '.isotope-item',
-    filter: "*"
+
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.grid-sizer'
+    }
   });
+  
+
+  var $grid = $('.isotope-list').isotope({
+        itemSelector: '.isotope-item',
+        filter: "*"
+      });
+  
 
   $('.isotope-sorters li').click(function(){
     var selector = $(this).attr('data-filter');
     
-    $('.isotope-list').isotope({
+    $grid.isotope({
       filter: selector,
     })
     
@@ -216,6 +227,12 @@ function isotope() {
     $('.isotope-sorters li.active').removeClass('active');
     $(this).addClass('active');
   });
+
+
+  // layout Isotope after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });  
 } 
 
 // ====================================================
