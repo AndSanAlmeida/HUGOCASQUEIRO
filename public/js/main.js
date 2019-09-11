@@ -201,15 +201,6 @@ const Reviews = new sliderReviews({
 
 function isotope() {
 
-  var $grid = $('.grid').isotope({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    masonry: {
-      columnWidth: '.grid-sizer'
-    }
-  });
-  
-
   var $grid = $('.isotope-list').isotope({
         itemSelector: '.isotope-item',
         filter: "*"
