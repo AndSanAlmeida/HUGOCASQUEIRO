@@ -42,12 +42,11 @@
             }  
         }
         .isotope-list {
+            margin: 0 auto;
             overflow:hidden;
         }
         .isotope-item {
-            margin: 15px;
             width: calc(50% - 30px);
-            display: inline-block;
             img {
                 border-radius: .25rem;
             }

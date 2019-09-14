@@ -1711,13 +1711,12 @@ p {
 }
 
 #portfolio #isotope .isotope-list {
+  margin: 0 auto;
   overflow: hidden;
 }
 
 #portfolio #isotope .isotope-item {
-  margin: 15px;
   width: calc(50% - 30px);
-  display: inline-block;
 }
 
 #portfolio #isotope .isotope-item img {

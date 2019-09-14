@@ -203,7 +203,14 @@ function isotope() {
 
   var $grid = $('.isotope-list').isotope({
         itemSelector: '.isotope-item',
-        filter: "*"
+        filter: '*',
+        transitionDuration: '0.8s',
+        masonry: {
+            columnWidth: '.isotope-item',
+            fitWidth: true,
+            horizontalOrder: true,
+            gutter: 15
+        }
       });
   
 
@@ -221,9 +228,9 @@ function isotope() {
 
 
   // layout Isotope after each image loads
-  $grid.imagesLoaded().progress( function() {
+  /*$grid.imagesLoaded().progress( function() {
     $grid.isotope('layout');
-  });  
+  });  */
 } 
 
 // ====================================================
