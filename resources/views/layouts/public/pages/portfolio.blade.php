@@ -34,90 +34,100 @@
             </div>
             <div class="isotope-list">
                 <div class="isotope-item interior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="My caption">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
                         <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}">           
-                        <div class="item-mask">
-                            <h5 class="on-center align-center">Caixa de Joias</h5>
-                            <p class="on-center align-center">Design, Rústico</p>     
-                        </div>
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Caixa de Joias</h5>
+                        <p class="align-center">Design, Rústico</p>                       
                     </a>                     
                 </div> 
                 <div class="isotope-item exterior">
-                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Porta Rustica</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>                                           
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Porta Rustica</h5>
+                        <p class="align-center">Design, Rústico</p>                                                
+                    </a>
                 </div> 
                 <div class="isotope-item cozinha">
-                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Caixa de Joias</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Caixa de Joias</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item interior">
-                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Porta Rustica</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Porta Rustica</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item exterior">
-                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Porta Rustica</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Porta Rustica</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item cozinha">
-                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Caixa de Joias</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Caixa de Joias</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div>  
                 <div class="isotope-item interior">
-                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Caixa de Joias</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Caixa de Joias</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item exterior">
-                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Porta Rustica</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Porta Rustica</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item cozinha">
-                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Caixa de Joias</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Caixa de Joias</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item interior">
-                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Porta Rustica</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Porta Rustica</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item exterior">
-                    <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Porta Rustica</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Porta Rustica</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div> 
                 <div class="isotope-item cozinha">
-                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Caixa de Joias</h5>
-                        <p class="on-center align-center">31/07/2019</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                        <div class="isotope-overlay"></div>
+                        <h5 class="align-center">Caixa de Joias</h5>
+                        <p class="align-center">Design, Rústico</p>     
+                    </a>
                 </div>                     
             </div>
         </div>  
@@ -125,14 +135,13 @@
 
     <!-- HIDE GALLERIES -->
     <div class="hide">
-        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
-        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
-        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
-        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
-        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
-        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
+        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
+        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
+        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
+        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
+        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
     </div>
-
 
 </div>
 
