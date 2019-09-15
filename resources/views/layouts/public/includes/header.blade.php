@@ -1,7 +1,7 @@
 <header id="header">
 	<div id="nav" class="navbar">
 		<a class="title" href="{{ url('/')}}" title="Início">
-			<img class="hcW" src="{!! asset('img/hcW.png') !!}" alt="Hugo Casqueiro">
+			<img class="hcW" src="{!! asset('img/hcN.png') !!}" alt="Hugo Casqueiro">
 			<img class="hcG" src="{!! asset('img/hcG.png') !!}" alt="Hugo Casqueiro">
 			<h1> | Carpintaria <span>- Marcenaria</span></h1>
 		</a>
