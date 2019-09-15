@@ -15,7 +15,7 @@
                     <ul class="aboutUs-socials">
                         <li><i class="fas fa-circle fb"></i><a href="#" class="fbh" title="Facebook">Fb</a></li>
                         <li><i class="fas fa-circle in"></i><a href="#" class="inh" title="Instagram">In</a></li>
-                        <li><i class="fas fa-circle tw"></i><a href="#" class="twh" title="Twitter">Tw</a></li>
+                        <li><i class="fas fa-circle li"></i><a href="#" class="lih" title="LinkedIn">Li</a></li>
                     </ul>
                     <a class="btn" href="{{ url('/portfolio') }}" title="Ver Portfólio">Ver Portfólio</a>
                 </div>
@@ -41,7 +41,7 @@
                             <ul class="members-profile-socials">
                                 <li><i class="fas fa-circle fb"></i><a href="#" class="fbh" title="Facebook">Fb</a></li>
                                 <li><i class="fas fa-circle in"></i><a href="#" class="inh" title="Instagram">In</a></li>
-                                <li><i class="fas fa-circle tw"></i><a href="#" class="twh" title="Twitter">Tw</a></li>
+                                <li><i class="fas fa-circle li"></i><a href="#" class="lih" title="LinkedIn">Li</a></li>
                             </ul>                                    
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             <ul class="members-profile-socials">
                                 <li><i class="fas fa-circle fb"></i><a href="#" class="fbh" title="Facebook">Fb</a></li>
                                 <li><i class="fas fa-circle in"></i><a href="#" class="inh" title="Instagram">In</a></li>
-                                <li><i class="fas fa-circle tw"></i><a href="#" class="twh" title="Twitter">Tw</a></li>
+                                <li><i class="fas fa-circle li"></i><a href="#" class="lih" title="LinkedIn">Li</a></li>
                             </ul>                                             
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             <ul class="members-profile-socials">
                                 <li><i class="fas fa-circle fb"></i><a href="#" class="fbh" title="Facebook">Fb</a></li>
                                 <li><i class="fas fa-circle in"></i><a href="#" class="inh" title="Instagram">In</a></li>
-                                <li><i class="fas fa-circle tw"></i><a href="#" class="twh" title="Twitter">Tw</a></li>
+                                <li><i class="fas fa-circle li"></i><a href="#" class="lih" title="LinkedIn">Li</a></li>
                             </ul>                                              
                         </div>
                     </div>

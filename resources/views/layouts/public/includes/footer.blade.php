@@ -20,7 +20,7 @@
                     <ul>
                         <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i>&nbsp;Facebook</a></li>
                         <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
-                        <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></li>
+                        <li><a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a></li>
                     </ul>
                 </div>
                 <div class="grid__item grid__item--md-span-4 footer_header_item">

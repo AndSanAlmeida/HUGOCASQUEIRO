@@ -201,37 +201,72 @@ const Reviews = new sliderReviews({
 
 function isotope() {
 
-  var $grid = $('.isotope-list').isotope({
+    var $grid = $('.isotope-list').isotope({
         itemSelector: '.isotope-item',
         filter: '*',
-        transitionDuration: '0.8s',
+        transitionDuration: '0.5s',
         masonry: {
-            columnWidth: '.isotope-item',
-            fitWidth: true,
-            horizontalOrder: true,
-            gutter: 15
+            columnWidth: 40,
+            fitWidth: true
         }
-      });
-  
+    }); 
 
-  $('.isotope-sorters li').click(function(){
-    var selector = $(this).attr('data-filter');
-    
-    $grid.isotope({
-      filter: selector,
-    })
-    
-    //changing active class with click event
-    $('.isotope-sorters li.active').removeClass('active');
-    $(this).addClass('active');
-  });
+    $('.isotope-sorters li').click(function(){
+        var selector = $(this).attr('data-filter');
+
+        $grid.isotope({
+          filter: selector,
+        })
+
+        //changing active class with click event
+        $('.isotope-sorters li.active').removeClass('active');
+        $(this).addClass('active');
+    });
 
 
-  // layout Isotope after each image loads
-  /*$grid.imagesLoaded().progress( function() {
-    $grid.isotope('layout');
-  });  */
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
 } 
+
+// ====================================================
+// MagnificPopup
+// ====================================================
+
+function magnificPopup () {
+    var groups = {};
+    $('.galleryItem').each(function() {
+      var id = parseInt($(this).attr('data-group'), 10);
+      
+      if(!groups[id]) {
+        groups[id] = [];
+      } 
+      
+      groups[id].push( this );
+    });
+
+
+    $.each(groups, function() {
+      
+      $(this).magnificPopup({
+          type: 'image',
+          closeOnContentClick: true,
+          closeBtnInside: false,
+          mainClass: 'mfp-with-zoom',
+          image: {
+            verticalFit: true,
+            titleSrc: function(item) {
+                return item.el.attr('data-title');
+            }
+          },
+          gallery: { 
+            enabled:true        
+          }
+      })
+      
+    });
+}
 
 // ====================================================
 // Back to Top
@@ -264,5 +299,6 @@ $(document).ready(function(){
     navResponsive();
     slider();
     isotope();
+    magnificPopup();
     goToTop();
 }); 

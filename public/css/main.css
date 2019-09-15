@@ -1439,8 +1439,8 @@ p {
   color: #e4405f;
 }
 
-#aboutUs .aboutUs-socials .tw {
-  color: #55acee;
+#aboutUs .aboutUs-socials .li {
+  color: #0077B5;
 }
 
 #aboutUs .aboutUs-socials li {
@@ -1469,8 +1469,8 @@ p {
   color: #e4405f;
 }
 
-#aboutUs .aboutUs-socials li .twh:hover {
-  color: #55acee;
+#aboutUs .aboutUs-socials li .lih:hover {
+  color: #0077B5;
 }
 
 #members {
@@ -1620,8 +1620,8 @@ p {
   color: #e4405f;
 }
 
-#members .members-profile-socials .tw {
-  color: #55acee;
+#members .members-profile-socials .li {
+  color: #0077B5;
 }
 
 #members .members-profile-socials li {
@@ -1650,8 +1650,8 @@ p {
   color: #e4405f;
 }
 
-#members .members-profile-socials li .twh:hover {
-  color: #55acee;
+#members .members-profile-socials li .lih:hover {
+  color: #0077B5;
 }
 
 @media screen and (max-width: 768px) {
@@ -1716,7 +1716,9 @@ p {
 }
 
 #portfolio #isotope .isotope-item {
-  width: calc(50% - 30px);
+  display: flex;
+  max-width: 440px;
+  margin: 15px;
 }
 
 #portfolio #isotope .isotope-item img {
@@ -1782,9 +1784,104 @@ p {
   top: 50%;
 }
 
-@media screen and (max-width: 576px) {
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.loading:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.loading:not(:required):after {
+  content: "";
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  box-shadow: #6dc234 1.5em 0 0 0, #6dc234 1.1em 1.1em 0 0, #6dc234 0 1.5em 0 0, #6dc234 -1.1em 1.1em 0 0, #6dc234 -1.5em 0 0 0, #6dc234 -1.1em -1.1em 0 0, #6dc234 0 -1.5em 0 0, #6dc234 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-close {
+  font-size: 42px;
+}
+
+.mfp-title,
+.mfp-counter {
+  font-size: 17px;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
   #portfolio #isotope .isotope-item {
-    width: calc(100% - 30px);
+    max-width: 360px;
   }
 }
 

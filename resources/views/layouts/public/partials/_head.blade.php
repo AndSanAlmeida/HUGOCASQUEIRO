@@ -9,7 +9,9 @@
         <!-- FAVICON -->
         <link rel="shortcut icon" type="image/png" href="{!! asset('img/hcG.png') !!}"/>
 
-        <!-- STYLES LINKS -->        
-        <link rel="stylesheet" type="text/css" href="{!! asset('css/main.css') !!}">
+        <!-- STYLES LINKS -->    
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        <link rel="stylesheet" type="text/css" href="{!! asset('css/main.css') !!}">
+
     </head>

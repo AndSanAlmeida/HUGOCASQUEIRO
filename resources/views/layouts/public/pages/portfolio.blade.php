@@ -4,6 +4,9 @@
 
 @section('content')
 
+<!-- Loader -->
+<div class="loading"></div>
+
 <div id="portfolio">
     <div class="portfolio" style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
         <div class="flexbox">
@@ -17,6 +20,8 @@
         </div>
     </div>
 
+    
+
     <div id="isotope">
         <div class="container">
             <div class="isotope-sorters">
@@ -29,11 +34,13 @@
             </div>
             <div class="isotope-list">
                 <div class="isotope-item interior">
-                    <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                    <div class="item-mask">
-                        <h5 class="on-center align-center">Caixa de Joias</h5>
-                        <p class="on-center align-center">Design, Rústico</p>     
-                    </div>
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="My caption">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}">           
+                        <div class="item-mask">
+                            <h5 class="on-center align-center">Caixa de Joias</h5>
+                            <p class="on-center align-center">Design, Rústico</p>     
+                        </div>
+                    </a>                     
                 </div> 
                 <div class="isotope-item exterior">
                     <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
@@ -111,10 +118,22 @@
                         <h5 class="on-center align-center">Caixa de Joias</h5>
                         <p class="on-center align-center">31/07/2019</p>     
                     </div>
-                </div>                        
+                </div>                     
             </div>
         </div>  
-    </div> 
+    </div>
+
+    <!-- HIDE GALLERIES -->
+    <div class="hide">
+        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="My caption"></a>
+    </div>
+
+
 </div>
 
 <div id="budget">
@@ -137,6 +156,13 @@
         </div>  
     </div>  
 </div>
+
+<script>
+    //LOADER
+    window.onload = function() {
+        $('.loading').fadeOut(); 
+    }
+</script>
 
 @stop
 
