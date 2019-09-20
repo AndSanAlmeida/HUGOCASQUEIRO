@@ -26,11 +26,11 @@
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
                     <h3>Hugo Casqueiro</h3>
                     <ul>
-                        <hr class="dotted"></hr>
+                        <hr class="dotted" />
                         <li><a href="mailto:hugocasqueiro@teste.com?Subject=hugocasquerio.pt%20|%20MAIL" target="_top" title="Enviar Email"><i class="fas fa-envelope contrast-color"></i>&nbsp;hugocasquerio@teste.com</a></li>
                         <li><i class="fas fa-phone contrast-color"></i>&nbsp;+351 919 123 654</li>
                         <li><i class="fas fa-address-card contrast-color"></i>&nbsp;Mira De Aire</li>
-                        <hr class="dotted">
+                        <hr class="dotted" />
                     </ul>
                 </div>
             </div>

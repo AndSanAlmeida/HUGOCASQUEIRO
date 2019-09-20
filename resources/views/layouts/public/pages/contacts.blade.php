@@ -69,33 +69,8 @@
 </div>
 
 <div id="map">
-	<iframe src="https://maps.google.com/maps?q=Mira%20&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	<iframe src="https://maps.google.com/maps?q=R.%20Ch%C3%A3o%20de%20Empires%2058&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </div>
-
-<!--<script>
-	function initMap() {
-		var myLatLong = {lat: 39.6270489, lng: -8.6720917};
-		var image = 'img/marker.svg';
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 12,
-			center: myLatLong,
-			scrollwheel: false
-		});
-		var marker = new google.maps.Marker({
-			position: myLatLong,
-			map: map,
-			icon: image
-		});
-		google.maps.event.addDomListener(window, 'resize', function() {
-		var center = map.getCenter()
-		google.maps.event.trigger(map, "resize")
-		map.setCenter(center)
-		})
-	}
-</script>
-<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8Hh9lM9JzNE4i2lr04VWiYejLwDpSQo0&callback=initMap">
-</script>-->
     
 @stop
 

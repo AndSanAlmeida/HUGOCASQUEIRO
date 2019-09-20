@@ -82,17 +82,16 @@
         <div class="flexbox">
             <div class="flexbox_item">
                 <div class="grey-fade-over"></div>
-                    <div class="container">
-                        <div class="grid budget_info align-center">
-                            <div class="grid__item grid__item--lg-span-8">
-                                <h1>Peça já o seu Orçamento.</h1>
-                            </div>
-                            <div class="grid__item grid__item--lg-span-4">
-                                <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
-                            </div>
+                <div class="container">
+                    <div class="grid budget_info align-center">
+                        <div class="grid__item grid__item--lg-span-8">
+                            <h1>Peça já o seu Orçamento.</h1>
                         </div>
-                    </div>                    
-                </div>
+                        <div class="grid__item grid__item--lg-span-4">
+                            <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
+                        </div>
+                    </div>
+                </div>                    
             </div>
         </div>  
     </div>  
