@@ -1233,7 +1233,7 @@ p {
 
 #services .services {
   position: relative;
-  padding: 10em 0;
+  padding: 5em 0;
   font-family: "Poppins", sans-serif;
   z-index: 2;
 }
@@ -1249,11 +1249,12 @@ p {
   line-height: 1.8;
 }
 
-#services .services .grid__item:nth-child(2) {
+#services .services .grid__item:nth-child(even) {
   border: 2px solid #6dc234;
 }
 
 #services .services-item {
+  margin: 2em 0;
   padding: 1em;
 }
 

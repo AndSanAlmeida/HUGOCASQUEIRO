@@ -145,7 +145,7 @@
 
     .services {
         position: relative;
-        padding: 10em 0;
+        padding: 5em 0;
         font-family: $poppins;
         z-index: 2;
 
@@ -158,11 +158,12 @@
             line-height: 1.8;
         }
 
-        .grid__item:nth-child(2) {
+        .grid__item:nth-child(even) {
             border: 2px solid $green;
         }
         
         &-item {
+            margin: 2em 0;
             padding: 1em;
         }
     }

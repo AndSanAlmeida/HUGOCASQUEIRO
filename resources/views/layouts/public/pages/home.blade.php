@@ -44,30 +44,55 @@
             <div class="grid">
                 <div class="grid__item grid__item--lg-span-4 services-item">
                     <h1>01.</h1>
-                    <h2>Carpintaria Interior e Exterior</h2>
+                    <h2>Carpintaria Interior</h2>
                     <ul>
-                        <li>Portaros</li>
-                        <li>Janelas em Madeira e PVC</li>
-                        <li>Escadarias</li>
-                        <li>Parquet / Piso Flutuante / Terraços Deck (...)</li>
-                        <li>Alpendres em Madeira</li>
+                        <li>Portas de interior e portas de entrada</li>    
+                        <li>Janelas em madeira e PVC</li>
+                        <li>Roupeiros, armários e closets</li>
+                        <li>Móveis de casa de banho</li>
+                        <li>Todo o tipo de mobiliário sobre medida (mesas, camas, entre outros…)</li>
                     </ul>
                 </div>
                 <div class="grid__item grid__item--lg-span-4 services-item">
                     <h1>02.</h1>
-                    <h2>Mobiliário</h2>
+                    <h2>Carpintaria Exterior</h2>
                     <ul>
-                        <li>Quartos Completos</li>
-                        <li>Roupeiros / Armários / Closets</li>
-                        <li>Casas de Banho</li>
-                        <li>Renovação e Restauração de todo o tipo de Mobiliário e Carpintarias em Madeira Maciça.</li>
+                        <li>Revestimento de paredes, fachadas em madeira maciça e aglomerados</li>
+                        <li>Terraços em deck compósito e madeira</li>
+                        <li>Alpendres e cobertos em madeira</li>
+                        <li>Cabanas de jardim</li>
+                        <li>Revestimento de Jacuzzis e piscinas exteriores</li>
                     </ul>
                 </div>
                 <div class="grid__item grid__item--lg-span-4 services-item">
                     <h1>03.</h1>
-                    <h2>Cozinhas por Medida</h2>
+                    <h2>Escadaria Interior e Exterior</h2>
                     <ul>
-                        <li>Modernas e Tradicionais (Madeira Maciça, Melamica e Lacada MDF)</li>
+                        <li>Todo o tipo de escadaria em madeira com acabamento em verniz ou velatura</li>                  
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>04.</h1>
+                    <h2>Pavimentos</h2>
+                    <ul>
+                        <li>Piso flutuante em madeira e estratificado laminado</li>
+                        <li>Lamparquet colado ao chão em madeira maciça </li>
+                        <li>Soalhos em madeira</li>
+                        <li>Rodapés em madeira e laminados</li>
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>05.</h1>
+                    <h2>Cozinhas</h2>
+                    <ul>
+                        <li>Conceção com projeto em 3D, fabricação e montagem de cozinhas modernas e tradicionais com um vasto leque de cores e padrões em melamina, termolaminado, madeira maciça e lacado MDF</li>
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>06.</h1>
+                    <h2>Renovação e Restauração</h2>
+                    <ul>
+                        <li>Todo o tipo de renovação e tratamento de madeira maciça em móveis, fachadas e pisos</li>
                     </ul>
                 </div>
             </div>
