@@ -11,7 +11,7 @@
                         <li><a href="{{ url('/home') }}" title="Início">Início</a></li>
                         <li><a href="{{ url('/aboutUs') }}" title="Sobre Nós">Sobre Nós</a></li>
                         <li><a href="{{ url('/portfolio') }}" title="Portfólio">Portfólio</a></li>  
-                        <li><a href="#" title="Catálogo" target="_blank">Catálogo</a></li>                      
+                        <!--<li><a href="#" title="Catálogo" target="_blank">Catálogo</a></li>-->                  
                         <li><a href="{{ url('/contacts') }}" title="Contactos">Contactos</a></li>
                     </ul>
                 </div>
