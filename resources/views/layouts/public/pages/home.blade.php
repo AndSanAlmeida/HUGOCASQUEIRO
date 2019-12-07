@@ -27,7 +27,7 @@
                 <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-slogan">
                     <h1 class="header_underline">Our Mission</h1>
                     <p> Our mission is to produce the highest quality work for every client, on every project.</p>
-                    <a class="btn-static align-right" href="{{ url('/aboutUs') }}" title="More about us">More about us</a>
+                    <a class="btn-static align-right" href="{{ url('/aboutUs', app()->getLocale()) }}" title="More about us">More about us</a>
                 </div>
                 <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-photo">
                     <img class="img_responsive" src="{!! asset('img/mission.jpg') !!}" alt="Our Mission">
