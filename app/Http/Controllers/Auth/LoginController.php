@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Auth;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -25,7 +27,15 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    public function redirectTo()
+{
+    return app()->getLocale() . '/dashboard';
+}
+
+public function logout(Request $request) {
+  Auth::logout();
+  return redirect(app()->getLocale() . '/login');
+}
 
     /**
      * Create a new controller instance.
