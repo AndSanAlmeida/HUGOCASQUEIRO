@@ -26,7 +26,7 @@ class SliderController extends Controller
             $slider = Slider::first();
             $img = Image::make($_FILES['photo']['tmp_name']);
             // save image
-            $img->save('img/slider.jpg');
+            $img->save(`img/slider.jpg');
             $slider->path =  "img/slider.jpg";
             $slider
                 ->setTranslation('title', 'pt', json_encode($request['title_pt']))
