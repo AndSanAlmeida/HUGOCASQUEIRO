@@ -1,4 +1,5 @@
 @extends('layouts.dashboard.dashboard')
+@section('title',  __('messages.administration') )
 @section('content')
     <main class="main">
     <div class="container-fluid mt-5">

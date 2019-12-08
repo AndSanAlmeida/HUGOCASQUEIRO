@@ -8,7 +8,7 @@
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.main-slider')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="typography.html">
+            <a class="nav-link" href="{{route('dashboard.mission', app()->getlocale())}}">
                     <i class="nav-icon icon-pencil"></i> @lang('messages.sidebar.our-mission')</a>
             </li>
             <li class="nav-item">
@@ -20,7 +20,7 @@
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.comments')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="colors.html">
+            <a class="nav-link" href="{{route('dashboard.about', app()->getlocale())}}">
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.about-us')</a>
             </li>
             <li class="nav-item">

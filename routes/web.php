@@ -22,6 +22,15 @@ Auth::routes();
 Route::group([  'prefix' => 'dashboard','middleware' => 'auth'], function() {
   Route::get('/', 'DashboardController@index')->name('dashboard');
   Route::get('/profile', 'DashboardController@profile')->name('profile');
+  
+  // ABOUT
+  Route::get('/about-us', 'AboutController@index')->name('dashboard.about');
+  Route::post('/about-us', 'AboutController@save')->name('dashboard.save-about');
+
+  // MISSION
+  Route::get('/mission', 'MissionController@index')->name('dashboard.mission');
+  Route::post('/mission', 'MissionController@save')->name('dashboard.save-mission');
+  
     });
 
 });
