@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary d-flex ml-auto mt-3 btn-ladda ladda-button" data-style="expand-left">@lang('messages.save')</button>
+        <button type="submit" class="btn btn-primary d-flex ml-auto mt-3">@lang('messages.save')</button>
         </form>
 
     </div>

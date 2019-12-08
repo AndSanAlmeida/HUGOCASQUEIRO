@@ -4,7 +4,7 @@
 
             <li class="nav-title">@lang('messages.sidebar.operations')</li>
             <li class="nav-item">
-                <a class="nav-link" href="colors.html">
+            <a class="nav-link" href="{{route('dashboard.slider', app()->getlocale())}}">
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.main-slider')</a>
             </li>
             <li class="nav-item">

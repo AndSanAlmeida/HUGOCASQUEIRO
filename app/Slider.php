@@ -7,7 +7,7 @@ use Spatie\Translatable\HasTranslations;
 class Slider extends Model
 {
     use HasTranslations;
-    public $translatable = ['title', 'body'];
+    public $translatable = ['title'];
 
     protected $fillable = [
         'path',

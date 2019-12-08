@@ -3,6 +3,9 @@
 // resources/lang/pt/messages.php
 
 return [
+    'actions' => 'acções',
+    'image' => 'imagem',
+    'slides' => 'slides',
     'success' => 'sucesso',
     'success-message' => 'operação concluida com sucesso',
     'title' => 'titulo',
