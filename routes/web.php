@@ -35,9 +35,12 @@ Route::group([
 
 
     // SLIDER
-    Route::get('/slider', 'SliderController@index')->name('dashboard.slider');
+    Route::get('/sliders', 'SliderController@index')->name('dashboard.sliders');
+    Route::get('/new-slider', 'SliderController@new')->name('dashboard.new-slider');
     Route::get('/slider/{id}', 'SliderController@edit')->name('dashboard.slider-edit');
-    Route::post('/slider', 'SliderController@save')->name('dashboard.save-slider');
+    Route::post('/slider-post', 'SliderController@save')->name('dashboard.save-slider');
+    Route::post('/slider/edit/{id}', 'SliderController@editSlide')->name('dashboard.update.slider');
+    Route::get('/slider/{id}/delete', 'SliderController@delete')->name('dashboard.slider-delete');
   });
 });
 Route::get('/', function () {

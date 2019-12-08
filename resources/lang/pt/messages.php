@@ -3,6 +3,8 @@
 // resources/lang/pt/messages.php
 
 return [
+    'back' => 'voltar',
+    'new-slide' => 'novo slide',
     'actions' => 'acções',
     'image' => 'imagem',
     'slides' => 'slides',
