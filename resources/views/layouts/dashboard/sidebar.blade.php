@@ -12,7 +12,7 @@
                     <i class="nav-icon icon-pencil"></i> @lang('messages.sidebar.our-mission')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="colors.html">
+                <a class="nav-link" href="{{route('dashboard.services', app()->getlocale())}}">
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.services')</a>
             </li>
             <li class="nav-item">

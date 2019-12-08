@@ -3,6 +3,14 @@
 // resources/lang/pt/messages.php
 
 return [
+    'identifier' => 'identificador',
+    'new-service' => 'novo serviço',
+    'home' => 'Inicio',
+    'about-us' => 'sobre nós',
+    'portfolio' => 'portfólio',
+    'contacts' => 'contactos',
+    'watch-portfolio' => 'ver portfolio',
+    'no-slides-found' => 'não existe slides',
     'back' => 'voltar',
     'new-slide' => 'novo slide',
     'actions' => 'acções',

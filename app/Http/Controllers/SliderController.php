@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Slider;
 use RealRashid\SweetAlert\Facades\Alert;
 use Image;
+use File;
 class SliderController extends Controller
 {
     public function index()
@@ -29,8 +30,11 @@ class SliderController extends Controller
     {
         try {
             $slider = Slider::find($id);
-
+            if (File::exists(public_path($slider->path))) {
+                File::delete(public_path($slider->path));
+            }
             $slider->delete();
+
             Alert::success(trans('messages.success'), trans('messages.success-message'));
             return back();
         } catch (\Exception $e) {
@@ -55,10 +59,13 @@ class SliderController extends Controller
                 ->save();
 
             if (isset($_FILES['photo']) && $_FILES['photo']['size'] > 0) {
+                if (!file_exists(public_path('img/slider'))) {
+                    mkdir(public_path('img/slider'), 775, true);
+                }
                 $img = Image::make($_FILES['photo']['tmp_name']);
                 // save image
-                $img->save("img/slider-" . $slider->id . ".jpg");
-                $slider->path = "img/slider-" . $slider->id . ".jpg";
+                $img->save("img/slider/slide-" . $slider->id . ".jpg");
+                $slider->path = "img/slider/slide-" . $slider->id . ".jpg";
                 $slider->update();
             }
 
@@ -75,10 +82,13 @@ class SliderController extends Controller
         try {
             $slider = Slider::find($id);
                 if (isset($_FILES['photo']) && $_FILES['photo']['size'] > 0) {
+                if (!file_exists(public_path('img/slider'))) {
+                    mkdir(public_path('img/slider'), 775, true);
+                }
                 $img = Image::make($_FILES['photo']['tmp_name']);
                 // save image
-                $img->save("img/slider-".$slider->id.".jpg");
-                $slider->path = "img/slider-".$slider->id.".jpg";
+                $img->save("img/slider/slide-".$slider->id.".jpg");
+                $slider->path = "img/slider/slide-".$slider->id.".jpg";
                 }
             $slider
                 ->setTranslation('title', 'pt', json_encode($request['title_pt']))

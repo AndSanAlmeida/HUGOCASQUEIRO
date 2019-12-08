@@ -15,10 +15,10 @@ Route::group([
   'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'
 ], function () {
 
-  Route::get('/', 'PublicPagesController@home');
-  Route::get('/aboutUs', 'PublicPagesController@aboutUs');
-  Route::get('/portfolio', 'PublicPagesController@portfolio');
-  Route::get('/contacts', 'PublicPagesController@contacts');
+  Route::get('/', 'PublicPagesController@home')->name('home');
+  Route::get('/aboutUs', 'PublicPagesController@aboutUs')->name('about');
+  Route::get('/portfolio', 'PublicPagesController@portfolio')->name('portfolio');
+  Route::get('/contacts', 'PublicPagesController@contacts')->name('contacts');
   Auth::routes();
 
   Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
@@ -41,6 +41,14 @@ Route::group([
     Route::post('/slider-post', 'SliderController@save')->name('dashboard.save-slider');
     Route::post('/slider/edit/{id}', 'SliderController@editSlide')->name('dashboard.update.slider');
     Route::get('/slider/{id}/delete', 'SliderController@delete')->name('dashboard.slider-delete');
+
+    // SERVICES
+    Route::get('/services', 'ServiceController@index')->name('dashboard.services');
+    Route::get('/new-service', 'ServiceController@new')->name('dashboard.new-service');
+    Route::get('/service/{id}', 'ServiceController@edit')->name('dashboard.service-edit');
+    Route::post('/service-post', 'ServiceController@save')->name('dashboard.save-service');
+    Route::post('/service/edit/{id}', 'ServiceController@editService')->name('dashboard.update.service');
+    Route::get('/service/{id}/delete', 'ServiceController@delete')->name('dashboard.service-delete');
   });
 });
 Route::get('/', function () {

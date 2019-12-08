@@ -10,14 +10,14 @@
             <div class="flexbox_item">
                 <div class="grey-fade-over"></div>
                 <div class="container">
-                    <h1 class="aboutUs-title">Sobre Nós</h1>
-                    <p class="aboutUs-text">Somos uma empresa jovem e profissional sediada em Mira de Aire, distrito de Leiria, fundada em 2020. Com mais de 10 anos de experiência na conceção, fabricação e montagem de todo o tipo de carpintaria interior e exterior, o nosso principal objetivo é a satisfação do cliente, oferecendo-lhe serviços de carpintaria de grande qualidade e excelência!</p>
+                <h1 class="aboutUs-title">{{ json_decode($about->title)}}</h1>
+                    <p class="aboutUs-text">{{ json_decode($about->body)}}</p>
                     <ul class="aboutUs-socials">
                         <li><i class="fas fa-circle fb"></i><a href="#" class="fbh" title="Facebook">Fb</a></li>
                         <li><i class="fas fa-circle in"></i><a href="#" class="inh" title="Instagram">In</a></li>
                         <li><i class="fas fa-circle li"></i><a href="#" class="lih" title="LinkedIn">Li</a></li>
                     </ul>
-                    <a class="btn" href="{{ url('/portfolio') }}" title="Ver Portfólio">Ver Portfólio</a>
+                <a class="btn" href="{{ route('portfolio', app()->getLocale()) }}" title="{{ __('messages.watch-portfolio')}}">@lang('messages.watch-portfolio')</a>
                 </div>
             </div>
         </div>
