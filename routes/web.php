@@ -49,6 +49,14 @@ Route::group([
     Route::post('/service-post', 'ServiceController@save')->name('dashboard.save-service');
     Route::post('/service/edit/{id}', 'ServiceController@editService')->name('dashboard.update.service');
     Route::get('/service/{id}/delete', 'ServiceController@delete')->name('dashboard.service-delete');
+
+    // COMMENTS
+    Route::get('/comments', 'CommentController@index')->name('dashboard.comments');
+    Route::get('/new-comment', 'CommentController@new')->name('dashboard.new-comment');
+    Route::get('/comment/{id}', 'CommentController@edit')->name('dashboard.comment-edit');
+    Route::post('/comment-post', 'CommentController@save')->name('dashboard.save-comment');
+    Route::post('/comment/edit/{id}', 'CommentController@editComment')->name('dashboard.update.comment');
+    Route::get('/comment/{id}/delete', 'CommentController@delete')->name('dashboard.comment-delete');
   });
 });
 Route::get('/', function () {

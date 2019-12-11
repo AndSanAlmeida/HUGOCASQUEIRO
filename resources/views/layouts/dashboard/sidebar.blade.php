@@ -16,7 +16,7 @@
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.services')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="colors.html">
+                <a class="nav-link" href="{{route('dashboard.comments', app()->getlocale())}}">
                     <i class="nav-icon icon-drop"></i> @lang('messages.sidebar.comments')</a>
             </li>
             <li class="nav-item">

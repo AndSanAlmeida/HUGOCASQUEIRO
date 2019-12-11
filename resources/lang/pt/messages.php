@@ -3,6 +3,10 @@
 // resources/lang/pt/messages.php
 
 return [
+    'comments' => 'comentários',
+    'new-comment' => 'novo comentário',
+    'no-comments-found' => 'Nenhum comentário encontrado',
+    'name' => 'nome',
     'identifier' => 'identificador',
     'new-service' => 'novo serviço',
     'home' => 'Inicio',
