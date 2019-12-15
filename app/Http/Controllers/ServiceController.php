@@ -10,25 +10,29 @@ class ServiceController extends Controller
     public function index()
     {
         $info = Service::orderBy('identifier', 'ASC')->get();
-        return view('dashboard.service')->with('info', $info);
+        return view('dashboard.services.index')->with('info', $info);
     }
 
     public function edit($locale, $id)
     {
         $info = Service::find($id);
-        return view('dashboard.service-edit')->with('info', $info);
+        return view('dashboard.services.edit')->with('info', $info);
     }
 
     public function new()
     {
-        return view('dashboard.service-new');
+        return view('dashboard.services.new');
     }
 
     public function delete($locale, $id)
     {
         try {
             $Service = Service::find($id);
-
+            $services = Service::count();
+            if ($services) {
+                Alert::toast(trans('messages.has_to_have_one'), 'error');
+                return back();
+            }
             $Service->delete();
             Alert::success(trans('messages.success'), trans('messages.success-message'));
             return back();

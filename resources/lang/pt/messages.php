@@ -3,6 +3,9 @@
 // resources/lang/pt/messages.php
 
 return [
+    'services' => 'serviços',
+    'new-slider' => 'novo slide',
+    'has_to_have_one' => 'tem de haver pelo menos 1 registo',
     'comments' => 'comentários',
     'new-comment' => 'novo comentário',
     'no-comments-found' => 'Nenhum comentário encontrado',
@@ -11,6 +14,7 @@ return [
     'new-service' => 'novo serviço',
     'home' => 'Inicio',
     'about-us' => 'sobre nós',
+    'our-mission' => 'nossa missão',
     'portfolio' => 'portfólio',
     'contacts' => 'contactos',
     'watch-portfolio' => 'ver portfolio',
@@ -36,6 +40,8 @@ return [
     'sidebar.comments' => 'Comentários',
     'sidebar.about-us' => 'Sobre nós',
     'sidebar.portfolio' => 'Portfólio',
+    'sidebar.portfolio-categories' => 'Categorias',
+    'sidebar.portfolio-projects' => 'Projectos',
     'header.greeting' => 'Olá',
     'header.user.settings' => 'Definições',
     'header.user.profile' => 'Perfil',

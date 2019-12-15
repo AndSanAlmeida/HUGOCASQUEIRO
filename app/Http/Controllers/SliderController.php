@@ -9,26 +9,55 @@ use Image;
 use File;
 class SliderController extends Controller
 {
+    /**
+     * return sliders Index view
+     *
+     * @return view
+     */
     public function index()
     {
         $info = Slider::all();
-        return view('dashboard.slider')->with('info', $info);
+        return view('dashboard.sliders.index')->with('info', $info);
     }
 
-    public function edit($locale, $id)
+    /**
+     * return single slider view
+     *
+     * @param [type] $locale
+     * @param [type] $id
+     * @return view
+     */
+    public function show($locale, $id)
     {
         $info = Slider::find($id);
-        return view('dashboard.slider-edit')->with('info', $info);
+        return view('dashboard.sliders.show')->with('info', $info);
     }
 
+    /**
+     * return new slider view
+     *
+     * @return view
+     */
     public function new()
     {
-        return view('dashboard.slider-new');
+        return view('dashboard.sliders.new');
     }
 
+    /**
+     * Deletes slider by ID
+     *
+     * @param [type] $locale
+     * @param [type] $id
+     * @return void
+     */
     public function delete($locale, $id)
     {
         try {
+            $sliders = Slider::count();
+            if ($sliders <= 1) {
+                Alert::toast(trans('messages.has_to_have_one'), 'error');
+                return back();   
+            }
             $slider = Slider::find($id);
             if (File::exists(public_path($slider->path))) {
                 File::delete(public_path($slider->path));
@@ -44,6 +73,13 @@ class SliderController extends Controller
         
     }
 
+    /**
+     * Save Slider to DB
+     *
+     * @param Request $request
+     * @param [type] $locale
+     * @return void
+     */
     public function save(Request $request, $locale)
     {
         try {
@@ -77,7 +113,15 @@ class SliderController extends Controller
         }
     }
 
-    public function editSlide(Request $request, $locale, $id)
+    /**
+     * Edit existing slider by ID
+     *
+     * @param Request $request
+     * @param [type] $locale
+     * @param [type] $id
+     * @return void
+     */
+    public function edit(Request $request, $locale, $id)
     {
         try {
             $slider = Slider::find($id);

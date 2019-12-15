@@ -12,18 +12,18 @@ class CommentController extends Controller
     public function index()
     {
         $info = Comment::all();
-        return view('dashboard.comment')->with('info', $info);
+        return view('dashboard.comments.index')->with('info', $info);
     }
 
     public function edit($locale, $id)
     {
         $info = Comment::find($id);
-        return view('dashboard.comment-edit')->with('info', $info);
+        return view('dashboard.comments.edit')->with('info', $info);
     }
 
     public function new()
     {
-        return view('dashboard.comment-new');
+        return view('dashboard.comments.new');
     }
 
     public function delete($locale, $id)

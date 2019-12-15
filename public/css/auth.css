@@ -961,3 +961,7 @@
   display: none;
 }
 
+.sidebar nav li {
+  width: 100%;
+}
+
