@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Category;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Image;
@@ -28,7 +29,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('dashboard.projects.new');
+        $categories = Category::get()->where('id', '>', 1);
+        return view('dashboard.projects.new')->with('categories', $categories);
     }
 
     /**
@@ -39,7 +41,55 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $project = new Project();
+            $project->category_id = $request['category'];
+            $project->main_photo = "";
+            $project
+                ->setTranslation('title', 'pt', json_encode($request['title_pt']))
+                ->setTranslation('family', 'pt', json_encode($request['family_pt']))
+
+                ->setTranslation('title', 'en', json_encode($request['title_en']))
+                ->setTranslation('family', 'en', json_encode($request['family_en']))
+
+                ->setTranslation('title', 'fr', json_encode($request['title_fr']))
+                ->setTranslation('family', 'fr', json_encode($request['family_fr']))
+                ->save();
+
+            if (isset($_FILES['main_photo']) && $_FILES['main_photo']['size'] > 0) {
+                if (!file_exists(public_path('img/projects/'. $project->id))) {
+                    mkdir(public_path('img/projects/'. $project->id), 775, true);
+                }
+                $img = Image::make($_FILES['main_photo']['tmp_name']);
+                // save image
+                $img->save("img/projects/" . $project->id . "/main_photo.jpg");
+                $project->main_photo = "img/projects/" . $project->id . "/main_photo.jpg";
+                $project->update();
+            }
+
+            if (isset($_FILES['photos']) && $_FILES['photos']['size'] > 0) {
+                if (!file_exists(public_path('img/projects/' . $project->id . '/photos'))) {
+                    mkdir(public_path('img/projects/' . $project->id . '/photos'), 775, true);
+                }
+                $images = $request->file('photos');
+                foreach ($images as $image) {
+                    $filename = $image->getClientOriginalName();
+                    Image::make($image)->save(public_path('img/projects/' . $project->id . '/photos' . '/' . $filename));
+                    $img = new \App\Image();
+                    $img->path = 'img/projects/' . $project->id . '/photos' . '/' . $filename;
+                    $img->project_id = $project->id;
+                    $img->save();
+                }
+            }
+
+        
+
+            Alert::success(trans('messages.success'), trans('messages.success-message'));
+            return redirect()->route('dashboard.projects', app()->getLocale());
+        } catch (\Exception $e) {
+            Alert::toast($e->getMessage(), 'error');
+            return back();
+        }
     }
 
     /**
@@ -51,7 +101,8 @@ class ProjectController extends Controller
     public function show($locale, $id)
     {
         $info = Project::find($id);
-        return view('dashboard.projects.show')->with('info', $info);
+        $categories = Category::get()->where('id', '>', 1);
+        return view('dashboard.projects.show')->with(['info'=> $info, 'categories'=> $categories]);
     }
 
     /**
@@ -64,23 +115,50 @@ class ProjectController extends Controller
     {
         try {
             $project = Project::find($id);
-            if (isset($_FILES['main_photo']) && $_FILES['main_photo']['size'] > 0) {
-                if (!file_exists(public_path('img/project/' . $project->id))) {
-                    mkdir(public_path('img/project' . $project->id), 775, true);
+            $project->category_id = $request['category'];
+            $project
+                ->setTranslation('title', 'pt', json_encode($request['title_pt']))
+                ->setTranslation('family', 'pt', json_encode($request['family_pt']))
+
+                ->setTranslation('title', 'en', json_encode($request['title_en']))
+                ->setTranslation('family', 'en', json_encode($request['family_en']))
+
+                ->setTranslation('title', 'fr', json_encode($request['title_fr']))
+                ->setTranslation('family', 'fr', json_encode($request['family_fr']))
+                ->update();
+
+            if ($request->hasFile('main_photo') && isset($_FILES['main_photo']) && $_FILES['main_photo']['size'] > 0) {
+                if (!file_exists(public_path('img/projects/' . $project->id))) {
+                    mkdir(public_path('img/projects/' . $project->id), 775, true);
                 }
                 $img = Image::make($_FILES['main_photo']['tmp_name']);
                 // save image
-                $img->save("img/project/main_photo-" . $project->id . ".jpg");
-                $project->path = "img/project/main_photo-" . $project->id . ".jpg";
+                $img->save("img/projects/" . $project->id . "/main_photo.jpg");
+                $project->main_photo = "img/projects/" . $project->id . "/main_photo.jpg";
+                $project->update();
             }
-            $project
-                ->setTranslation('title', 'pt', json_encode($request['title_pt']))
 
-                ->setTranslation('title', 'en', json_encode($request['title_en']))
+            if ($request->hasFile('photos') && isset($_FILES['photos']) && $_FILES['photos']['size'] > 0) {
+                $project->images()->delete();
+                File::deleteDirectory(public_path('img/projects/' . $project->id . '/photos'));
+                if (!file_exists(public_path('img/projects/' . $project->id . '/photos'))) {
+                    mkdir(public_path('img/projects/' . $project->id . '/photos'), 775, true);
+                }
+                $images = $request->file('photos');
+                foreach ($images as $image) {
+                    $filename = $image->getClientOriginalName();
+                    Image::make($image)->save(public_path('img/projects/' . $project->id . '/photos' . '/' . $filename));
+                    $img = \App\Image::where('path','=', 'img/projects/' . $project->id . '/photos' . '/' . $filename)->count();
 
-                ->setTranslation('title', 'fr', json_encode($request['title_fr']))
+                    $img = new \App\Image();
+                    $img->path = 'img/projects/' . $project->id . '/photos' . '/' . $filename;
+                    $img->project_id = $project->id;
+                    $img->save();
+                    
+                }
+            }
 
-                ->update();
+
 
             Alert::success(trans('messages.success'), trans('messages.success-message'));
             return back();
@@ -88,18 +166,6 @@ class ProjectController extends Controller
             Alert::toast($e->getMessage(), 'error');
             return back();
         }
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Project  $project
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Project $project)
-    {
-        //
     }
 
     /**
@@ -117,9 +183,8 @@ class ProjectController extends Controller
                 return back();
             }
             $project = Project::find($id);
-            if (File::exists(public_path($project->main_img_path))) {
-                File::delete(public_path($project->main_img_path));
-            }
+            $project->images()->delete();
+            File::deleteDirectory(public_path("img/projects/" . $project->id));
             $project->delete();
 
             Alert::success(trans('messages.success'), trans('messages.success-message'));

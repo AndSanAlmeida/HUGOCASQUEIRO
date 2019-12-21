@@ -27,12 +27,28 @@
         <div class="tab-content">
             <div class="tab-pane active" id="pt" role="tabpanel">
                 <div class="form-group">
+                    <label for="category">{{ucfirst(trans('messages.category'))}}</label>
+                    <select class="form-control" id="category" name="category">
+                        @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{json_decode($category->name)}}</option>   
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="family_pt">{{ucfirst(trans('messages.family'))}}</label>
+                    <input type="text" class="form-control" name="family_pt" id="family_pt" value="" required>
+                </div>
+                <div class="form-group">
                     <label for="title_pt">{{ucfirst(trans('messages.title'))}}</label>
                     <input type="text" class="form-control" name="title_pt" id="title_pt"
                         value="" required>
                 </div>
             </div>
             <div class="tab-pane" id="en" role="tabpanel">
+                <div class="form-group">
+                    <label for="family_en">{{ucfirst(trans('messages.family'))}}</label>
+                    <input type="text" class="form-control" name="family_en" id="family_en" value="" required>
+                </div>
                 <div class="form-group">
                     <label for="title_en">{{ucfirst(trans('messages.title'))}}</label>
                     <input type="text" class="form-control" name="title_en" id="title_en"
@@ -41,6 +57,10 @@
             </div>
             <div class="tab-pane" id="fr" role="tabpanel">
                 <div class="form-group">
+                    <label for="family_fr">{{ucfirst(trans('messages.family'))}}</label>
+                    <input type="text" class="form-control" name="family_fr" id="family_fr" value="" required>
+                </div>
+                <div class="form-group">
                     <label for="title_fr">{{ucfirst(trans('messages.title'))}}</label>
                     <input type="text" class="form-control" name="title_fr" id="title_fr"
                         value="" required>
@@ -48,8 +68,12 @@
             </div>
             <div class="tab-pane" id="img" role="tabpanel">
                 <div class="form-group">
-                    <input type="file"  name="main_photo" id="main_photo" required>
-                    
+                    <label for="main_photo">{{ ucfirst(trans('messages.main_photo'))}}</label>
+                    <input class="form-control-file" type="file"  name="main_photo" id="main_photo" required>
+                </div>
+                <div class="form-group">
+                    <label for="photos">{{ ucfirst(trans('messages.photos'))}}</label>
+                    <input class="form-control-file" type="file" name="photos[]" id="photos" multiple>
                 </div>
             </div>
         </div>

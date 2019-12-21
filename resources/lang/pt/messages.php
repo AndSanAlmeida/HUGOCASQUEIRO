@@ -4,7 +4,9 @@
 
 return [
     'category' => 'categoria',
+    'photos' => 'Fotos',
     'new-project' => 'novo projecto',
+    'projects' => 'projectos',
     'family' => 'familia',
     'main_photo' => 'foto principal',
     'no-projects-found' => 'nenhum projecto encontrado',

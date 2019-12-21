@@ -69,9 +69,9 @@ Route::group([
     // Projects
     Route::get('/projects', 'ProjectController@index')->name('dashboard.projects');
     Route::get('/new-project', 'ProjectController@create')->name('dashboard.new-project');
-    Route::get('/project/{id}', 'ProjectController@edit')->name('dashboard.project-edit');
+    Route::get('/project/{id}', 'ProjectController@show')->name('dashboard.project-edit');
     Route::post('/project-post', 'ProjectController@store')->name('dashboard.save-project');
-    Route::post('/project/edit/{id}', 'ProjectController@update')->name('dashboard.update-project');
+    Route::post('/project/edit/{id}', 'ProjectController@edit')->name('dashboard.update-project');
     Route::get('/project/{id}/delete', 'ProjectController@destroy')->name('dashboard.project-delete');
   });
 });

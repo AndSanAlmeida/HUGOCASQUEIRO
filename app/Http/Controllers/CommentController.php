@@ -35,7 +35,7 @@ class CommentController extends Controller
             }
             $Comment->delete();
             Alert::success(trans('messages.success'), trans('messages.success-message'));
-            return back();
+            return redirect()->route('dashboard.comments', app()->getLocale());
         } catch (\Exception $e) {
             Alert::toast($e->getMessage(), 'error');
             return back();
