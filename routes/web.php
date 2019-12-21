@@ -45,7 +45,7 @@ Route::group([
     // SERVICES
     Route::get('/services', 'ServiceController@index')->name('dashboard.services');
     Route::get('/new-service', 'ServiceController@new')->name('dashboard.new-service');
-    Route::get('/service/{id}', 'ServiceController@edit')->name('dashboard.service-edit');
+    Route::get('/service/{id}', 'ServiceController@show')->name('dashboard.service-edit');
     Route::post('/service-post', 'ServiceController@save')->name('dashboard.save-service');
     Route::post('/service/edit/{id}', 'ServiceController@editService')->name('dashboard.update.service');
     Route::get('/service/{id}/delete', 'ServiceController@delete')->name('dashboard.service-delete');
@@ -57,6 +57,14 @@ Route::group([
     Route::post('/comment-post', 'CommentController@save')->name('dashboard.save-comment');
     Route::post('/comment/edit/{id}', 'CommentController@editComment')->name('dashboard.update.comment');
     Route::get('/comment/{id}/delete', 'CommentController@delete')->name('dashboard.comment-delete');
+
+    // CATEGORIES
+    Route::get('/categories', 'CategoryController@index')->name('dashboard.categories');
+    Route::get('/new-category', 'CategoryController@new')->name('dashboard.new-category');
+    Route::get('/category/{id}', 'CategoryController@show')->name('dashboard.category-edit');
+    Route::post('/category-post', 'CategoryController@save')->name('dashboard.save-category');
+    Route::post('/category/edit/{id}', 'CategoryController@edit')->name('dashboard.update-category');
+    Route::get('/category/{id}/delete', 'CategoryController@delete')->name('dashboard.category-delete');
   });
 });
 Route::get('/', function () {

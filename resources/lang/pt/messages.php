@@ -3,6 +3,9 @@
 // resources/lang/pt/messages.php
 
 return [
+    'categories' => 'categorias',
+    'new-category' => 'nova categoria',
+    'filter' => 'filtro',
     'services' => 'serviços',
     'new-slider' => 'novo slide',
     'has_to_have_one' => 'tem de haver pelo menos 1 registo',

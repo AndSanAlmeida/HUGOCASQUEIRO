@@ -28,7 +28,7 @@
                     <i class="far fa-handshake"></i> @lang('messages.sidebar.portfolio')</a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" href="icons/coreui-icons.html">
+                        <a class="nav-link" href="{{route('dashboard.categories', app()->getlocale())}}">
                             <i class="far fa-bookmark"></i> @lang('messages.sidebar.portfolio-categories')
                         </a>
                     </li>

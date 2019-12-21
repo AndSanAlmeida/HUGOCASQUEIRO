@@ -13,7 +13,7 @@ class ServiceController extends Controller
         return view('dashboard.services.index')->with('info', $info);
     }
 
-    public function edit($locale, $id)
+    public function show($locale, $id)
     {
         $info = Service::find($id);
         return view('dashboard.services.edit')->with('info', $info);
