@@ -17,8 +17,8 @@
             <div class="dropdown-header text-center">
                <strong>@lang('messages.header.user.settings')</strong>
             </div>
-         <a class="dropdown-item" href="{{route('profile',app()->getLocale())}}">
-            <i class="fa fa-user"></i> @lang('messages.header.user.profile')</a>
+         {{-- <a class="dropdown-item" href="{{route('profile',app()->getLocale())}}" disabled>
+            <i class="fa fa-user"></i> @lang('messages.header.user.profile')</a> --}}
          <a class="dropdown-item" href="{{url('logout')}}">
             <i class="fa fa-lock"></i> @lang('messages.header.user.logout')</a>
          </div>

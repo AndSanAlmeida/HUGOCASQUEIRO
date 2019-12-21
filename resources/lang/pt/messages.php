@@ -3,6 +3,7 @@
 // resources/lang/pt/messages.php
 
 return [
+    'return-to-website' => 'regressar ao site',
     'category' => 'categoria',
     'photos' => 'Fotos',
     'new-project' => 'novo projecto',
