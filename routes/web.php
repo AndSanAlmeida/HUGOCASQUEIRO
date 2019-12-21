@@ -65,6 +65,14 @@ Route::group([
     Route::post('/category-post', 'CategoryController@save')->name('dashboard.save-category');
     Route::post('/category/edit/{id}', 'CategoryController@edit')->name('dashboard.update-category');
     Route::get('/category/{id}/delete', 'CategoryController@delete')->name('dashboard.category-delete');
+
+    // Projects
+    Route::get('/projects', 'ProjectController@index')->name('dashboard.projects');
+    Route::get('/new-project', 'ProjectController@create')->name('dashboard.new-project');
+    Route::get('/project/{id}', 'ProjectController@edit')->name('dashboard.project-edit');
+    Route::post('/project-post', 'ProjectController@store')->name('dashboard.save-project');
+    Route::post('/project/edit/{id}', 'ProjectController@update')->name('dashboard.update-project');
+    Route::get('/project/{id}/delete', 'ProjectController@destroy')->name('dashboard.project-delete');
   });
 });
 Route::get('/', function () {

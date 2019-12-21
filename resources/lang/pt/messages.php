@@ -3,6 +3,11 @@
 // resources/lang/pt/messages.php
 
 return [
+    'category' => 'categoria',
+    'new-project' => 'novo projecto',
+    'family' => 'familia',
+    'main_photo' => 'foto principal',
+    'no-projects-found' => 'nenhum projecto encontrado',
     'categories' => 'categorias',
     'new-category' => 'nova categoria',
     'filter' => 'filtro',

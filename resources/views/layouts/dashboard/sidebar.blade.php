@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="icons/flags.html">
+                        <a class="nav-link" href="{{route('dashboard.projects', app()->getlocale())}}">
                             <i class="far fa-folder-open"></i> @lang('messages.sidebar.portfolio-projects')</a>
                     </li>
                 </ul>
