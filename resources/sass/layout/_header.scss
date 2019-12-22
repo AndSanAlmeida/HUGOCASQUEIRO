@@ -102,11 +102,13 @@
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        @include transition(all, 300ms, cubic-bezier(.4,0,.2,1));
+        opacity: 0;
         @include transform(translateX(20em));
-        z-index: 10001;
+        @include transition(all, 300ms, cubic-bezier(.4,0,.2,1));
         &.visible {
+            opacity: 1;
             @include transform(translateX(0px));
+            z-index: 10001; // Most be here, cuz onload
         }
         nav {
             padding: 3em 2em;

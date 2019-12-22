@@ -27,15 +27,14 @@ class LoginController extends Controller
      *
      * @var string
      */
-    public function redirectTo()
-{
-    return app()->getLocale() . '/dashboard';
-}
+    public function redirectTo() {
+        return app()->getLocale() . '/dashboard/sliders';
+    }
 
-public function logout(Request $request) {
-  Auth::logout();
-  return redirect(app()->getLocale() . '/login');
-}
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect(app()->getLocale() . '/login');
+    }
 
     /**
      * Create a new controller instance.
