@@ -4,7 +4,6 @@
 <div class="container">
    <div class="row justify-content-center">
       <div class="col-md-8">
-      <a href="{{route('home', app()->getLocale())}}" class="btn btn-link">{{ trans('messages.return-to-website')}}</a>
          <div class="card-group">
             <div class="card p-4">
                <div class="card-body">
@@ -43,6 +42,7 @@
                   <div class="row">
                      <div class="col-6">
                         <button class="btn btn-primary px-4" type="submit">Login</button>
+                        <a href="{{route('home', app()->getLocale())}}" class="btn btn-link">{{ trans('messages.return-to-website')}}</a>
                      </div>
                      
                   </div>

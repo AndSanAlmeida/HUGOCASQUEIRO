@@ -23,7 +23,7 @@ Route::group([
 
   Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
-    Route::get('/profile', 'DashboardController@profile')->name('profile');
+    // Route::get('/profile', 'DashboardController@profile')->name('profile');
 
     // ABOUT
     Route::get('/about-us', 'AboutController@index')->name('dashboard.about');
