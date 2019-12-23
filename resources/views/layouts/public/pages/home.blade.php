@@ -25,12 +25,12 @@
         <div class="container">
             <div class="grid">
                 <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-slogan">
-                    <h1 class="header_underline">Our Mission</h1>
-                    <p> Our mission is to produce the highest quality work for every client, on every project.</p>
-                    <a class="btn-static align-right" href="{{ url('/aboutUs', app()->getLocale()) }}" title="More about us">More about us</a>
+                    <h1 class="header_underline">{{ json_decode($mission->title)}}</h1>
+                    <p> {{ json_decode($mission->body)}}</p>
+                    <a class="btn-static align-right" href="{{ route('about', app()->getLocale()) }}" title="{{ __('messages.more-about-us')}}">{{ __('messages.more-about-us')}}</a>
                 </div>
                 <div class="grid__item grid__item--md-span-6 grid__item--sm-span-12 mission-photo">
-                    <img class="img_responsive" src="{!! asset('img/mission.jpg') !!}" alt="Our Mission">
+                    <img class="img_responsive" src="{!! asset('img/mission.jpg') !!}" alt="{{ json_decode($mission->title)}}">
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
 
             <section class="reviews-container reviews-slider">
 
-                <div class="reviews-title">Histórias Reais</div>
+                <div class="reviews-title">{{ __('messages.real-histories')}}</div>
 
                 <div class="reviews-list slider-wrap">
                     <div class="reviews-item reviews-slide">
@@ -190,10 +190,10 @@
                 <div class="container">
                     <div class="grid budget_info align-center">
                         <div class="grid__item grid__item--lg-span-8">
-                            <h1>Peça já o seu Orçamento.</h1>
+                            <h1>{{ __('messages.budget')}}</h1>
                         </div>
                         <div class="grid__item grid__item--lg-span-4">
-                            <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
+                            <a class="btn-budget" href="{{ route('contacts', app()->getLocale()) }}" title="{{ __('messages.budget.button')}}">{{ __('messages.budget.button')}}</a>
                         </div>
                     </div>
                 </div>                    

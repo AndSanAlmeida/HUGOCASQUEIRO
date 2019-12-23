@@ -28,9 +28,9 @@
     <div id="members">
         <div class="members">
             <div class="container">
-                <h5 class="members-title align-center">A nossa equipa</h5>
-                <h2 class="members-subtitle align-center">Equipa de Profissionais.</h2>
-                <p class="members-text align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <h5 class="members-title align-center">{{ __('messages.about-us.team.team')}}</h5>
+                <h2 class="members-subtitle align-center">{{ __('messages.about-us.team.title')}}</h2>
+                <p class="members-text align-center">{{ __('messages.about-us.team.slogan')}}</p> 
                 <div class="grid">
                     <div class="grid__item grid__item--md-span-4 grid__item--sm-span-12">
                         <div class="members-profile align-center">
@@ -85,10 +85,10 @@
                 <div class="container">
                     <div class="grid budget_info align-center">
                         <div class="grid__item grid__item--lg-span-8">
-                            <h1>Peça já o seu Orçamento.</h1>
+                            <h1>{{ __('messages.budget')}}</h1>
                         </div>
                         <div class="grid__item grid__item--lg-span-4">
-                            <a class="btn-budget" href="{{ url('/contacts') }}" title="Entrar em contacto">Entrar em contacto</a>
+                            <a class="btn-budget" href="{{ route('contacts', app()->getLocale()) }}" title="{{ __('messages.budget.button')}}">{{ __('messages.budget.button')}}</a>
                         </div>
                     </div>
                 </div>                    

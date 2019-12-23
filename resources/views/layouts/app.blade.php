@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app_name', 'HugoCasqueiro') }}</title>
+    <title>{{ config('app_name', 'Hugo Casqueiro') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
