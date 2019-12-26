@@ -16738,7 +16738,12 @@ function goToTop() {
 } // ====================================================
 // Inicializa funções ONLOAD
 // ====================================================
+//LOADER
 
+
+window.onload = function () {
+  $('.loading').fadeOut("slow");
+};
 
 sticky();
 navResponsive();

@@ -4,9 +4,6 @@
 
 @section('content')
 
-<!-- Loader -->
-<div class="loading"></div>
-
 <div id="portfolio">
     <div class="portfolio" style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
         <div class="flexbox">
@@ -18,9 +15,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    
+    </div>    
 
     <div id="isotope">
         <div class="container">
@@ -164,13 +159,6 @@
         </div>  
     </div>  
 </div>
-
-<script>
-    //LOADER
-    window.onload = function() {
-        $('.loading').fadeOut(); 
-    }
-</script>
 
 @stop
 

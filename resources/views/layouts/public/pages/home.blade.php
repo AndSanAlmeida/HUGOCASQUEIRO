@@ -4,6 +4,9 @@
 
 @section('content')
 
+<!-- Loader -->
+<div class="loading"></div>
+
 <div id="carousel">
     <ul class="carousel-list">
         <li style="background-image: url('{!! asset('img/slide_01.jpg') !!}');">
@@ -37,7 +40,7 @@
     </div>    
 </div>
 
-<div id="services" style="background-image: url('{!! asset('img/services.jpg') !!}');">
+{{-- <div id="services" style="background-image: url('{!! asset('img/services.jpg') !!}');">
     <div class="grey-fade-over" style="opacity: 0.8; z-index: 1;"></div>
     <div class="services">
         <div class="container">
@@ -53,6 +56,69 @@
                         <li>Todo o tipo de mobiliário sobre medida (mesas, camas, entre outros…)</li>
                     </ul>
                 </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>02.</h1>
+                    <h2>Carpintaria Exterior</h2>
+                    <ul>
+                        <li>Revestimento de paredes, fachadas em madeira maciça e aglomerados</li>
+                        <li>Terraços em deck compósito e madeira</li>
+                        <li>Alpendres e cobertos em madeira</li>
+                        <li>Cabanas de jardim</li>
+                        <li>Revestimento de Jacuzzis e piscinas exteriores</li>
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>03.</h1>
+                    <h2>Escadaria Interior e Exterior</h2>
+                    <ul>
+                        <li>Todo o tipo de escadaria em madeira com acabamento em verniz ou velatura</li>                  
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>04.</h1>
+                    <h2>Pavimentos</h2>
+                    <ul>
+                        <li>Piso flutuante em madeira e estratificado laminado</li>
+                        <li>Lamparquet colado ao chão em madeira maciça </li>
+                        <li>Soalhos em madeira</li>
+                        <li>Rodapés em madeira e laminados</li>
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>05.</h1>
+                    <h2>Cozinhas</h2>
+                    <ul>
+                        <li>Conceção com projeto em 3D, fabricação e montagem de cozinhas modernas e tradicionais com um vasto leque de cores e padrões em melamina, termolaminado, madeira maciça e lacado MDF</li>
+                    </ul>
+                </div>
+                <div class="grid__item grid__item--lg-span-4 services-item">
+                    <h1>06.</h1>
+                    <h2>Renovação e Restauração</h2>
+                    <ul>
+                        <li>Todo o tipo de renovação e tratamento de madeira maciça em móveis, fachadas e pisos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>                    
+</div> --}}
+<div id="services" style="background-image: url('{!! asset('img/services.jpg') !!}');">
+    <div class="grey-fade-over" style="opacity: 0.8; z-index: 1;"></div>
+    <div class="services">
+        <div class="container">
+            <div class="grid">
+                @foreach ($services as $service)
+                    <div class="grid__item grid__item--lg-span-4 services-item">
+                        @if ($service->id < 10)
+                            <h1>0{{ $service->id }}.</h1>
+                        @else
+                            <h1>{{ $service->id }}.</h1>
+                        @endif
+                        <h2>{{ json_decode($service->title) }}</h2>
+                        {{ json_decode($service->body) }}
+                    </div>
+                @endforeach
+                
                 <div class="grid__item grid__item--lg-span-4 services-item">
                     <h1>02.</h1>
                     <h2>Carpintaria Exterior</h2>

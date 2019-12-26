@@ -297,9 +297,14 @@ function goToTop() {
 // Inicializa funções ONLOAD
 // ====================================================
 
-    sticky();
-    navResponsive();
-    slider();
-    isotope();
-    magnificPopup();
-     goToTop();
+//LOADER
+window.onload = function() {
+    $('.loading').fadeOut("slow"); 
+}
+
+sticky();
+navResponsive();
+slider();
+isotope();
+magnificPopup();
+goToTop();
