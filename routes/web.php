@@ -19,10 +19,12 @@ Route::group([
   Route::get('/aboutUs', 'PublicPagesController@aboutUs')->name('about');
   Route::get('/portfolio', 'PublicPagesController@portfolio')->name('portfolio');
   Route::get('/contacts', 'PublicPagesController@contacts')->name('contacts');
+  Route::post('/send-email', 'PublicPagesController@sendEmail')->name('send-email');
   Auth::routes();
 
   Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
+    
 
     // ABOUT
     Route::get('/about-us', 'AboutController@index')->name('dashboard.about');

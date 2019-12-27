@@ -23,7 +23,8 @@
 		<div class="container">
 			<h2 class="contactForm-title align-center">{{ __('messages.contacts.form.title')}}</h2>
 			<p class="contactForm-subtitle align-center">{{ __('messages.contacts.form.slogan')}}</p>
-			<form method="POST">
+		<form method="POST" action="{{route("send-email",app()->getLocale())}}">
+			@csrf
 				<div class="grid">
 					<div class="grid__item grid__item--md-span-6 grid__item--sm-span-12">
 						<input class="form-control" type="text" name="name" placeholder="{{ __('messages.contacts.form.field.name')}} *" required>

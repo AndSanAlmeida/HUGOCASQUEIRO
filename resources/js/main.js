@@ -301,10 +301,11 @@ function goToTop() {
 window.onload = function() {
     $('.loading').fadeOut("slow"); 
 }
-
-sticky();
-navResponsive();
-slider();
-isotope();
-magnificPopup();
-goToTop();
+$(document).ready(function () {
+    sticky();
+    navResponsive();
+    slider();
+    isotope();
+    magnificPopup();
+    goToTop();
+});

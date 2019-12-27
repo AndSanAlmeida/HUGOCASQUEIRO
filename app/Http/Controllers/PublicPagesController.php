@@ -11,6 +11,8 @@ use App\About;
 use App\Category;
 use App\Project;
 use App\Image;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class PublicPagesController extends Controller
 {
@@ -33,5 +35,10 @@ class PublicPagesController extends Controller
     }
     public function contacts () {
         return view('layouts.public.pages.contacts');
+    }
+    public function sendEmail(Request $request)
+    {
+        Mail::send(new ContactMail($request));
+        return back();
     }
 }
