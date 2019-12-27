@@ -3,23 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Service;
+use App\Slider;
 use App\Mission;
+use App\Service;
+use App\Comment;
 use App\About;
+use App\Category;
+use App\Project;
+use App\Image;
 
 class PublicPagesController extends Controller
 {
     public function home () {
-        $services = Service::get();
+        $slides = Slider::get();
         $mission = Mission::first();
-        return view('layouts.public.pages.home', compact('mission', 'services'));
+        $services = Service::get();
+        $comments = Comment::get();
+        return view('layouts.public.pages.home', compact('slides', 'mission', 'services', 'comments'));
     }
     public function aboutUs () {
         $about = About::first();
         return view('layouts.public.pages.aboutUs', compact('about'));
     }
     public function portfolio () {
-        return view('layouts.public.pages.portfolio');
+        $categories = Category::get();
+        $projects = Project::get();
+        $images = Image::get();
+        return view('layouts.public.pages.portfolio', compact('categories', 'projects', 'images'));
     }
     public function contacts () {
         return view('layouts.public.pages.contacts');

@@ -21,121 +21,31 @@
         <div class="container">
             <div class="isotope-sorters">
                 <ul class="align-center">
-                    <li data-filter="*" class="active">Todos</li>
-                    <li data-filter=".interior">Interior</li>
-                    <li data-filter=".exterior">Exterior</li>
-                    <li data-filter=".cozinha">Cozinha</li>
+                    @foreach ($categories as $category)
+                        <li data-filter="{{ $category->filter }}">{{ json_decode($category->name) }}</li>
+                    @endforeach
                 </ul>
             </div>
             <div class="isotope-list">
-                <div class="isotope-item interior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}">           
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Caixa de Joias</h5>
-                        <p class="align-center">Design, Rústico</p>                       
-                    </a>                     
-                </div> 
-                <div class="isotope-item exterior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Porta Rustica</h5>
-                        <p class="align-center">Design, Rústico</p>                                                
-                    </a>
-                </div> 
-                <div class="isotope-item cozinha">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Caixa de Joias</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item interior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Porta Rustica</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item exterior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Porta Rustica</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item cozinha">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Caixa de Joias</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div>  
-                <div class="isotope-item interior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Caixa de Joias</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item exterior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Porta Rustica</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item cozinha">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Caixa de Joias</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item interior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Porta Rustica</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item exterior">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Porta Rustica</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div> 
-                <div class="isotope-item cozinha">
-                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
-                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
-                        <div class="isotope-overlay"></div>
-                        <h5 class="align-center">Caixa de Joias</h5>
-                        <p class="align-center">Design, Rústico</p>     
-                    </a>
-                </div>                     
+                @foreach ($projects as $project)
+                    <div class="isotope-item {{ ltrim($project->category->filter, '.') }}">
+                        <a href="{{ $project->main_photo }}" class="galleryItem" data-group="{{ $project->id}}" data-title="{{ json_decode($project->title) }}">
+                            <img class="img_responsive" src="{{ $project->main_photo }}">           
+                            <div class="isotope-overlay"></div>
+                            <h5 class="align-center">{{ json_decode($project->title) }}</h5>
+                            <p class="align-center">{{ json_decode($project->family) }}</p>                       
+                        </a>                     
+                    </div> 
+                @endforeach               
             </div>
         </div>  
     </div>
 
     <!-- HIDE GALLERIES -->
     <div class="hide">
-        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
-        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
-        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
-        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
-        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
-        <a href="{!! asset('img/item02.jpg') !!}" class="galleryItem hide" data-group="image-1" data-title="Image Title!"></a>
+        @foreach ($images as $image)
+            <a href="{{ $image->path}}" class="galleryItem hide" data-group="{{ $image->project_id}}" data-title="{{ json_decode($image->project->title) }}"></a>
+        @endforeach
     </div>
 
 </div>
