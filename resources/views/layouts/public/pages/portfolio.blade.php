@@ -24,19 +24,88 @@
                     @foreach ($categories as $category)
                         <li data-filter="{{ $category->filter }}">{{ json_decode($category->name) }}</li>
                     @endforeach
+                    {{-- <li data-filter="*">Todos</li>
+                    <li data-filter=".interior">Interior</li>
+                    <li data-filter=".exterior">Exterior</li>
+                    <li data-filter=".cozinha">Cozinha</li> --}}
                 </ul>
             </div>
             <div class="isotope-list">
                 @foreach ($projects as $project)
                     <div class="isotope-item {{ ltrim($project->category->filter, '.') }}">
-                        <a href="{{ $project->main_photo }}" class="galleryItem" data-group="{{ $project->id}}" data-title="{{ json_decode($project->title) }}">
+                        <a href="{{ $project->main_photo }}" class="galleryItem" data-group="{{ $project->id }}" data-title="{{ json_decode($project->title) }}">
                             <img class="img_responsive" src="{{ $project->main_photo }}">           
                             <div class="isotope-overlay"></div>
                             <h5 class="align-center">{{ json_decode($project->title) }}</h5>
                             <p class="align-center">{{ json_decode($project->family) }}</p>                       
                         </a>                     
                     </div> 
-                @endforeach               
+                @endforeach 
+
+                {{-- @foreach ($projects as $project)
+                    <div class="isotope-item exterior">
+                        <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                            <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}">           
+                        </a>                     
+                    </div> 
+                @endforeach --}}
+
+                
+                {{-- <div class="isotope-item exterior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item kitchen">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item interior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item exterior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item kitchen">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    </a>
+                </div>  
+                <div class="isotope-item interior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item exterior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item kitchen">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item interior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item exterior">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item02.jpg') !!}" alt="">
+                    </a>
+                </div> 
+                <div class="isotope-item cozinha">
+                    <a href="{!! asset('img/item01.jpg') !!}" class="galleryItem" data-group="image-1" data-title="Image Title!">
+                        <img class="img_responsive" src="{!! asset('img/item01.jpg') !!}" alt="">
+                    </a>
+                </div>  --}}             
             </div>
         </div>  
     </div>

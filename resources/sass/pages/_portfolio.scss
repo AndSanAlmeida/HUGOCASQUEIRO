@@ -66,9 +66,10 @@
             display: flex;
             max-width: 440px;
             margin: 15px;
+            // transition: background 0.8s, box-shadow 0.8s;
 
             &:hover .isotope-overlay {
-                opacity: 1;
+                opacity: 0.9;
                 @include transform(scale(1)); 
             }
 

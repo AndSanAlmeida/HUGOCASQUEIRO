@@ -207,9 +207,8 @@ function isotope() {
     var $grid = $('.isotope-list').isotope({
         itemSelector: '.isotope-item',
         filter: '*',
-        transitionDuration: '0.5s',
+        transitionDuration: '0.8s',
         masonry: {
-            columnWidth: 40,
             fitWidth: true
         }
     });
@@ -228,9 +227,9 @@ function isotope() {
 
 
     // layout Isotope after each image loads
-    $grid.imagesLoaded().progress(function () {
-        $grid.isotope('layout');
-    });
+    // $grid.imagesLoaded().progress(function () {
+    //     $grid.isotope('layout');
+    // });
 }
 
 // ====================================================
@@ -294,18 +293,19 @@ function goToTop() {
 }
 
 // ====================================================
-// Inicializa funções ONLOAD
+// Inicializa funções ONLOAD / READY
 // ====================================================
 
 //LOADER
-window.onload = function() {
+$(document).ready(function () {
     $('.loading').fadeOut("slow"); 
-}
+    isotope();
+});
+
 $(document).ready(function () {
     sticky();
     navResponsive();
     slider();
-    isotope();
     magnificPopup();
     goToTop();
 });

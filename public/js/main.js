@@ -16661,9 +16661,8 @@ function isotope() {
   var $grid = $('.isotope-list').isotope({
     itemSelector: '.isotope-item',
     filter: '*',
-    transitionDuration: '0.5s',
+    transitionDuration: '0.8s',
     masonry: {
-      columnWidth: 40,
       fitWidth: true
     }
   });
@@ -16676,10 +16675,9 @@ function isotope() {
     $('.isotope-sorters li.active').removeClass('active');
     $(this).addClass('active');
   }); // layout Isotope after each image loads
-
-  $grid.imagesLoaded().progress(function () {
-    $grid.isotope('layout');
-  });
+  // $grid.imagesLoaded().progress(function () {
+  //     $grid.isotope('layout');
+  // });
 } // ====================================================
 // MagnificPopup
 // ====================================================
@@ -16736,21 +16734,22 @@ function goToTop() {
     }, 800);
   });
 } // ====================================================
-// Inicializa funções ONLOAD
+// Inicializa funções ONLOAD / READY
 // ====================================================
 //LOADER
 
 
-window.onload = function () {
+$(document).ready(function () {
   $('.loading').fadeOut("slow");
-};
-
-sticky();
-navResponsive();
-slider();
-isotope();
-magnificPopup();
-goToTop();
+  isotope();
+});
+$(document).ready(function () {
+  sticky();
+  navResponsive();
+  slider();
+  magnificPopup();
+  goToTop();
+});
 
 /***/ }),
 
