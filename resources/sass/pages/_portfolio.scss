@@ -44,15 +44,15 @@
 
         .isotope-list {
             margin: 0 auto;
-            overflow:hidden;
+            overflow: hidden;
         }
 
         .isotope-overlay {
             position: absolute;
-            width: calc(100% - 40px);
-            height: calc(100% - 40px);
-            left: 20px;
-            top: 17px;
+            width: calc(100% - 80px);
+            height: calc(100% - 80px);
+            left: 40px;
+            top: 40px;
             z-index: 1;
             display: block;
             opacity: 0;
@@ -62,15 +62,17 @@
             @include transition(all, 200ms, linear);                
         }
 
-        .isotope-item {
-            display: flex;
-            max-width: 440px;
-            margin: 15px;
-            // transition: background 0.8s, box-shadow 0.8s;
+        .isotope-item {            
+            width: 50%;
+            padding: 20px;
 
             &:hover .isotope-overlay {
                 opacity: 0.9;
                 @include transform(scale(1)); 
+            }
+
+            a {
+                display: flex;
             }
 
             img {
@@ -156,11 +158,11 @@
     color: white;
 }
 
-@include large {
+@include medium {
     #portfolio {
         #isotope {
             .isotope-item {
-                max-width: 360px;
+                width: 100%;
             }
         }
     }

@@ -207,9 +207,11 @@ function isotope() {
     var $grid = $('.isotope-list').isotope({
         itemSelector: '.isotope-item',
         filter: '*',
-        transitionDuration: '0.8s',
+        percentPosition: true,
+        transitionDuration: '0.5s',
         masonry: {
-            fitWidth: true
+            columnWidth: '.isotope-item',
+            horizontalOrder: true
         }
     });
 
@@ -227,9 +229,9 @@ function isotope() {
 
 
     // layout Isotope after each image loads
-    // $grid.imagesLoaded().progress(function () {
-    //     $grid.isotope('layout');
-    // });
+    $grid.imagesLoaded().progress(function () {
+        $grid.isotope('layout');
+    });
 }
 
 // ====================================================
@@ -299,13 +301,13 @@ function goToTop() {
 //LOADER
 $(document).ready(function () {
     $('.loading').fadeOut("slow"); 
-    isotope();
 });
 
 $(document).ready(function () {
     sticky();
     navResponsive();
     slider();
+    isotope();
     magnificPopup();
     goToTop();
 });

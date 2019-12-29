@@ -1736,10 +1736,10 @@ p {
 
 #portfolio #isotope .isotope-overlay {
   position: absolute;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  left: 20px;
-  top: 17px;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  left: 40px;
+  top: 40px;
   z-index: 1;
   display: block;
   opacity: 0;
@@ -1755,16 +1755,19 @@ p {
 }
 
 #portfolio #isotope .isotope-item {
-  display: -webkit-box;
-  display: flex;
-  max-width: 440px;
-  margin: 15px;
+  width: 50%;
+  padding: 20px;
 }
 
 #portfolio #isotope .isotope-item:hover .isotope-overlay {
   opacity: 0.9;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+#portfolio #isotope .isotope-item a {
+  display: -webkit-box;
+  display: flex;
 }
 
 #portfolio #isotope .isotope-item img {
@@ -1849,9 +1852,9 @@ p {
   color: white;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   #portfolio #isotope .isotope-item {
-    max-width: 360px;
+    width: 100%;
   }
 }
 
