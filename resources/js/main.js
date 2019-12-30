@@ -215,6 +215,9 @@ function isotope() {
         }
     });
 
+    // Set first 'li' Active
+    $('.isotope-sorters li:first-child').addClass('active');
+
     $('.isotope-sorters li').click(function () {
         var selector = $(this).attr('data-filter');
 
@@ -222,7 +225,7 @@ function isotope() {
             filter: selector,
         })
 
-        //changing active class with click event
+        //changing active class with click event        
         $('.isotope-sorters li.active').removeClass('active');
         $(this).addClass('active');
     });

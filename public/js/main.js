@@ -16667,12 +16667,14 @@ function isotope() {
       columnWidth: '.isotope-item',
       horizontalOrder: true
     }
-  });
+  }); // Set first 'li' Active
+
+  $('.isotope-sorters li:first-child').addClass('active');
   $('.isotope-sorters li').click(function () {
     var selector = $(this).attr('data-filter');
     $grid.isotope({
       filter: selector
-    }); //changing active class with click event
+    }); //changing active class with click event        
 
     $('.isotope-sorters li.active').removeClass('active');
     $(this).addClass('active');
