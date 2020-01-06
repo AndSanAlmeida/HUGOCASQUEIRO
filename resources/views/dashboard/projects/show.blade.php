@@ -68,18 +68,18 @@
             </div>
             <div class="tab-pane" id="img" role="tabpanel">
                 <div class="form-group">
-                    <label for="main_photo">{{ ucfirst(trans('messages.main_photo'))}}</label>
+                    <label for="main_photo" class="h3">{{ ucfirst(trans('messages.main_photo'))}}</label>
                     <input class="form-control-file mb-3" type="file" name="main_photo" id="main_photo">
                     @if ($info->main_photo)
-                <img src="{{asset($info->main_photo)}}" class="img-fluid img-thumbnail w-50" alt="main_photo">
+                <img src="{{asset($info->main_photo)}}" class="w-50" alt="main_photo">
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="photos">{{ ucfirst(trans('messages.photos'))}}</label>
+                    <label for="photos" class="h3">{{ ucfirst(trans('messages.photos'))}}</label>
                     <input class="form-control-file mb-3" type="file" name="photos[]" id="photos" multiple>
                     @if ($info->images)
                         @foreach ($info->images as $img)
-                        <img src="{{asset($img->path)}}" class="img-fluid img-thumbnail w-50" alt="photo">
+                        <img src="{{asset($img->path)}}" class="img-thumbnail" alt="photo" width="350" height="350">
                         @endforeach
                     @endif
                 </div>

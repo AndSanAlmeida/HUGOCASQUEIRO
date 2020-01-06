@@ -8,11 +8,11 @@
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
                     <h5 class="header_underline">{{ __('messages.pages')}}</h5>
                     <ul>
-                        <li><a href="{{ url('/home') }}" title="{{ __('messages.home')}}">{{ __('messages.home')}}</a></li>
-                        <li><a href="{{ url('/aboutUs') }}" title="{{ __('messages.about-us')}}">{{ __('messages.about-us')}}</a></li>
-                        <li><a href="{{ url('/portfolio') }}" title="{{ __('messages.portfolio')}}">{{ __('messages.portfolio')}}</a></li>  
+                        <li><a href="{{ route('about', app()->getLocale())}}" title="{{ __('messages.home')}}">{{ __('messages.home')}}</a></li>
+                        <li><a href="{{ route('about', app()->getLocale())}}" title="{{ __('messages.about-us')}}">{{ __('messages.about-us')}}</a></li>
+                        <li><a href="{{ route('portfolio', app()->getLocale())}}" title="{{ __('messages.portfolio')}}">{{ __('messages.portfolio')}}</a></li>  
                         <!--<li><a href="#" title="Catálogo" target="_blank">Catálogo</a></li>-->                  
-                        <li><a href="{{ url('/contacts') }}" title="{{ __('messages.contacts')}}">{{ __('messages.contacts')}}</a></li>
+                        <li><a href="{{ route('contacts', app()->getLocale())}}" title="{{ __('messages.contacts')}}">{{ __('messages.contacts')}}</a></li>
                     </ul>
                 </div>
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
@@ -27,9 +27,9 @@
                     <h3>Hugo Casqueiro</h3>
                     <ul>
                         <hr class="dotted" />
-                        <li><a href="mailto:hugocasqueiro@teste.com?Subject=hugocasquerio.pt%20|%20MAIL" target="_top" title="Enviar Email"><i class="fas fa-envelope contrast-color"></i>&nbsp;carpintariahc@gmail.com</a></li>
+                        <li><a href="mailto:carpintariahc@gmail.com?Subject=carpintariahc.pt%20|%20MAIL" target="_top" title="Enviar Email"><i class="fas fa-envelope contrast-color"></i>&nbsp;carpintariahc@gmail.com</a></li>
                         <li><i class="fas fa-phone contrast-color"></i>&nbsp;+351 919 123 654</li>
-                        <li><i class="fas fa-address-card contrast-color"></i>&nbsp;Mira De Aire</li>
+                        <li><i class="fas fa-address-card contrast-color"></i>&nbsp;R. Chão de Empires nº58, Mira de Aire</li>
                         <hr class="dotted" />
                     </ul>
                 </div>

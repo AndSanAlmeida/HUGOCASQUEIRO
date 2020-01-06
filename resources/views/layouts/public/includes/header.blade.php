@@ -20,7 +20,7 @@
             <a href="{{ route('about', app()->getLocale())}}" class="link" title="{{ __('messages.about-us')}}">@lang('messages.about-us')</a>
 	        <a href="{{ route('portfolio', app()->getLocale())}}" class="link" title="{{ __('messages.portfolio')}}">@lang('messages.portfolio')</a>
             <!--<a href="#" class="link" title="Catálogo" target="_blank">Catálogo</a>-->
-			<a href=" {{ route('contacts', app()->getLocale())}} " class="link" title="{{ __('messages.contacts')}}">@lang('messages.contacts')</a>
+			<a href="{{ route('contacts', app()->getLocale())}}" class="link" title="{{ __('messages.contacts')}}">@lang('messages.contacts')</a>
             <ul class="sidenav-languages align-center">
                 <li><a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'pt') }}" title="Português"><img src="{!! asset('img/flags/portugal.svg') !!}" alt="Portugal" width="40" height="40"></a></li>       
                 <li><a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'en') }}" title="Inglês"><img src="{!! asset('img/flags/united-kingdom.svg') !!}" alt="Inglaterra" width="40" height="40"></a></li>

@@ -48,7 +48,7 @@ return [
     'sidebar.portfolio-projects' => 'Projectos',
     'header.greeting' => 'Olá',
     'header.user.settings' => 'Definições',
-    'header.user.profile' => 'Perfil',
+    'header.user.home' => 'Back to Website',
     'header.user.logout' => 'Sair',
     // Fontend
     'portuguese' => 'Português',

@@ -30,8 +30,8 @@
             <div class="isotope-list">
                 @foreach ($projects as $project)
                     <div class="isotope-item {{ ltrim($project->category->filter, '.') }}">
-                        <a href="{{ $project->main_photo }}" class="galleryItem" data-group="{{ $project->id }}" data-title="{{ json_decode($project->title) }}">
-                            <img class="img_responsive" src="{{ $project->main_photo }}">           
+                        <a href="{{ asset($project->main_photo) }}" class="galleryItem" data-group="{{ $project->id }}" data-title="{{ json_decode($project->title) }}">
+                            <img class="img_responsive" src="{{ asset($project->main_photo) }}">           
                             <div class="isotope-overlay"></div>
                             <h5 class="align-center">{{ json_decode($project->title) }}</h5>
                             <p class="align-center">{{ json_decode($project->family) }}</p>                       
@@ -45,7 +45,7 @@
     <!-- HIDE GALLERIES -->
     <div class="hide">
         @foreach ($images as $image)
-            <a href="{{ $image->path}}" class="galleryItem hide" data-group="{{ $image->project_id}}" data-title="{{ json_decode($image->project->title) }}"></a>
+            <a href="{{ asset($image->path) }}" class="galleryItem hide" data-group="{{ $image->project_id }}" data-title="{{ json_decode($image->project->title) }}"></a>
         @endforeach
     </div>
 

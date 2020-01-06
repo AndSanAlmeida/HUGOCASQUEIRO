@@ -28,11 +28,6 @@ class ServiceController extends Controller
     {
         try {
             $Service = Service::find($id);
-            $services = Service::count();
-            if ($services) {
-                Alert::toast(trans('messages.has_to_have_one'), 'error');
-                return back();
-            }
             $Service->delete();
             Alert::success(trans('messages.success'), trans('messages.success-message'));
             return back();
