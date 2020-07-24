@@ -1,37 +1,31 @@
 @charset 'UTF-8';
 // 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins';
+@import 'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
 
 // 2. Vendors
-@import
-  'vendors/normalize';
+@import 'vendors/normalize';
 
 // 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+@import 'base/base',
+'base/fonts',
+'base/typography',
+'base/helpers';
 
 // 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/budget',
-  'layout/footer';
+@import 'layout/header',
+'layout/budget',
+'layout/footer';
 
 // 5. Components
-@import
-  'components/button';
+@import 'components/button';
 
 // 6. Page-specific styles
-@import
-  'pages/home',
-  'pages/aboutUs',
-  'pages/portfolio',
-  'pages/contacts';
+@import 'pages/home',
+'pages/aboutUs',
+'pages/portfolio',
+'pages/contacts';
 
 
 // -----------------------------------------------------------------------------
@@ -45,12 +39,14 @@
 }
 
 // loop over the breakpoints
-@each $key, $value in $breakpoints {
+@each $key,
+$value in $breakpoints {
     @for $i from 1 through $items {
         .grid__item--#{$key}-span-#{$i} {
             flex: 0 0 100%;
+
             @include break($key) {
-              flex: 0 0 #{$i / $items * 100%};
+                flex: 0 0 #{$i / $items * 100%};
             }
         }
     }
@@ -73,14 +69,15 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     left: 0;
     top: 0;
     opacity: .1;
     visibility: hidden;
     z-index: 9999;
-    transition: all 300ms cubic-bezier(.4,0,.2,1);
+    transition: all 300ms cubic-bezier(.4, 0, .2, 1);
     transform: translateZ(0);
+
     &.visible {
         transition-delay: 0;
         visibility: visible;
@@ -89,7 +86,7 @@
 }
 
 // -----------------------------------------------------------------------------
-//FLEXBOX
+// FLEXBOX
 // -----------------------------------------------------------------------------
 
 .flexbox {
@@ -98,6 +95,7 @@
     width: 100%;
     min-height: 100%;
     z-index: 2;
+
     .flexbox_item {
         display: table-cell;
         vertical-align: middle;
@@ -134,7 +132,8 @@
 // TITLE
 // -----------------------------------------------------------------------------
 
-.main-title, .main-subtitle {
+.main-title,
+.main-subtitle {
     color: white;
     letter-spacing: 1px;
 }
@@ -200,6 +199,25 @@
 }
 
 // -----------------------------------------------------------------------------
+// OTHERS
+// -----------------------------------------------------------------------------
+.success-message {
+    background-color: #e6fce4;
+    border: 1px solid #00ab02;
+    padding: 15px;
+    color: #005801;
+    font-size: 12pt;
+}
+
+.error-message {
+    background-color: #fce4e4;
+    border: 1px solid #fcc2c3;
+    padding: 15px;
+    color: #881a1a;
+    font-size: 12pt;
+}
+
+// -----------------------------------------------------------------------------
 // LOADING
 // -----------------------------------------------------------------------------
 
@@ -247,87 +265,85 @@
 /* Animation */
 
 @-webkit-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 
 @-moz-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 
 @-o-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 
 @keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 // -----------------------------------------------------------------------------
 // MEDIA QUERIES
 // -----------------------------------------------------------------------------
 
-@include large {
-    
-}
+@include large {}
 
 @include medium {
     .main-subtitle {
@@ -335,6 +351,4 @@
     }
 }
 
-@include small {
-
-}
+@include small {}

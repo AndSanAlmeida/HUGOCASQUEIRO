@@ -57,8 +57,8 @@ class ProjectController extends Controller
                 ->save();
 
             if (isset($_FILES['main_photo']) && $_FILES['main_photo']['size'] > 0) {
-                if (!file_exists(public_path('img/projects/'. $project->id))) {
-                    mkdir(public_path('img/projects/'. $project->id), 775, true);
+                if (!file_exists(public_path('img/projects/' . $project->id))) {
+                    mkdir(public_path('img/projects/' . $project->id), 0755, true);
                 }
                 $img = Image::make($_FILES['main_photo']['tmp_name']);
                 // save image
@@ -69,7 +69,7 @@ class ProjectController extends Controller
 
             if (isset($_FILES['photos']) && $_FILES['photos']['size'] > 0) {
                 if (!file_exists(public_path('img/projects/' . $project->id . '/photos'))) {
-                    mkdir(public_path('img/projects/' . $project->id . '/photos'), 775, true);
+                    mkdir(public_path('img/projects/' . $project->id . '/photos'), 0755, true);
                 }
                 $images = $request->file('photos');
                 foreach ($images as $image) {
@@ -82,7 +82,7 @@ class ProjectController extends Controller
                 }
             }
 
-        
+
 
             Alert::success(trans('messages.success'), trans('messages.success-message'));
             return redirect()->route('dashboard.projects', app()->getLocale());
@@ -102,7 +102,7 @@ class ProjectController extends Controller
     {
         $info = Project::find($id);
         $categories = Category::get()->where('id', '>', 1);
-        return view('dashboard.projects.show')->with(['info'=> $info, 'categories'=> $categories]);
+        return view('dashboard.projects.show')->with(['info' => $info, 'categories' => $categories]);
     }
 
     /**
@@ -129,7 +129,7 @@ class ProjectController extends Controller
 
             if ($request->hasFile('main_photo') && isset($_FILES['main_photo']) && $_FILES['main_photo']['size'] > 0) {
                 if (!file_exists(public_path('img/projects/' . $project->id))) {
-                    mkdir(public_path('img/projects/' . $project->id), 775, true);
+                    mkdir(public_path('img/projects/' . $project->id), 0755, true);
                 }
                 $img = Image::make($_FILES['main_photo']['tmp_name']);
                 // save image
@@ -142,19 +142,18 @@ class ProjectController extends Controller
                 $project->images()->delete();
                 File::deleteDirectory(public_path('img/projects/' . $project->id . '/photos'));
                 if (!file_exists(public_path('img/projects/' . $project->id . '/photos'))) {
-                    mkdir(public_path('img/projects/' . $project->id . '/photos'), 775, true);
+                    mkdir(public_path('img/projects/' . $project->id . '/photos'), 0755, true);
                 }
                 $images = $request->file('photos');
                 foreach ($images as $image) {
                     $filename = $image->getClientOriginalName();
                     Image::make($image)->save(public_path('img/projects/' . $project->id . '/photos' . '/' . $filename));
-                    $img = \App\Image::where('path','=', 'img/projects/' . $project->id . '/photos' . '/' . $filename)->count();
+                    $img = \App\Image::where('path', '=', 'img/projects/' . $project->id . '/photos' . '/' . $filename)->count();
 
                     $img = new \App\Image();
                     $img->path = 'img/projects/' . $project->id . '/photos' . '/' . $filename;
                     $img->project_id = $project->id;
                     $img->save();
-                    
                 }
             }
 

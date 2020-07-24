@@ -694,7 +694,7 @@ p {
 }
 
 #header #nav nav .nav-links li {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 #header #nav nav .nav-links li a {
@@ -730,7 +730,7 @@ p {
 
 #header .navbar h1,
 #header .navbar a {
-  color: #FFF;
+  color: #fff;
 }
 
 #header .sticky {
@@ -738,7 +738,7 @@ p {
   left: 0;
   position: fixed;
   width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
   line-height: 3.5;
   box-shadow: 0 0 0.125em 0 rgba(0, 0, 0, 0.35);
   -webkit-animation: sticky 500ms;
@@ -782,15 +782,24 @@ p {
   color: #444;
   text-transform: uppercase;
   text-decoration: none;
-  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6;
   display: block;
   font-size: 0.9em;
   font-weight: 700;
   padding: 0.75em 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
 }
 
-#header #sidenav nav .link:first-child {
-  border: 0;
+#header #sidenav nav .link:hover,
+#header #sidenav nav .link:active,
+#header #sidenav nav .link:focus {
+  color: #6dc234;
+}
+
+#header #sidenav nav .link.active {
+  border-bottom: solid 1px #6dc234;
 }
 
 #header #sidenav .close {
@@ -817,6 +826,34 @@ p {
 #header #sidenav .sidenav-languages li {
   display: inline;
   margin: 0 5px;
+}
+
+#header #sidenav .sidenav-socials {
+  list-style-type: none;
+  padding: 0;
+}
+
+#header #sidenav .sidenav-socials li {
+  display: inline;
+  margin: 0 5px;
+}
+
+#header #sidenav .sidenav-socials li a {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+
+#header #sidenav .sidenav-socials li a.facebook:hover {
+  color: #3b5999;
+}
+
+#header #sidenav .sidenav-socials li a.instagram:hover {
+  color: #e4405f;
+}
+
+#header #sidenav .sidenav-socials li a.linkedin:hover {
+  color: #0077B5;
 }
 
 @-webkit-keyframes sticky {
@@ -848,7 +885,7 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
-  #header #nav span {
+  #header #nav h1 {
     display: none;
   }
 
@@ -1037,7 +1074,7 @@ p {
 #goToTop {
   position: fixed;
   color: #6dc234;
-  bottom: 20px;
+  bottom: 85px;
   right: 15px;
   cursor: pointer;
   z-index: 500;
@@ -1047,7 +1084,7 @@ p {
 }
 
 #goToTop:hover {
-  bottom: 25px;
+  bottom: 90px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2532,6 +2569,22 @@ p {
 
 .style-3 {
   background-color: #212121;
+}
+
+.success-message {
+  background-color: #e6fce4;
+  border: 1px solid #00ab02;
+  padding: 15px;
+  color: #005801;
+  font-size: 12pt;
+}
+
+.error-message {
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  padding: 15px;
+  color: #881a1a;
+  font-size: 12pt;
 }
 
 .loading {

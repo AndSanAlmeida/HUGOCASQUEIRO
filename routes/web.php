@@ -10,16 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Send Email
+
 Route::group([
   'prefix' => '{locale}',
   'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'
 ], function () {
-
+  
   Route::get('/', 'PublicPagesController@home')->name('home');
   Route::get('/aboutUs', 'PublicPagesController@aboutUs')->name('about');
   Route::get('/portfolio', 'PublicPagesController@portfolio')->name('portfolio');
   Route::get('/contacts', 'PublicPagesController@contacts')->name('contacts');
-  Route::post('/send-email', 'PublicPagesController@sendEmail')->name('send-email');
+  Route::post('/sendEmail', 'PublicPagesController@sendEmail');
   Auth::routes();
 
   Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {

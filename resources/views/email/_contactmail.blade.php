@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Carpintaria - Marcenaria HC</title>
+    <title>Carpintaria | Marcenaria HC</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -317,9 +317,9 @@
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p><b>Nome:</b> {{ $email->name }}</p>
-                        <p><b>Email:</b> {{ $email->email }}</p>
-                        <p><b>Menssagem</b><br> {{ $email->message }}</p>
+                        <p><b>Nome:</b> {{ $data->name }}</p>
+                        <p><b>Email:</b> {{ $data->email }}</p>
+                        <p><b>Menssagem</b><br> {{ $data->message }}</p>
                       </td>
                     </tr>
                   </table>

@@ -1,6 +1,6 @@
 <div class="style-3">
     <div id="goToTop">
-        <i class="fas fa-chevron-circle-up fa-2x" title="Go To Top"></i>
+        <i class="fas fa-chevron-circle-up fa-lg" title="Go To Top"></i>
     </div>
     <div class="container">
         <footer id="footer">
