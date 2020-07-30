@@ -57,7 +57,7 @@ class CommentController extends Controller
 
             if (isset($_FILES['photo']) && $_FILES['photo']['size'] > 0) {
                 if (!file_exists(public_path('img/comments'))) {
-                    mkdir(public_path('img/comments'), 775, true);
+                    mkdir(public_path('img/comments'), 0755, true);
                 }
                 $img = Image::make($_FILES['photo']['tmp_name']);
                 // save image
@@ -88,7 +88,7 @@ class CommentController extends Controller
 
             if (isset($_FILES['photo']) && $_FILES['photo']['size'] > 0) {
                 if (!file_exists(public_path('img/comments'))) {
-                    mkdir(public_path('img/comments'), 775, true);
+                    mkdir(public_path('img/comments'), 0755, true);
                 }
                 $img = Image::make($_FILES['photo']['tmp_name']);
                 // save image

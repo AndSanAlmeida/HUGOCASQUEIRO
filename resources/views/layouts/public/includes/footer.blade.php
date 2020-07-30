@@ -1,6 +1,6 @@
 <div class="style-3">
     <div id="goToTop">
-        <i class="fas fa-chevron-circle-up fa-2x" title="Go To Top"></i>
+        <i class="fas fa-chevron-circle-up fa-lg" title="Go To Top"></i>
     </div>
     <div class="container">
         <footer id="footer">
@@ -18,9 +18,9 @@
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
                     <h5 class="header_underline">{{ __('messages.socials')}}</h5>
                     <ul>
-                        <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i>&nbsp;Facebook</a></li>
-                        <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
-                        <li><a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/HCCarpintaria" target="_blank" title="Facebook"><i class="fab fa-facebook"></i>&nbsp;Facebook</a></li>
+                        <li><a href="https://www.instagram.com/hc_carpintaria/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
+                        {{-- <li><a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a></li> --}}
                     </ul>
                 </div>
                 <div class="grid__item grid__item--md-span-4 footer_header_item">
@@ -28,8 +28,8 @@
                     <ul>
                         <hr class="dotted" />
                         <li><a href="mailto:carpintariahc@gmail.com?Subject=carpintariahc.pt%20|%20MAIL" target="_top" title="Enviar Email"><i class="fas fa-envelope contrast-color"></i>&nbsp;carpintariahc@gmail.com</a></li>
-                        <li><i class="fas fa-phone contrast-color"></i>&nbsp;+351 919 123 654</li>
-                        <li><i class="fas fa-address-card contrast-color"></i>&nbsp;R. Chão de Empires nº58, Mira de Aire</li>
+                        <li><i class="fas fa-phone contrast-color"></i>&nbsp;+351 935216651</li>
+                        <li><i class="fas fa-address-card contrast-color"></i>&nbsp;Rua General Humberto Delgado nº1487-A, 2485-123, Mira de Aire</li>
                         <hr class="dotted" />
                     </ul>
                 </div>

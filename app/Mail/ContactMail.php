@@ -12,15 +12,15 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $email;
+    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct($data)
     {
-        $this->email = $request;
+        $this->data = $data;
     }
 
     /**
@@ -30,9 +30,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Email From Website")
-                    ->from($this->email->email)
-                    ->to(env('MAIL_USERNAME'))
-                    ->view('email.contactmail');
+        return $this->markdown('email.contact-form')
+                    ->from('info@carpintariahc.pt');
     }
 }

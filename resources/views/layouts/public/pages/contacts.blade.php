@@ -2,6 +2,19 @@
 
 @section('title', 'Contacts')
 
+@section('scripts')
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.sitekey') }}"></script>
+    <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('{{ config('services.recaptcha.sitekey') }}', {action: '/{{ app()->getLocale()}}/sendEmail'}).then(function(token) {
+                    if (token) {
+                    document.getElementById('recaptcha').value = token;
+                    }
+                });
+            });
+    </script>
+@stop
+
 @section('content')
 
 <div id="contacts">
@@ -23,8 +36,20 @@
 		<div class="container">
 			<h2 class="contactForm-title align-center">{{ __('messages.contacts.form.title')}}</h2>
 			<p class="contactForm-subtitle align-center">{{ __('messages.contacts.form.slogan')}}</p>
-		<form method="POST" action="{{route("send-email",app()->getLocale())}}">
-			@csrf
+
+			@if (session()->has('message'))				
+				<div class="success-message">{{ session()->get('message') }}</div>					
+			@endif
+			@if (count($errors) > 0)				
+				<div class="error-message">
+					@foreach ($errors->all() as $error)
+						{{ $error }} <br/>
+					@endforeach	
+				</div>	
+			@endif
+
+			<form method="POST" action="/{{app()->getLocale()}}/sendEmail">
+				@csrf
 				<div class="grid">
 					<div class="grid__item grid__item--md-span-6 grid__item--sm-span-12">
 						<input class="form-control" type="text" name="name" placeholder="{{ __('messages.contacts.form.field.name')}} *" required>
@@ -35,11 +60,16 @@
 					<div class="grid__item grid__item-md--span-12">
 						<textarea class="form-control" name="message" placeholder="{{ __('messages.contacts.form.field.description')}} *" required></textarea>
 					</div>
+
+					{{-- Recaptcha --}}
+					<input type="hidden" name="recaptcha" id="recaptcha">
+
 					<div class="grid__item grid__item-md--span-12 align-center">
 						<input class="btn-static" type="submit" name="submeter" value="{{ __('messages.contacts.form.button')}}">
 					</div>						
 				</div>				
-			</form>			
+			</form>	
+				
 		</div>
 	</div>
 </div>
@@ -52,12 +82,12 @@
 
 			<div class="grid align-center">
 				<div class="grid__item grid__item--md-span-4 grid__item--sm-span-12">
-					<i class="fas fa-phone-alt fa-3x contrast-color"></i>
-					<h5 class="contactDetails-info">+351 249533780</h5>
+					<i class="fas fa-map-pin fa-3x contrast-color"></i>
+					<h5 class="contactDetails-info" style="text-transform: capitalize;">Rua General Humberto Delgado nº1487-A, 2485-123, Mira de Aire</h5>
 				</div>
 				<div class="grid__item grid__item--md-span-4 grid__item--sm-span-12">
 					<i class="fas fa-mobile-alt fa-3x contrast-color"></i>
-					<h5 class="contactDetails-info">+351 915507135</h5>
+					<h5 class="contactDetails-info">+351 935216651</h5>
 				</div>
 				<div class="grid__item grid__item--md-span-4 grid__item--sm-span-12">
 					<i class="far fa-envelope-open fa-3x contrast-color"></i>
@@ -70,7 +100,7 @@
 </div>
 
 <div id="map">
-	<iframe src="https://maps.google.com/maps?q=R.%20Ch%C3%A3o%20de%20Empires%2058&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	<iframe src="https://maps.google.com/maps?q=39.5434207%2C-8.7284824&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </div>
     
 @stop
